@@ -1,0 +1,76 @@
+@import 'variables';
+
+section {
+  height: 100vh;
+}
+
+.promo-photo {
+  display: block;
+  width: 100%;
+  background-image: url(/assets/images/background/IMG_9868.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 50px 0;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.menu {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+li {
+  position: relative;
+  margin: 0 20px;
+  padding: 9px 0;
+  list-style: none;
+
+  a {
+    display: inline-block;
+    transition: all .3s ease;
+    color: $white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+.second-menu {
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.logo {
+  padding: 0 50px;
+  color: $white;
+  font-family: Romantica;
+  font-size: 40px;
+
+  a {
+    &:hover {
+      opacity: 1;
+    }
+
+    &:visited {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+/**
+ * Titles
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.small-caps {
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-bold,
+strong {
+  font-weight: 700;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}

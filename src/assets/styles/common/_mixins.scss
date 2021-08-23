@@ -1,0 +1,42 @@
+//......... Spacings helpers, generates helpers classes such as.........//
+//......... mt-0 = margin-top: 0 | pl-sm = padding-left: 16px  .........//
+$positions: (
+  't': 'top',
+  'r': 'right',
+  'b': 'bottom',
+  'l': 'left'
+);
+
+$spacings: (
+  '0': 0,
+  'xs': 8px,
+  'sm': 16px,
+  'md': 24px,
+  'lg': 32px,
+  'xl': 40px,
+  'xxl': 48px,
+  'xxxl': 56px,
+  'xxxxl': 64px
+);
+
+/* stylelint-disable declaration-no-important -- we want to override all other values */
+@each $positionKey, $positionValue in $positions {
+  @each $spacingKey, $spacingValue in $spacings {
+    .m#{$positionKey}-#{$spacingKey} {
+      margin-#{$positionValue}: $spacingValue !important;
+    }
+
+    .p#{$positionKey}-#{$spacingKey} {
+      padding-#{$positionValue}: $spacingValue !important;
+    }
+  }
+}
+/* stylelint-enable declaration-no-important */
+
+/* stylelint-disable declaration-no-important -- we want to override all other values */
+@each $spacingKey, $spacingValue in $spacings {
+  .font-size-#{$spacingKey} {
+    font-size: $spacingValue !important;
+  }
+}
+/* stylelint-enable declaration-no-important */
