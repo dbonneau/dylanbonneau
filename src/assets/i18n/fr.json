@@ -1,2 +1,18 @@
 {
-}
+    "common": {
+      "sign_in": "Se connecter",
+      "welcome": "Bienvenue"
+    },
+    "connection" : {
+      "sign_in": {
+        "description": "Connectez-vous à votre compte existant.",
+        "your_email": "Votre email",
+        "your_password": "Votre mot de passe",
+        "forgot_password": "Mot de passe oublié ?"
+      }
+    },
+    "form_error": {
+      "please_enter_valid_email": "Veuillez saisir une adresse email valide",
+      "invalid_email_or_password": "Email ou mot de passe invalide."
+    }
+  }

@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'utils';
+
+.selected-color {
+  position: relative;
+  height: 120px;
+  transition: transform .165s cubic-bezier(.4, 0, .2, 1),
+    border-radius .38s cubic-bezier(.4, 0, .2, 1) .215s,
+    background .5s linear;
+}
+
+span {
+  display: block;
+  width: 100px;
+  height: 100%;
+  transform: scale(1.15);
+  background-color: $white;
+  color: $black;
+  line-height: 120px;
+  text-align: center;
+}

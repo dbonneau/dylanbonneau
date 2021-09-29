@@ -1,0 +1,55 @@
+@import 'variables';
+
+.grid-icons {
+  padding: 16px 8px;
+}
+
+.search-cont {
+  width: 50%;
+  margin: 10px auto;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0,
+    rgba(0, 0, 0, .08) 0 1px 3px 0;
+}
+
+.search-cont .search-box {
+  display: flex;
+  color: $black;
+
+  em {
+    margin: auto;
+  }
+
+  em:hover {
+    cursor: pointer;
+  }
+}
+
+.search-cont .search-box input {
+  width: 70%;
+  height: 40px;
+  margin: 0 0 0 10px;
+  padding: 0;
+  border-style: initial;
+  border-radius: 2px;
+  outline: none;
+  font-size: 19px;
+}
+
+input {
+  font: 400 11px system-ui;
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+}

@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'demo';
+
+.demo-menu {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0 40px;
+  list-style-type: none;
+  background-color: $primary;
+  color: $white;
+  line-height: 36px;
+
+  a {
+    display: inline-block;
+    padding: 0 20px;
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken($primary, 8%);
+    }
+  }
+
+  .menu-title {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.menu-button {
+  font-size: 1.2em;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.custom {
+  .mat-menu-panel {
+    max-width: 500px;
+    border-radius: 0;
+  }
+
+  .mat-menu-content:not(:empty) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .mat-menu-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+
+    small {
+      padding-left: 30px;
+      color: $primary;
+      font-size: .875em;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <app-menu-demo></app-menu-demo>
+
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="window-size"><span>{{ windowSize }}</span> px</div>
+
+    <div class="wrapper">
+
+      <app-icons *ngIf="thisIsPage(ROUTING.Icons)"></app-icons>
+      <app-colors *ngIf="thisIsPage(ROUTING.Colors)"></app-colors>
+      <app-buttons *ngIf="thisIsPage(ROUTING.Buttons)"></app-buttons>
+      <app-forms *ngIf="thisIsPage(ROUTING.Forms)"></app-forms>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+<div id="scroll-to-top" class="scroll-button" (click)="scrollToTop()" [ngClass]="{'is-active': scrolled}">↑</div>

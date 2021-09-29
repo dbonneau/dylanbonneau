@@ -1,0 +1,57 @@
+<div class="container">
+
+  <div [className]="'selected-color background-' + selectedColor">
+    <span>${{selectedColor}}</span>
+  </div>
+
+  <div class="grid">
+    <!-- theme -->
+    <div [className]="'grid-colors center background-' + color" [ngClass]="{ 'active': isSelectedColor(color) }"
+      *ngFor="let color of listColorsTheme" (click)="changeColor(color)">
+      <em class="icon icon-check" *ngIf="isSelectedColor(color)"></em>
+    </div>
+  </div>
+
+  <!-- colors -->
+  <div class="grid">
+    <div [className]="'grid-colors center background-' + color" [ngClass]="{ 'active': isSelectedColor(color) }"
+      *ngFor="let color of listColors" (click)="changeColor(color)">
+      <em class="icon icon-check" *ngIf="isSelectedColor(color)"></em>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- blue -->
+    <div [className]="'grid-colors center background-' + color" [ngClass]="{ 'active': isSelectedColor(color) }"
+      *ngFor="let color of listColorsBlue" (click)="changeColor(color)">
+      <em class="icon icon-check" *ngIf="isSelectedColor(color)"></em>
+    </div>
+    <!-- green -->
+    <div [className]="'grid-colors center background-' + color" [ngClass]="{ 'active': isSelectedColor(color) }"
+      *ngFor="let color of listColorsGreen" (click)="changeColor(color)">
+      <em class="icon icon-check" *ngIf="isSelectedColor(color)"></em>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- red -->
+    <div [className]="'grid-colors center background-' + color" [ngClass]="{ 'active': isSelectedColor(color) }"
+      *ngFor="let color of listColorsRed" (click)="changeColor(color)">
+      <em class="icon icon-check" *ngIf="isSelectedColor(color)"></em>
+    </div>
+    <!-- yellow -->
+    <div [className]="'grid-colors center background-' + color" [ngClass]="{ 'active': isSelectedColor(color) }"
+      *ngFor="let color of listColorsYellow" (click)="changeColor(color)">
+      <em class="icon icon-check" *ngIf="isSelectedColor(color)"></em>
+    </div>
+  </div>
+
+  <!-- grey -->
+  <div class="grid">
+    <div [className]="'grid-colors center background-' + color" [ngClass]="{ 'active': isSelectedColor(color) }"
+      *ngFor="let color of listColorsGrey" (click)="changeColor(color)">
+      <em class="icon icon-check" *ngIf="isSelectedColor(color)"></em>
+    </div>
+  </div>
+
+</div>

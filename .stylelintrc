@@ -49,7 +49,7 @@
     "linebreaks": "unix",
     "max-empty-lines": 1,
     "max-nesting-depth": [
-      3,
+      4,
       {
         "ignoreAtRules": [
           "each",
@@ -105,7 +105,6 @@
     "selector-list-comma-newline-after": "always",
     "selector-max-compound-selectors": 3,
     "selector-max-id": 0,
-    "selector-max-specificity": "0,4,0",
     "selector-max-universal": 1,
     "selector-no-qualifying-type": [
       true,

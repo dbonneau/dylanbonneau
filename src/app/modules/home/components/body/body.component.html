@@ -1,23 +1,49 @@
 <!-- MENU -->
-<header>
-  <nav>
-    <ul class="menu content-end">
-      <li><a href="">Home</a></li>
-      <li><a href="">Portfolio</a></li>
-      <li><a href="">Blog</a></li>
-    </ul>
-    <div class="logo">
-      <a href="#">Dylan
-      </a>
-    </div>
-    <ul class="second-menu menu">
-      <li><a href="">Pages</a></li>
-      <li><a href="">Contact</a></li>
-      <li><a href="">Buy</a></li>
-    </ul>
-  </nav>
-</header>
+<app-header></app-header>
 
 <!-- FIRST BLOCK -->
 <section class="promo-photo">
+  <div class="cta">
+    <h1>Vous allez vous marier ?</h1>
+    <p>lorem ipsum dolor sit amet, consectetur adipisicing</p>
+    <button class="white-color">Bouton outline</button>
+  </div>
+</section>
+
+<!-- ABOUT BLOCK -->
+<section class="about section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <h3 class="title" data-title="Rennes, Nantes et Caen">Photographe de mariage</h3>
+    </div>
+
+    <div class="section-body grid">
+      <div>
+        <img class="img-profile" src="/assets/images/profile/IMG_6841.jpg" alt="" />
+      </div>
+
+      <div>
+        <h2 class="title-sm">Salut, c'est Dylan</h2>
+        <p class="text">
+          Je suis un Normand expatrié en Bretagne.<br>
+          J’ai été bercé par les vagues de la mer, et ébloui par la lumière et le soleil de Normandie (Entre deux averses).
+        </p>
+        <p class="text">
+          J’aime entendre le chant des oiseaux en forêt,
+          l’odeur des brochettes en train de griller sur le barbecue, ou encore tourner les pages d’un livre les soirs d'hiver au coin de la cheminée.
+        </p>
+        <p class="text">
+          Mais ce que je préfère,<br>
+          c’est d’immortaliser les moments de vie,<br>
+          d’écrire une histoire,<br>
+          la vôtre.
+        </p>
+        <button (click)="goToAboutMe()" class="button-outline cta-about">venez me découvrir</button>
+      </div>
+
+
+
+
+    </div>
+  </div>
 </section>

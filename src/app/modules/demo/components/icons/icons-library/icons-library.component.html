@@ -1,0 +1,22 @@
+<div class="container">
+
+  <div class="search-cont">
+    <div class="search-box">
+      <em class="icon icon-search"></em>
+      <input type="text" [(ngModel)]="searchName" placeholder="Search icons...">
+      <em class="icon icon-x" [ngStyle]="{'visibility': searchName ? 'visible' : 'hidden' }" (click)="resetSearch()"></em>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="grid-icons center" *ngFor="let icon of listIcons | filter:searchName">
+      <div>
+        <em [className]="'icon icon-' + icon"></em>
+      </div>
+      <div>
+        <span>{{icon}}</span>
+      </div>
+    </div>
+  </div>
+
+</div>
