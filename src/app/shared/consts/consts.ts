@@ -1,4 +1,5 @@
 export const ROUTING_HOME = 'home';
+export const ROUTING_GALERIES = 'galeries';
 
 export const ROUTING_DEMO = 'demo';
 export const ROUTING_ICONS = 'icons';
@@ -15,5 +16,7 @@ export const ROUTING = {
     Forms: `/${ROUTING_DEMO}/${ROUTING_FORMS}`,
     // Module Home
     home: `/${ROUTING_HOME}`,
-  };
+    // Module Home
+    galeries: `/${ROUTING_GALERIES}`,
+};
 

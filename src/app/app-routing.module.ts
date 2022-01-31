@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BodyComponent } from './modules/home/components/body/body.component';
-import { ROUTING_DEMO } from './shared/consts/consts';
+import { ROUTING_DEMO, ROUTING_GALERIES } from './shared/consts/consts';
 
 const routes: Routes = [
     {
@@ -11,6 +10,10 @@ const routes: Routes = [
     {
         path: ROUTING_DEMO,
         loadChildren: () => import('./modules/demo/demo.module').then(m => m.DemoModule)
+    },
+    {
+        path: ROUTING_GALERIES,
+        loadChildren: () => import('./modules/galeries/galeries.module').then(m => m.GaleriesModule)
     }
     // {
     //     path: ROUTING_DEMO,

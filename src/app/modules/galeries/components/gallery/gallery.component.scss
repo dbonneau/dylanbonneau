@@ -1,0 +1,60 @@
+.title {
+  letter-spacing: .02em;
+  line-height: 1.2em;
+  max-width: 700px;
+  font-size: 32px;
+  margin: 0 auto;
+  font-family: "Oswald script=latin rev=3", Cardo, Raleway, sans-serif;
+
+  &::after {
+    content: attr(data-title);
+    display: block;
+    color: black;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
+
+article,
+.block-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    max-width: 800px;
+  }
+}
+
+.block-container {
+  color: black;
+  max-width: 800px;
+}
+
+.block-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    object-fit: cover;
+    max-width: 200px;
+    margin: 0 10px;
+  }
+}
+
+.block-images-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    object-fit: cover;
+    max-height: 500px;
+    margin: 0 10px;
+  }
+}

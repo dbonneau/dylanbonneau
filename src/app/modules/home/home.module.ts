@@ -6,12 +6,10 @@ import { HighlightModule } from 'ngx-highlightjs';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
-import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
     declarations: [
-        BodyComponent,
-        HeaderComponent
+        BodyComponent
     ],
     imports: [
         CommonModule,
