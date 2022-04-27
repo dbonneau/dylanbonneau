@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ROUTING_DEMO, ROUTING_GALERIES } from './shared/consts/consts';
+import { ROUTING_ABOUT, ROUTING_CONTACTS, ROUTING_DEMO, ROUTING_GALERIES, ROUTING_WEDDING } from './shared/consts/consts';
 
 const routes: Routes = [
     {
@@ -14,6 +14,18 @@ const routes: Routes = [
     {
         path: ROUTING_GALERIES,
         loadChildren: () => import('./modules/galeries/galeries.module').then(m => m.GaleriesModule)
+    },
+    {
+        path: ROUTING_CONTACTS,
+        loadChildren: () => import('./modules/contacts/contacts.module').then(m => m.ContactsModule)
+    },
+    {
+        path: ROUTING_ABOUT,
+        loadChildren: () => import('./modules/about-me/about-me.module').then(m => m.AboutMeModule)
+    },
+    {
+        path: ROUTING_WEDDING,
+        loadChildren: () => import('./modules/wedding/wedding.module').then(m => m.WeddingModule)
     }
     // {
     //     path: ROUTING_DEMO,

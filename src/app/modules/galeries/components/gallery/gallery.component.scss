@@ -1,3 +1,8 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
 .title {
   letter-spacing: .02em;
   line-height: 1.2em;
@@ -56,5 +61,19 @@ article,
     object-fit: cover;
     max-height: 500px;
     margin: 0 10px;
+  }
+}
+
+@media(max-width: 900px) {
+
+  .block-container {
+    .img-title {
+      max-width: 100%;
+    }
+  }
+
+  p {
+    margin: 0 40px;
+    text-align: justify;
   }
 }

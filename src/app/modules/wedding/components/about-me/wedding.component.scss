@@ -1,0 +1,52 @@
+@import 'variables';
+@import 'typography';
+@import 'mixins';
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+section {
+  height: 100vh;
+}
+
+.title-block {
+  background-color: #F2F2F2;
+  height: calc(100vh - 300px);
+}
+
+.text-block {
+  margin: 10px 0;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-height: calc(100vh - 300px);
+  text-align: left;
+
+  h1,
+  h2,
+  p {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+  }
+
+  h1,
+  h2 {
+    font-size: 42px;
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 10px auto;
+  }
+}
+
+.second-block {
+  margin: 50px 0;
+}

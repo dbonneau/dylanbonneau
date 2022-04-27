@@ -1,0 +1,59 @@
+<!-- MENU -->
+<app-header [scrolledTheme]="true"></app-header>
+
+<section class="grid-wrap">
+  <h1 class="title">Comment puis-je <br>vous aider ?</h1>
+  <div class="flex">
+    <img
+      src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      alt="salad" class="img">
+
+    <form action="">
+
+      <div class="formField">
+        <input type="input" placeholder="Prenom" name="prenom" id='prenom' required />
+        <label for="prenom">Votre Prénom</label>
+      </div>
+
+      <div class="formField">
+        <input type="input" placeholder="Nom" name="nom" id='nom' required />
+        <label for="nom">Votre Nom</label>
+      </div>
+
+      <div class="formField">
+        <input type="input" placeholder="Mail" name="mail" id='mail' required />
+        <label for="mail">Votre adresse mail</label>
+      </div>
+
+      <div class="formField">
+        <input type="input" placeholder="Phone" phone="phone" id='phone' required />
+        <label for="phone">Votre numéro de téléphone</label>
+      </div>
+<!-- si option selectionné supprimer la couleur -->
+      <div class="formField">
+        <select name="pets" id="pet-select">
+          <option value="">Comment m'avez-vous connu ?</option>
+          <option value="Amis">Amis</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Google">Google</option>
+        </select>
+      </div>
+
+      <div class="formField">
+        <input type="input" placeholder="Ville" name="ville" id='ville' required />
+        <label for="ville">La ville où vous vivez</label>
+      </div>
+
+      <div class="formField">
+        <input type="date" placeholder="Date" name="date" id='date' required />
+        <label for="name">La date de votre mariage</label>
+      </div>
+
+      <div class="formField">
+        <input type="input" placeholder="Lieu" name="lieu" id='lieu' required />
+        <label for="lieu">Le Lieu de votre mariage</label>
+      </div>
+
+    </form>
+  </div>
+</section>

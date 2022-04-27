@@ -1,6 +1,11 @@
 @import 'variables';
 @import 'typography';
 
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
 section {
   height: 100vh;
 }
@@ -14,26 +19,41 @@ section {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
 
-  .cta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: calc(100vh - 300px);
-    padding-top: 300px;
-    background-color: #0000004A;
-    text-align: center;
-  }
+.cta-img {
+  background-color: #0000004A;
+  color: white;
+  padding-top: 300px;
+}
+
+.cta-white {
+  top: 20%;
+  position: relative;
+}
+
+.text-block {
+  margin: 10px 0;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 300px);
+  text-align: center;
 
   p {
     display: flex;
     flex-direction: column;
+    max-width: 60%;
+    margin: 0 auto;
   }
 
   button {
     bottom: 25px;
-    width: 30%;
+    min-width: 30%;
     min-width: 200px;
     margin: 40px auto 0;
     padding: 20px;
@@ -41,10 +61,13 @@ section {
   }
 }
 
-h1 {
+h1,
+h2 {
   display: flex;
   flex-direction: column;
   font-size: 42px;
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 .container {
@@ -54,7 +77,6 @@ h1 {
 }
 
 .section-header {
-  margin: 48px;
   text-align: center;
 }
 
@@ -82,6 +104,7 @@ h1 {
   color: $grey-3;
   font-size: 1.6rem;
   font-weight: 600;
+  margin: 5px;
 }
 
 .grid {
@@ -94,7 +117,6 @@ h1 {
   }
 
   :nth-child(2) {
-    margin-left: 24px;
     text-align: left;
   }
 }
@@ -108,11 +130,12 @@ h1 {
   color: $black;
 
   img {
-    max-width: 400px;
+    max-width: 450px;
+    width: 100%;
   }
 
   .text {
-    margin: 16px 0;
+    margin: 16px 5px;
   }
 
   .points {
@@ -138,4 +161,47 @@ h1 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+@media(max-width: 900px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .cta {
+    button {
+      font-size: 15px;
+    }
+  }
+
+  .grid {
+    display: flex;
+
+    :nth-child(1) {
+      margin: auto;
+    }
+
+    :nth-child(2) {
+      margin-top: 25px;
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+
+  .title {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 20px;
+  }
+
+  .text-block {
+    max-height: 110px;
+    overflow: auto;
+  }
+}
+
+@media(max-width: 600px) {
+  app-arrow-scroll {
+    display: none;
+  }
 }

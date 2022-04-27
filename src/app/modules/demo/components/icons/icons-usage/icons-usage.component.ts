@@ -9,7 +9,7 @@ import { IconsComponent } from '../icons.component';
 export class IconsUsageComponent extends IconsComponent implements OnInit {
   public iconCheck = `<em class='icon icon-check'></em>`;
   public iconCheckPrimary = `<em class='icon icon-check colors-primary'></em>`;
-  public iconCheckFontSize20 = `<em class='icon icon-check font-size-20'></em>`;
+  public iconCheckFontSize20 = `<em class='icon icon-check font-size-xl'></em>`;
 
   constructor() {
     super();

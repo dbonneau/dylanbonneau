@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'typography';
+@import 'mixins';
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.my-name-is-bond {
+  flex-direction: row;
+  min-height: auto;
+  height: calc(100vh - 240px);
+
+  .text-block {
+    padding-top: 100px;
+    max-width: 500px;
+  }
+
+  .img-left {
+    margin-right: 40px;
+    height: 360px;
+    object-fit: cover;
+    padding-top: 100px;
+  }
+}
+
+.text-block {
+  max-width: 600px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.img-block {
+  display: flex;
+  align-items: flex-start;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-block-left {
+    padding-top: 100px;
+  }
+
+  .img-block-right {
+    padding-top: 50px;
+  }
+}
+
+.img-profile {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  padding: 8px;
+}
+
+h1,
+h2 {
+  font-size: 42px;
+}

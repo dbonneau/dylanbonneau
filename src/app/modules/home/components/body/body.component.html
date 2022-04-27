@@ -3,10 +3,12 @@
 
 <!-- FIRST BLOCK -->
 <section class="promo-photo">
-  <div class="cta">
-    <h1>Ce n'est pas seulement beau la photographie</h1>
-    <p>C'est l'experience et les souvenirs que nous créerons ensemble</p>
-    <button class="white-color">Entrer en contact</button>
+  <div class="cta cta-img">
+    <h2>
+      Écrivez l'histoire du jour <br>
+      le plus heureux de votre vie
+    </h2>
+    <app-arrow-scroll></app-arrow-scroll>
   </div>
 </section>
 
@@ -19,36 +21,56 @@
 
     <div class="section-body grid">
       <div>
-        <img class="img-profile" src="/assets/images/profile/IMG_6841.jpg" alt="" />
+        <img class="img-profile" src="/assets/images/profile/moi.jpg" alt="" />
       </div>
 
       <div>
         <h2 class="title-sm">Salut, c'est Dylan</h2>
-        <p class="text">
-          Je suis un Normand expatrié en Bretagne.<br>
-          J’ai été bercé par les vagues de la mer, et ébloui par la lumière et le soleil de Normandie (Entre deux averses).
-        </p>
-        <p class="text">
-          J’aime entendre le chant des oiseaux en forêt,
-          l’odeur des brochettes en train de griller sur le barbecue, ou encore tourner les pages d’un livre les soirs d'hiver au coin de la cheminée.
-        </p>
-        <p class="text">
-          Mais ce que je préfère,<br>
-          c’est d’immortaliser les moments de vie,<br>
-          d’écrire une histoire,<br>
-          la vôtre.
-        </p>
+        <div class="text-block">
+          <p class="text">
+            Si vous lisez ceci, c’est que mes photos vous plaisent. <br>
+            Youhou, c’est génial !
+          </p>
+          <p class="text">
+            Parce qu'en tant que photographe de mariage, <br>
+            je ne fais pas que ça, prendre des photos.
+          </p>
+          <p class="text">
+            Il est primordial d’avoir le feeling.
+          </p>
+          <p class="text">
+            Découvrez mon univers et cliquez sur le bouton <br>
+            pour savoir si je suis le photographe qui vous correspond
+          </p>
+        </div>
         <button (click)="goToAboutMe()" class="button-outline cta-about">venez me découvrir</button>
       </div>
-
-
-
-
     </div>
   </div>
 </section>
 
-<!-- ABOUT BLOCK -->
+<!-- MARRIED BLOCK -->
 <section class="test">
+  <div class="cta cta-img">
+    <h1>Vous allez vous marier ?</h1>
+    <div class="text-block">
+      <p>Je ne fais pas seulement prendre des photos de votre mariage</p>
+      <p>Je vous raconte une des pages de l'histoire de votre vie</p>
+      <p>Pour que vous vous souveniez de vos instants magiques</p>
+    </div>
+    <button class="white-color">Nous voulons contempler notre histoire</button>
+  </div>
+</section>
 
+<!-- ASSISTED BLOCK -->
+<section>
+  <div class="cta cta-white">
+    <h1>Vous avez assisté à un mariage ?</h1>
+    <div class="text-block">
+      <p>Nous nous sommes rencontrés il y a peu et vous voulez contempler les photos ?</p>
+      <p>Vous attendez avec impatience de vous remémorer les moments les plus magiques de cette journée ?</p>
+      <p>Il vous suffit de cliquer sur ce bouton et de rentrer le code</p>
+    </div>
+    <button>Je veux découvrir les photos de la journée</button>
+  </div>
 </section>
