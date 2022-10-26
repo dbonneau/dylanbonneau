@@ -1,4 +1,4 @@
-@import '../modules/fonts/fonts';
+@import "../modules/fonts/fonts";
 
 /**
  * Titles
@@ -42,10 +42,23 @@ strong {
   text-decoration: underline;
 }
 
-.title {
-  margin: 50px 0 80px;
+.title,
+.subtitle {
   color: black;
   text-align: center;
-  font-family: 'Unna';
+  font-family: "Unna";
+}
+
+.title {
+  margin-top: 50px;
+  &:not(.with-subtitle) {
+    margin-bottom: 80px;
+  }
+  
   font-size: 3.125rem;
+}
+
+.subtitle {
+  margin-bottom: 80px;
+  font-size: 1rem;
 }
