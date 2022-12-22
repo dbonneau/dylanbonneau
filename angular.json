@@ -54,7 +54,10 @@
                                 "src/assets/styles/common"
                             ]
                         },
-                        "scripts": []
+                        "scripts": [],
+                        "allowedCommonJsDependencies": [
+                            "rxjs/internal/operators/map"
+                         ]
                     },
                     "configurations": {
                         "production": {

@@ -1,65 +1,40 @@
-@import 'variables';
-@import 'typography';
-@import 'mixins';
+@import "variables";
+@import "typography";
+@import "mixins";
 
 :host {
   display: block;
   min-height: 100vh;
 }
 
-.my-name-is-bond {
-  flex-direction: row;
-  min-height: auto;
-  height: calc(100vh - 240px);
+.form-bloc {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 
-  .text-block {
-    padding-top: 100px;
-    max-width: 500px;
-  }
-
-  .img-left {
-    margin-right: 40px;
-    height: 360px;
-    object-fit: cover;
-    padding-top: 100px;
+  @media (min-width: 900px) {
+    flex-direction: row;
   }
 }
 
 .text-block {
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  text-align: center;
 }
 
 section {
   display: flex;
   justify-content: center;
-}
-
-.img-block {
-  display: flex;
-  align-items: flex-start;
-
-  div {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .img-block-left {
-    padding-top: 100px;
-  }
-
-  .img-block-right {
-    padding-top: 50px;
-  }
+  margin: 70px 24px;
 }
 
 .img-profile {
-  width: 140px;
-  height: 200px;
+  width: 100%;
+  height: 100vh;
   object-fit: cover;
-  padding: 8px;
+  object-position: 40% 29%;
 }
 
-h1,
-h2 {
-  font-size: 42px;
-}

@@ -1,6 +1,6 @@
-@import 'variables';
-@import 'typography';
-@import 'mixins';
+@import "variables";
+@import "typography";
+@import "mixins";
 
 :host {
   display: block;
@@ -8,45 +8,99 @@
 }
 
 section {
-  height: 100vh;
-}
-
-.title-block {
-  background-color: #F2F2F2;
-  height: calc(100vh - 300px);
+  min-height: 100vh;
 }
 
 .text-block {
   margin: 10px 0;
 }
 
+.container-banner {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: 64px;
+
+  .title-banner {
+    background: $primary;
+    max-width: 600px;
+    padding: 24px;
+    width: 100%;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+.banner {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: 85% 29%;
+}
+
 .block {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  max-height: calc(100vh - 300px);
-  text-align: left;
+  align-items: center;
+  width: calc(100% - 48px);
+  min-height: calc(100vh - 300px);
+  text-align: justify;
+  padding: 24px;
 
   h1,
   h2,
   p {
     display: flex;
     flex-direction: column;
-    max-width: 60%;
-  }
-
-  h1,
-  h2 {
-    font-size: 42px;
-    margin: 0 auto;
-  }
-
-  p {
-    margin: 10px auto;
+    @media (min-width: 900px) {
+      max-width: 1000px;
+    }
   }
 }
 
-.second-block {
-  margin: 50px 0;
+/////////////////@at-root
+/// 
+/// 
+
+.image-mosaic {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .card-tall {
+    grid-row: span 2 / auto;
+  }
+
+  .card-wide {
+    grid-column: span 2 / auto;
+  }
 }

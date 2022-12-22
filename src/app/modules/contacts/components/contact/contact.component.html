@@ -1,8 +1,12 @@
 <!-- MENU -->
 <app-header [scrolledTheme]="true"></app-header>
 
-<section class="grid-wrap">
-  <h1 class="title with-subtitle">Et si on faisait connaissance ?</h1>
+<app-spinner *ngIf="loading"></app-spinner>
+
+<app-infobox *ngIf="error" title="Une erreur est survenue, veuillez réessayer ultérieurement" [type]="EInfoBox.ERROR"></app-infobox>
+
+<section class="grid-wrap" *ngIf="!loading">
+  <h1>Et si on faisait connaissance ?</h1>
   <p class="subtitle">
     <span>{{
       "J'ai hâte de vous découvrir. Parlez-moi de vous, de votre mariage, de vos envies."
@@ -14,7 +18,7 @@
 
   <div class="form-bloc">
     <img
-      src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      src="/assets/images/profile/IMG_6479.jpg"
       alt="salad"
       class="img"
     />

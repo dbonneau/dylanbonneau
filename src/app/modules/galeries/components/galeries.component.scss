@@ -17,12 +17,12 @@
 
 .card {
   position: relative;
-  width: 250px;
-  height: 300px;
+  width: 300px;
+  height: 450px;
   background: #fff;
   margin: 0 auto;
   border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 
   &:before,
   &:after {
@@ -43,12 +43,12 @@
 
     &:before {
       transform: rotate(20deg);
-      box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     }
 
     &:after {
       transform: rotate(10deg);
-      box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     }
 
     .imgBx {
@@ -88,7 +88,7 @@
       margin: 0;
       padding: 0;
       font-weight: 600;
-      font-size: 9px;
+      font-size: 12px;
       color: #777;
       text-transform: uppercase;
 
@@ -97,13 +97,12 @@
         font-size: 20px;
         color: black;
         display: block;
-        margin-top: 5px;
       }
     }
   }
 }
 
-@media(max-width: 1367px) {
+@media (max-width: 1367px) {
   .card {
     .imgBx {
       bottom: 80px;

@@ -9,7 +9,7 @@ const routes: Routes = [
     component: GaleriesComponent
   },
   {
-    path: ':name',
+    path: ':weddingId',
     component: GalleryComponent
   }
 ];

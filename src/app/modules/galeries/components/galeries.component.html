@@ -3,13 +3,12 @@
 <div class="container">
     <h1 class="title">portfolio</h1>
     <div class="box">
-    
-        <div class="card" *ngFor="let item of items" (click)="navigateTo(item.url)">
+        <div class="card" *ngFor="let gallery of galleries" (click)="navigateTo(gallery.id)">
           <div class="imgBx">
-              <img [src]="item.img" [alt]="item.alt">
+              <img [src]="gallery?.fields?.card[0]?.url" [alt]="gallery?.fields?.card[0]?.filename">
           </div>
           <div class="details">
-              <h2>{{item.place}}, {{item.country}} :<br><span>{{item.couple}}</span></h2>
+              <h2>{{gallery?.fields?.place}}, {{gallery?.fields?.country}} :<br><span>{{gallery?.fields?.couple}}</span></h2>
           </div>
         </div>
     </div>

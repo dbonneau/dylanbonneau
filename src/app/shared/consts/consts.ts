@@ -1,7 +1,7 @@
 export const ROUTING_HOME = 'home';
 export const ROUTING_GALERIES = 'galeries';
 export const ROUTING_CONTACTS = 'contacts';
-export const ROUTING_ABOUT = 'about';
+export const ROUTING_ABOUT = 'a-propos';
 export const ROUTING_WEDDING = 'wedding';
 
 export const ROUTING_DEMO = 'demo';

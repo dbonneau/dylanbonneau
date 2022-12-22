@@ -7,7 +7,7 @@
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .promo-photo {
@@ -24,7 +24,7 @@ section {
 .cta-img {
   background-color: #0000004A;
   color: white;
-  padding-top: 300px;
+  padding-top: 18.75rem;
 }
 
 .cta-white {
@@ -33,7 +33,7 @@ section {
 }
 
 .text-block {
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 .cta {
@@ -41,8 +41,12 @@ section {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 18.75rem);
   text-align: center;
+
+  h1 {
+    color: $white;
+  }
 
   p {
     display: flex;
@@ -52,12 +56,12 @@ section {
   }
 
   button {
-    bottom: 25px;
+    bottom: 1.563rem;
     min-width: 30%;
-    min-width: 200px;
-    margin: 40px auto 0;
-    padding: 20px;
-    font-size: 20px;
+    min-width: 12.5rem;
+    margin: 2.5rem auto 0;
+    padding: 1.25rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -65,7 +69,7 @@ h1,
 h2 {
   display: flex;
   flex-direction: column;
-  font-size: 42px;
+  font-size: 2.625rem;
   max-width: 75%;
   margin: 0 auto;
 }
@@ -73,7 +77,7 @@ h2 {
 .container {
   position: relative;
   margin: 0 auto;
-  padding: 0 64px;
+  padding: 0 4rem;
 }
 
 .section-header {
@@ -83,19 +87,19 @@ h2 {
 .title {
   display: inline-block;
   position: relative;
-  margin-bottom: 10px;
-  padding-bottom: 16px;
+  margin-bottom: 0.625rem;
+  padding-bottom: 1rem;
   font-size: 2.8rem;
   line-height: 1;
 
   &::after {
     content: attr(data-title);
     display: block;
-    margin-top: 15px;
+    margin-top: 0.938rem;
     color: $primary;
     font-size: 1.15rem;
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 0.188rem;
     text-transform: uppercase;
   }
 }
@@ -104,7 +108,7 @@ h2 {
   color: $grey-3;
   font-size: 1.6rem;
   font-weight: 600;
-  margin: 5px;
+  margin: 0.313rem;
 }
 
 .grid {
@@ -113,7 +117,7 @@ h2 {
   align-items: center;
 
   :nth-child(1) {
-    margin-right: 24px;
+    margin-right: 1.5rem;
   }
 
   :nth-child(2) {
@@ -130,26 +134,27 @@ h2 {
   color: $black;
 
   img {
-    max-width: 450px;
+    max-width: 28.125rem;
     width: 100%;
   }
 
   .text {
-    margin: 16px 5px;
+    margin: 1rem 0.313rem;
   }
 
   .points {
     top: 65%;
     left: 80%;
-    width: 300px;
+    width: 18.75rem;
     opacity: .1;
   }
 
 }
 
 .cta-about {
-  padding: 15px 35px;
-  font-size: 25px;
+  padding: 0.938rem 2.188rem;
+  font-size: 1.563rem;
+  margin: 24px 0;
 }
 
 .test {
@@ -157,7 +162,7 @@ h2 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: url(/assets/images/background/IMG_9483.jpg);
+  background-image: url(/assets/images/background/Mathilde_Seb_30072022_135824.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -165,24 +170,25 @@ h2 {
 
 @media(max-width: 900px) {
   .container {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 
   .cta {
     button {
-      font-size: 15px;
+      font-size: 0.938rem;
     }
   }
 
   .grid {
     display: flex;
+    justify-content: center;
 
     :nth-child(1) {
       margin: auto;
     }
 
     :nth-child(2) {
-      margin-top: 25px;
+      margin-top: 1.563rem;
       margin-left: 0;
       text-align: center;
     }
@@ -191,12 +197,7 @@ h2 {
   .title {
     margin-bottom: 0;
     padding-bottom: 0;
-    margin-top: 20px;
-  }
-
-  .text-block {
-    max-height: 110px;
-    overflow: auto;
+    margin-top: 1.25rem;
   }
 }
 
