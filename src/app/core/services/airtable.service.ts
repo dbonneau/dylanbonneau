@@ -12,7 +12,7 @@ export class AirtableService {
 
   private _getHeaders() {
     return new HttpHeaders({
-      Authorization: `Bearer ${environment.airtable}`,
+      Authorization: `Bearer ${process.env.airtable}`,
     });
   }
 
