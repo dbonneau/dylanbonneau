@@ -19,16 +19,16 @@
     text-align: left;
 
     &::before {
-      content: '';
+      content: "";
       float: left;
     }
   }
 
   &-colors {
     width: 20%;
-    transition: transform .165s cubic-bezier(.4, 0, .2, 1),
-      border-radius .38s cubic-bezier(.4, 0, .2, 1) .215s,
-      background .5s linear;
+    transition: transform 0.165s cubic-bezier(0.4, 0, 0.2, 1),
+      border-radius 0.38s cubic-bezier(0.4, 0, 0.2, 1) 0.215s,
+      background 0.5s linear;
     cursor: pointer;
 
     @media (min-width: 48em) {
@@ -36,7 +36,7 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       padding-top: 100%;
       float: left;
     }
@@ -53,14 +53,14 @@
   &-icons {
     flex-direction: column;
     width: 96px;
-    transition: transform .165s cubic-bezier(.4, 0, .2, 1),
-      border-radius .38s cubic-bezier(.4, 0, .2, 1) .215s,
-      background .5s linear;
+    transition: transform 0.165s cubic-bezier(0.4, 0, 0.2, 1),
+      border-radius 0.38s cubic-bezier(0.4, 0, 0.2, 1) 0.215s,
+      background 0.5s linear;
     font-size: 10px;
     cursor: pointer;
 
     &::before {
-      content: '';
+      content: "";
       float: left;
     }
 
@@ -73,7 +73,7 @@
   &-colors:hover {
     z-index: 100;
     transform: scale(1.15);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   }
 
   &-selected-icons {
@@ -136,4 +136,49 @@
 
 .align-items-center {
   align-items: center;
+}
+
+/**
+ * Card
+ */
+
+.image-mosaic {
+  display: grid;
+  padding: 32px;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+}
+
+.card {
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .card-tall {
+    grid-row: span 2 / auto;
+  }
+
+  .card-wide {
+    grid-column: span 3 / auto;
+  }
 }

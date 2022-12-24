@@ -2,13 +2,13 @@
   <div></div>
   <!-- <span class="logo">Dylan</span> -->
   <div class="open-menu"><i class='icon icon-menu' (click)="toggleMenu()"></i></div>
-  <ul class="main-menu" [ngStyle]="{'display' : 'flex', 'top': height ? '0' : '-100%'}">
+  <ul class="main-menu" [ngStyle]="{'display' : 'flex', 'top': height ? '0' : '-1000%'}">
       <li *ngIf="scrolled || scrolledTheme"><a href="#"><img src="/assets/images/logo/logo.png" alt=""></a></li>
       <li *ngIf="!scrolled && !scrolledTheme"><a href="#"><img src="/assets/images/logo/logo-white.png" alt=""></a></li>
     <li><a class='link' href="javascript: void(0)" (click)="redirect(ROUTING.About)">À propos</a></li>
     <li><a class='link' href="javascript: void(0)" (click)="redirect(ROUTING.Contacts)">me contacter</a></li>
     <li><a class='link' href="javascript: void(0)" (click)="redirect(ROUTING.Wedding)">mariage</a></li>
-    <li><a class='link' href="javascript: void(0)" (click)="redirect(ROUTING.Galeries)">Galeries</a></li>
+    <!-- <li><a class='link' href="javascript: void(0)" (click)="redirect(ROUTING.Galeries)">Galeries</a></li> -->
     <!-- <li><a class='link' href="#">Clients</a></li> -->
     <div class="close-menu"><i class="icon icon-x" (click)="toggleMenu()"></i></div>
   </ul>
