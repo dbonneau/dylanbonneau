@@ -173,6 +173,12 @@
   margin: 0;
 }
 
+@media screen and (max-width: 599px) {
+  .card-tall-mobile {
+    grid-row: span 2 / auto;
+  }
+}
+
 @media screen and (min-width: 600px) {
   .card-tall {
     grid-row: span 2 / auto;
