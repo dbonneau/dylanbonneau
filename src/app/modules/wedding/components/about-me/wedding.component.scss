@@ -15,37 +15,6 @@ section {
   margin: 10px 0;
 }
 
-.container-banner {
-  position: relative;
-  text-align: center;
-  color: white;
-  margin-top: 64px;
-
-  .title-banner {
-    background: $primary;
-    max-width: 600px;
-    padding: 24px 0;
-    width: 100%;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    @media (min-width: 900px) {
-      padding: 24px;
-    }
-  }
-}
-
-
-.banner {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  object-position: 85% 29%;
-}
-
 .block {
   display: flex;
   flex-direction: column;

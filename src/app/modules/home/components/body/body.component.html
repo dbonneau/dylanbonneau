@@ -16,43 +16,39 @@
 <section class="about" id="about">
   <div class="container">
     <div class="section-header">
-      <h3 class="title" data-title="Rennes, Nantes et Caen">
+      <h2 class="title" data-title="Rennes, Nantes et Caen">
         Photographe de mariage
-      </h3>
+      </h2>
+      <h2>Bonjour, je suis Dylan Bonneau</h2>
     </div>
 
     <div class="section-body grid">
       <div>
-        <img
-          class="img-profile"
-          src="https://i.goopics.net/uayjvt.jpg"
-          alt="dylan-bonneau-profile-portrait-mer-noir-blanc"
-        />
+        <img class="img-profile" src="https://i.goopics.net/uayjvt.jpg"
+          alt="dylan-bonneau-profile-portrait-mer-noir-blanc" />
       </div>
 
       <div>
-        <h2 class="title-sm">Bonjour, je suis Dylan Bonneau</h2>
         <div class="text-block">
           <p class="text">
-            Parler de sois n'est pas simple, <br />
-            surtout lorsque l'on est timide comme moi.
+            Je suis ravi de vous présenter mon univers photographique.
           </p>
           <p class="text">
-            J'aime échanger autour d'un café ou d'une bonne bière pour mieux
-            vous connaître <br />
-            et ainsi créer des liens pour être à l'aise le jour de votre
-            mariage.
+            Mon objectif est de vous offrir des photos uniques et authentiques, reflétant votre
+            histoire et votre amour. Je m'efforce de capturer l'essence même de votre jour de mariage, en mettant en
+            avant vos émotions et votre personnalité.
           </p>
           <p class="text">
-            Cela va me permettre de retranscrire le naturel <br />
-            et l'ambiance magique de votre journée.
+            Je suis convaincu que chaque mariage est unique et je prends un soin particulier à comprendre vos souhaits
+            et vos besoins afin de créer des souvenirs inoubliables de cet événement spécial.
+          </p>
+          <p class="text">
+            Je vous invite à parcourir mon site pour découvrir mon travail et à me contacter si vous avez des questions
+            ou si vous souhaitez réserver une séance.
           </p>
         </div>
-        <button
-          (click)="navigate(ROUTING.About)"
-          class="button-outline cta-about"
-        >
-          Venez me découvrir
+        <button (click)="navigate(ROUTING.About)" class="button-outline cta-about">
+          Qui suis-je ?
         </button>
       </div>
     </div>
@@ -60,7 +56,7 @@
 </section>
 
 <!-- MARRIED BLOCK -->
-<section class="test">
+<section class="married">
   <div class="cta cta-img">
     <h2>Vous allez vous marier ?</h2>
     <div class="text-block">
@@ -68,10 +64,6 @@
         Quelle merveilleuse nouvelle ! Je suis ravi pour vous et je suis honoré
         que vous ayez pensé à moi pour vous accompagner dans cette étape si
         importante de votre vie.
-      </p>
-      <p>N'hésitez pas à me contacter si vous avez des questions ou des
-        préoccupations. Je serais ravi de discuter avec vous et de vous aider à
-        planifier votre mariage.
       </p>
     </div>
     <button class="white-color" (click)="navigate(ROUTING.Wedding)">
@@ -92,3 +84,21 @@
     <button>Je veux découvrir les photos de la journée</button>
   </div>
 </section> -->
+
+<!-- MARRIED BLOCK -->
+<section>
+    <div class="cta mt-md">
+      <h2>
+        Vous pouvez réserver votre séance dès à présent
+      </h2>
+      <div class="text-block">
+        <p>
+          N'hésitez pas à me contacter pour en savoir plus sur mes services, ainsi que pour réserver
+          votre séance. Je suis impatients de vous connaitre afin de capturer le mariage qui vous ressemble
+        </p>
+      </div>
+      <button class="primary-color button-outline" (click)="navigate(ROUTING.Wedding)">
+        Nous voulons faire connaissance
+      </button>
+    </div>
+</section>

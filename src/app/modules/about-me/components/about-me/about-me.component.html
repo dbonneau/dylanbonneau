@@ -1,11 +1,14 @@
 <!-- MENU -->
 <app-header [scrolledTheme]="true"></app-header>
 
+<img class="img-profile" src="https://i.goopics.net/hwudk2.jpg"
+  alt="dylan-bonneau-profile-portrait-mer-noir-blanc-zoom" />
+
 <section>
   <div class="text-block">
     <h1>Bonjour, Je suis Dylan Bonneau</h1>
     <p class="text">
-      Je suis un normand qui s'est perdu en bretagne depuis maintenant quelques
+      Je suis un normand qui s'est perdu en Bretagne depuis maintenant quelques
       années. Je vais bientôt passer le cap de la trentaine mais reste un
       éternel enfant en quête d'aventures et d'amusements.
     </p>
@@ -46,7 +49,13 @@
   </div>
 </section>
 
-<img class="img-profile" src="https://i.goopics.net/hwudk2.jpg" alt="dylan-bonneau-profile-portrait-mer-noir-blanc-zoom" />
+<div class="container-banner">
+  <img class="banner" src="/assets/images/portfolio/gallery/IMG_6479.jpg"
+    alt="Mathilde-maquillage-naturel-cheveux-fleurs-champetre" />
+  <div class="title-banner">
+    Le commencement
+  </div>
+</div>
 
 <section>
   <div class="text-block">
@@ -83,10 +92,19 @@
       ce moment là que j'ai su que je voulais devenir photographe de mariage.
       Pour vivre des instants émouvants, insolite et drôle.
     </p>
+
+    <div class="button-group">
+      <button (click)="navigate(ROUTING.Wedding)" class="is-medium primary-color button-outline">
+        Explorez mon univers
+      </button>
+      <button (click)="navigate(ROUTING.Contacts)" class="is-medium primary-color">
+        Parlons de votre projet
+      </button>
+    </div>
   </div>
 </section>
 
-<section>
+<!-- <section>
   <div class="text-block">
     <h2>Ne faites pas cette erreur !</h2>
     <p class="text">
@@ -181,4 +199,4 @@
       Nous voulons te rencontrer
     </button>
   </div>
-</section>
+</section> -->
