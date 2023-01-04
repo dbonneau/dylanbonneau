@@ -4,12 +4,12 @@ import { RouterModule } from '@angular/router';
 import { HighlightModule } from 'ngx-highlightjs';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { WeddingComponent } from './components/wedding/wedding.component';
-import { WeddingRoutingModule } from './wedding-routing.module';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ErrorsRoutingModule } from './errors-routing.module';
 
 @NgModule({
     declarations: [
-        WeddingComponent
+        PageNotFoundComponent
     ],
     imports: [
         CommonModule,
@@ -17,7 +17,7 @@ import { WeddingRoutingModule } from './wedding-routing.module';
         HighlightModule,
         ReactiveFormsModule,
         SharedModule,
-        WeddingRoutingModule
+        ErrorsRoutingModule
     ]
 })
-export class WeddingModule { }
+export class ErrorsModule { }

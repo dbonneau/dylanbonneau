@@ -56,7 +56,9 @@
                         },
                         "scripts": [],
                         "allowedCommonJsDependencies": [
-                            "rxjs/internal/operators/map"
+                            "rxjs/internal/operators/map",
+                            "rxjs/internal/operators/mergeMap",
+                            "rxjs/internal/operators/filter"
                          ]
                     },
                     "configurations": {

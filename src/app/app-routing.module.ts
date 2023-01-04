@@ -26,17 +26,11 @@ const routes: Routes = [
     {
         path: ROUTING_WEDDING,
         loadChildren: () => import('./modules/wedding/wedding.module').then(m => m.WeddingModule)
+    },
+    {
+        path: '**',
+        loadChildren: () => import('./modules/errors/errors.module').then(m => m.ErrorsModule)
     }
-    // {
-    //     path: ROUTING_DEMO,
-    //     loadChildren: () => import('./modules/demo/demo.module')
-    //         .then(m => m.DemoModule)
-    // },
-    // {
-    //   path: '**',
-    //   component: ErrorComponent,
-    //   data: { type: 404, message: 'Page not found' }
-    // }
 ];
 
 @NgModule({

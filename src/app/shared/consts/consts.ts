@@ -1,8 +1,8 @@
 export const ROUTING_HOME = 'home';
 export const ROUTING_GALERIES = 'galeries';
-export const ROUTING_CONTACTS = 'contacts';
+export const ROUTING_CONTACTS = 'me-contacter';
 export const ROUTING_ABOUT = 'a-propos';
-export const ROUTING_WEDDING = 'wedding';
+export const ROUTING_WEDDING = 'mariage';
 
 export const ROUTING_DEMO = 'demo';
 export const ROUTING_ICONS = 'icons';
