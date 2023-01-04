@@ -7,6 +7,7 @@ import { ArrowScrollComponent } from './components/arrow-scroll/arrow-scroll.com
 import { spinnerComponent } from './components/spinner/spinner.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { InfoboxComponent } from './components/infobox/infobox.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 const components = [
   HeaderComponent,
@@ -16,7 +17,7 @@ const components = [
   InfoboxComponent
 ];
 
-const material = [MatSnackBarModule];
+const material = [MatSnackBarModule, MatExpansionModule];
 
 @NgModule({
   declarations: [...components],
