@@ -5,6 +5,7 @@ import { filter } from 'rxjs/internal/operators/filter';
 import { mergeMap } from 'rxjs/internal/operators/mergeMap';
 import { SEOService } from './core/services/seo.service';
 
+declare const gtag: Function; // <------------Important: the declartion for gtag is required!
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -30,7 +31,10 @@ export class AppComponent implements OnInit {
             .subscribe((event) => {
                 this._seoService.updateTitle(event['title']);
                 //Updating Description tag dynamically with title
-                this._seoService.updateDescription(event['title'] + event['description'])
+                this._seoService.updateDescription(event['title'] + event['description']);
+                gtag('event', 'page_view', {
+                    page_path: event?.urlAfterRedirects
+                })
             });
     }
 }
