@@ -32,6 +32,7 @@ export class AppComponent implements OnInit {
                 this._seoService.updateTitle(event['title']);
                 //Updating Description tag dynamically with title
                 this._seoService.updateDescription(event['title'] + event['description']);
+                this._seoService.createLinkForCanonicalURL(event['canonical']);
                 gtag('event', 'page_view', {
                     page_path: event?.urlAfterRedirects
                 })
