@@ -1,51 +1,47 @@
+import { PlatformLocation } from '@angular/common';
 import { Component, OnInit, HostListener, Input } from '@angular/core';
-import { Router } from '@angular/router';
 import { ROUTING } from 'src/app/shared/consts/consts';
 
 @Component({
-    selector: 'app-header',
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @Input() scrolledTheme: boolean;
 
-    @Input() scrolledTheme: boolean;
+  public scrolled: boolean = false;
+  public hide: boolean = false;
+  public showMenu: boolean = false;
+  public height: number = 0;
+  public ROUTING = ROUTING;
 
-    public scrolled: boolean = false;
-    public hide: boolean = false;
-    public showMenu: boolean = false;
-    public height: number = 0;
-    public ROUTING = ROUTING;
-
-    @HostListener('window:scroll', ['$event'])
-    onWindowScroll() {
-        const pos = document.documentElement.scrollTop;
-        const max = 5;
-        if (pos <= max) {
-            this.scrolled = false;
-            this.hide = false;
-        } else {
-            this.scrolled = true;
-            setTimeout(() => {
-                this.hide = true;
-            }, 10);
-        }
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const pos = document.documentElement.scrollTop;
+    const max = 5;
+    if (pos <= max) {
+      this.scrolled = false;
+      this.hide = false;
+    } else {
+      this.scrolled = true;
+      setTimeout(() => {
+        this.hide = true;
+      }, 10);
     }
+  }
 
-    constructor(
-        private readonly _router: Router
-    ) {
-        this.scrolledTheme = false;
-    }
+  constructor(private readonly _platformLocation: PlatformLocation) {
+    this.scrolledTheme = false;
+  }
 
-    ngOnInit() {
-    }
+  ngOnInit() {}
 
-    toggleMenu() {
-        this.height = !this.height ? 100 : 0;
-    }
+  toggleMenu() {
+    this.height = !this.height ? 100 : 0;
+  }
 
-    redirect(route: string) {
-        this._router.navigate([`${route}`])
-    }
+  redirect(route: string) : string {
+    return `${(this._platformLocation as any).location.origin}${route}`;
+  }
 }
