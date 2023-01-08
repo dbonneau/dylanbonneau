@@ -3,6 +3,7 @@ export const ROUTING_GALERIES = 'galeries';
 export const ROUTING_CONTACTS = 'me-contacter';
 export const ROUTING_ABOUT = 'a-propos';
 export const ROUTING_WEDDING = 'mariage';
+export const ROUTING_LEGAL_NOTICE = 'mentions-legales';
 
 export const ROUTING_DEMO = 'demo';
 export const ROUTING_ICONS = 'icons';
@@ -11,21 +12,22 @@ export const ROUTING_BUTTONS = 'buttons';
 export const ROUTING_FORMS = 'forms';
 
 export const ROUTING = {
-    // Module Demo
-    Demo: `/${ROUTING_DEMO}`,
-    Icons: `/${ROUTING_DEMO}/${ROUTING_ICONS}`,
-    Colors: `/${ROUTING_DEMO}/${ROUTING_COLORS}`,
-    Buttons: `/${ROUTING_DEMO}/${ROUTING_BUTTONS}`,
-    Forms: `/${ROUTING_DEMO}/${ROUTING_FORMS}`,
-    // Module Home
-    Home: `/${ROUTING_HOME}`,
-    // Module Contacts
-    Contacts: `/${ROUTING_CONTACTS}`,
-    // Module Galeries
-    Galeries: `/${ROUTING_GALERIES}`,
-    // Module about
-    About: `/${ROUTING_ABOUT}`,
-    // Module wedding
-    Wedding: `/${ROUTING_WEDDING}`,
+  // Module Demo
+  Demo: `/${ROUTING_DEMO}`,
+  Icons: `/${ROUTING_DEMO}/${ROUTING_ICONS}`,
+  Colors: `/${ROUTING_DEMO}/${ROUTING_COLORS}`,
+  Buttons: `/${ROUTING_DEMO}/${ROUTING_BUTTONS}`,
+  Forms: `/${ROUTING_DEMO}/${ROUTING_FORMS}`,
+  // Module Home
+  Home: `/${ROUTING_HOME}`,
+  // Module Contacts
+  Contacts: `/${ROUTING_CONTACTS}`,
+  // Module Galeries
+  Galeries: `/${ROUTING_GALERIES}`,
+  // Module about
+  About: `/${ROUTING_ABOUT}`,
+  // Module wedding
+  Wedding: `/${ROUTING_WEDDING}`,
+  // Module legal notice
+  legalNotice: `/${ROUTING_LEGAL_NOTICE}`,
 };
-

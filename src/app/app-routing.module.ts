@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ROUTING_ABOUT, ROUTING_CONTACTS, ROUTING_DEMO, ROUTING_GALERIES, ROUTING_WEDDING } from './shared/consts/consts';
+import { ROUTING_ABOUT, ROUTING_CONTACTS, ROUTING_DEMO, ROUTING_GALERIES, ROUTING_LEGAL_NOTICE, ROUTING_WEDDING } from './shared/consts/consts';
 
 const routes: Routes = [
     {
@@ -26,6 +26,10 @@ const routes: Routes = [
     {
         path: ROUTING_WEDDING,
         loadChildren: () => import('./modules/wedding/wedding.module').then(m => m.WeddingModule)
+    },
+    {
+        path: ROUTING_LEGAL_NOTICE,
+        loadChildren: () => import('./modules/legal-notice/legal-notice.module').then(m => m.LegalNoticeModule)
     },
     {
         path: '**',

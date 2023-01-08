@@ -1,3 +1,43 @@
 <footer>
-    <p>Copyright &copy; {{dataNow | date: 'yyyy' }} | Dylan BONNEAU | All Rights Reserved.</p>
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <a href="#"
+          ><img
+            class="logo"
+            src="/assets/images/logo/logo-primary.png"
+            alt="logo"
+        /></a>
+        <div class="tagline">Photographe de mariage & créateur d'histoires</div>
+      </div>
+      <div class="links-main">
+        <div class="links-column">
+          <a class="link" [href]="redirect(ROUTING.About)">{{
+            "à propos" | uppercase
+          }}</a>
+        </div>
+        <div class="links-column">
+          <a class="link" [href]="redirect(ROUTING.Contacts)">{{
+            "me contacter" | uppercase
+          }}</a>
+        </div>
+        <div class="links-column">
+          <a class="link" [href]="redirect(ROUTING.Wedding)">{{
+            "mariage" | uppercase
+          }}</a>
+        </div>
+        <div class="links-column">
+          <a class="link" [href]="redirect(ROUTING.legalNotice)">{{
+            "mentions légales" | uppercase
+          }}</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        &copy; {{ dataNow | date : "yyyy" }} Dylan BONNEAU. Tous droits
+        réservés.
+      </div>
+    </div>
+  </div>
 </footer>
