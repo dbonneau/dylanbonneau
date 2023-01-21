@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'icons';
+@import 'mixins';
+@import 'button';
+@import 'utils';
+@import 'search';
+@import 'colorPalettes';
+@import 'sizes';
+@import 'typography';
+@import 'form';
+@import '~highlight.js/styles/atom-one-dark.css';
+
+/* You can add global styles to this file, and also import other style files */
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: $black;
+}
+
+* {
+  margin: 0;
+  font-family: 'Oswald script=latin rev=3',
+    Cardo,
+    Raleway,
+    sans-serif;
+}

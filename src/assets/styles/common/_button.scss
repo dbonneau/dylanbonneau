@@ -1,0 +1,252 @@
+a {
+  color: $link-color;
+  text-decoration: underline;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+button,
+.button {
+  display: inline-block;
+  position: relative;
+  padding: 0 $btn-h-padding;
+  transition: transform .1s cubic-bezier(.4, 0, .2, 1),
+    border-radius .25s cubic-bezier(.4, 0, .2, 1) .215s,
+    background .3s linear;
+  border-style: unset;
+  outline: none; // bad practise but was asked
+  background-color: transparent;
+  font-size: $btn-font-size;
+  line-height: calc(#{$btn-height} - (#{$btn-border-width} * 2));
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+
+  /**
+   * Buttons with icons on left or right
+   */
+  [class^=icon-] {
+    position: absolute;
+    font-size: 20px;
+    line-height: calc(#{$btn-height} - (#{$btn-border-width} * 2));
+  }
+
+  @each $position,
+  $opposite in (left, right),
+  (right, left) {
+    &.#{$position}-icon {
+      padding-#{$opposite}: 20px;
+      padding-#{$position}: calc(#{$btn-h-padding} + 25px);
+
+      [class^=icon-] {
+        #{$position}: calc(#{$btn-h-padding} - 5px);
+      }
+    }
+  }
+
+  &:not(.is-primary) {
+    border-width: $btn-border-width;
+    border-style: solid;
+    border-radius: $btn-radius;
+    border-color: $btn-border-color;
+    background-color: $btn-bg-color;
+    color: $btn-color;
+
+    &.primary-color {
+      background: $primary;
+
+      &:hover:not([disabled]) {
+        border-color: $primary;
+        background-color: transparent;
+        color: $primary;
+      }
+    }
+
+    &.secondary-color {
+      background: $secondary;
+
+      &:hover:not([disabled]) {
+        border-color: $secondary;
+        background-color: transparent;
+        color: $secondary;
+      }
+    }
+
+    &.tertiary-color {
+      background: $tertiary;
+
+      &:hover:not([disabled]) {
+        border-color: $tertiary;
+        background-color: transparent;
+        color: $tertiary;
+      }
+    }
+
+    &.white-color {
+      background: $white;
+      color: $black;
+
+      &:hover:not([disabled]) {
+        border-color: $white;
+        background-color: transparent;
+        color: $white;
+      }
+    }
+
+    &.button-hover-white {
+      border-style: hidden;
+
+      &:hover:not([disabled]) {
+        border-style: hidden;
+        background-color: $white;
+        color: $grey-3;
+      }
+    }
+
+    &.button-outline {
+      border-color: $grey-3;
+      background-color: transparent;
+      color: $grey-3;
+
+      &:hover:not([disabled]) {
+        border-color: $grey-3;
+        background-color: $grey-3;
+        color: $white;
+      }
+
+      &.primary-color {
+        border-color: $primary;
+        background-color: transparent;
+        color: $primary;
+
+        &:hover:not([disabled]) {
+          border-color: $primary;
+          background-color: $primary;
+          color: $white;
+        }
+      }
+
+      &.secondary-color {
+        border-color: $secondary;
+        background-color: transparent;
+        color: $secondary;
+
+        &:hover:not([disabled]) {
+          border-color: $secondary;
+          background-color: $secondary;
+          color: $white;
+        }
+      }
+
+      &.tertiary-color {
+        border-color: $tertiary;
+        background-color: transparent;
+        color: $tertiary;
+
+        &:hover:not([disabled]) {
+          border-color: $tertiary;
+          background-color: $tertiary;
+          color: $white;
+        }
+      }
+
+      &.white-color {
+        border-color: $white;
+        background-color: transparent;
+        color: $white;
+
+        &:hover:not([disabled]) {
+          border-color: $white;
+          background-color: $white;
+          color: $black;
+        }
+      }
+    }
+
+    &:hover:not([disabled]) {
+      border-style: double;
+      border-color: $grey-3;
+      background-color: transparent;
+      color: $grey-3;
+    }
+
+    &:active {
+      background-color: darken($btn-hover-bg-color, 3%);
+    }
+
+    &.is-disabled,
+    &[disabled],
+    &:disabled {
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: $btn-disabled-border-color;
+        opacity: $btn-disabled-opacity;
+        background-color: $btn-disabled-bg-color;
+        color: $btn-disabled-color;
+        cursor: default;
+      }
+    }
+  }
+
+  &.is-medium {
+    padding: 0 $btn-medium-h-padding;
+    line-height: $btn-medium-line-height;
+
+    [class^=icon-] {
+      font-size: 16px;
+      line-height: #{$btn-medium-line-height};
+    }
+  }
+
+  &.small {
+    font-size: calc(#{$btn-font-size} * .85);
+  }
+
+}
+
+/**
+   * Button positioning with wrappers
+   */
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  &.align-center {
+    justify-content: center;
+  }
+
+  &.align-right {
+    justify-content: flex-end;
+  }
+
+  &.split {
+    justify-content: space-between;
+  }
+
+  &:not(.align-items-start) {
+    align-items: center;
+  }
+
+  button,
+  .button {
+    margin-left: 5px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+/**
+   * Tooltips
+   */
+[class*=-tooltip] {
+  color: $grey-8;
+  font-size: 18px;
+  cursor: pointer;
+}

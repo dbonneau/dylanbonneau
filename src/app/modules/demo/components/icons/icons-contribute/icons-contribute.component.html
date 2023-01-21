@@ -1,0 +1,119 @@
+<div class="container">
+
+  <div class="grid">
+    <div class="grid-items center">
+      <h1 class="center">Lignes directrices de conception et de production</h1>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="grid-items center">
+      <p>Vous ne voyez pas l'icône dont vous avez besoin dans la bibliothèque?
+        Vous pouvez en ajouter! Suivez ces instructions pour garantir la cohérence visuelle
+        et la mise en forme appropriée.
+      </p>
+
+      <ul class="flex flex-column">
+        <li class="list-item Markdown-module-list-item">
+          <span>
+            Toutes les icônes doivent être uniques et non redondantes avec les icônes existantes dans le système.
+            Recherchez dans la bibliothèque le ou les mots-clés associés à la nouvelle icône proposée
+            pour vous assurer qu'elle n'est pas déjà représentée.
+          </span>
+        </li>
+        <li class="list-item Markdown-module-list-item">
+          <span>
+            Toutes les icônes doivent être utilisables sur toutes les plateformes et tous les appareils pris en charge.
+          </span>
+        </li>
+        <li class="list-item Markdown-module-list-item">
+          <span>
+            Toutes les icônes doivent être compréhensibles par un public mondial d'utilisateurs, quelle que soit leur
+            nationalité ou leur langue.
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!----------------- create ----------------->
+  <div class="grid">
+    <div class="grid-items center flex flex-column">
+      <h3>Créer une icône</h3>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="grid-items center">
+      <ul class="flex flex-column">
+        <li class="list-item Markdown-module-list-item">
+          <span>
+            Créez un plan de travail 24 x 24 px pour chaque icône.
+          </span>
+        </li>
+        <li class="list-item Markdown-module-list-item">
+          <span>
+            Assurez-vous de nommer correctement les calques et les plans de travail
+            (ces noms seront également exportés dans le code).</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!----------------- export ----------------->
+  <div class="grid">
+    <div class="grid-items center flex flex-column">
+      <h3>Exportation de SVG</h3>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="grid-items center">
+      <ul class="flex flex-column">
+        <li class="list-item Markdown-module-list-item">
+          <span>
+            Rendez-vous sur <a href="https://icomoon.io/app/#/select" target="_blank">icomoon.io</a>
+          </span>
+        </li>
+        <li class="list-item Markdown-module-list-item">
+          <span>
+            Appuyez sur <span class="primary-color">Import Icons</span>
+          </span>
+        </li>
+        <li class="list-item Markdown-module-list-item">
+          <span>
+            Ajoutez le fichier <a href="/assets/fonts/common/icons/icomoon.woff">icomoon.woff</a>
+          </span>
+        </li>
+        <li class="list-item Markdown-module-list-item">
+          <span>
+            Ajoutez vos icônes (possibilité de récupérer ici : <a href="https://boxicons.com/" target="_blank">boxicons.com</a>)
+          </span>
+        </li>
+        <li class="list-item Markdown-module-list-item">
+          <span>
+            téléchargez le nouveau fichier
+          </span>
+        </li>
+        <li class="list-item Markdown-module-list-item">
+          <span>
+            Remplacer l'ancien fichier <span class="primary-color">/assets/fonts/common/icons/icomoon.woff</span>
+          </span>
+        </li>
+      </ul>
+      <p>
+        Ne pas oublier de rajouter dans <span class="primary-color">/assets/styles/common/_icons.scss</span> le code
+        suivant :
+      </p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="grid-items center">
+      <div>
+        <pre><code [highlight]="newIcon" [languages]="['css']"></code></pre>
+      </div>
+    </div>
+  </div>
+
+</div>

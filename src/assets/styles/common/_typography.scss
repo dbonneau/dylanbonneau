@@ -1,0 +1,67 @@
+@import "../modules/fonts/fonts";
+
+/**
+ * Titles
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.small-caps {
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-bold,
+strong {
+  font-weight: 700;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.title,
+.subtitle {
+  color: black;
+  text-align: center;
+  font-family: "Unna";
+}
+
+.title {
+  &:not(.with-subtitle) {
+    margin-bottom: 80px;
+  }
+  
+  font-size: 3.125rem;
+}
+
+.subtitle {
+  margin-bottom: 80px;
+  font-size: 1rem;
+}
+
+.text-left {
+  text-align: left;
+}

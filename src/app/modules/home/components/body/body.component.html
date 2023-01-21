@@ -1,0 +1,121 @@
+<!-- MENU -->
+<app-header></app-header>
+
+<!-- FIRST BLOCK -->
+<section class="promo-photo">
+  <div class="cta cta-img">
+    <h1>Dylan, Photographe de mariage</h1>
+    <h2>
+      Je vous accompagne dans votre histoire,<br />
+      pour des photos qui vous ressemblent
+    </h2>
+    <app-arrow-scroll></app-arrow-scroll>
+  </div>
+</section>
+
+<section>
+  <div class="sensitivity">
+    <div class="img">
+      <img src="https://i.goopics.net/rqgl1g.jpg" alt="fenetre-chateau-robe-dentelle-lustre-lumiere-naturelle-portrait" />
+    </div>
+    <div class="text">
+      <p>
+        A chaque fois que je prends mon appareil photo, c'est comme si je
+        pouvais regarder à travers cette fenêtre et saisir les instants les plus
+        précieux. Ma sensibilité me permet d'apercevoir les détails des plus
+        subtils, les regards complices et les sourires émus qui composents votre
+        journée.
+      </p>
+      <p>
+        C'est un véritable plaisir, qui me touche profondément d'être le témoin
+        de l'amour que se donnent deux personnes. L'amour est un sentiment
+        complexe et magnifique qui prend des formes différentes pour chaque
+        couple.
+      </p>
+      <p>
+        C'est quelque chose qui m'inspire, qui me remplit d'émotions et qui me
+        donne l'impression que tout est possible. C'est un privilège de pouvoir
+        capturer ces moments pour les partager avec le monde entier.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT BLOCK -->
+<section>
+  <div class="about">
+    <div class="text">
+      <h3>Salut, je m'appelle Dylan</h3>
+      <p>Je suis ravi de vous présenter mon univers.</p>
+      <p>
+        Imaginons un rendez-vous autour d'un café, d'un chocolat chaud ou d'un
+        thé, où nous pourrons décrire et discuter de votre relation, comme un
+        roman captivant qui se déroule sous nos yeux. Chacun des moments
+        capturés sera comme les chapitres d'une merveilleuse romance, mettant en
+        lumière l'évolution et l'ivresse de votre amour.
+      </p>
+      <button
+        (click)="navigate(ROUTING.About)"
+        class="button-outline cta-about"
+      >
+        Nous voulons te connaître
+      </button>
+    </div>
+    <div class="img">
+      <h2 class="title with-subtitle" data-title="En france et à l'étranger">
+        Photographe de mariage
+      </h2>
+      <img src="https://i.goopics.net/uayjvt.jpg" alt="dylan-bonneau-profile-portrait-mer-noir-blanc" />
+    </div>
+  </div>
+</section>
+
+<!-- MARRIED BLOCK -->
+<section class="married">
+  <div class="cta cta-img">
+    <h2>Vous allez vous marier ?</h2>
+    <div class="text-block">
+      <p>
+        Quelle merveilleuse nouvelle ! Je suis ravi pour vous et je suis honoré
+        que vous ayez pensé à moi pour vous accompagner dans cette étape si
+        importante de votre vie.
+      </p>
+    </div>
+    <button class="white-color" (click)="navigate(ROUTING.Wedding)">
+      Nous voulons contempler notre histoire
+    </button>
+  </div>
+</section>
+
+<!-- ASSISTED BLOCK -->
+<!-- <section>
+  <div class="cta cta-white">
+    <h2>Vous avez assisté à un mariage ?</h2>
+    <div class="text-block">
+      <p>Nous nous sommes rencontrés il y a peu et vous voulez contempler les photos ?</p>
+      <p>Vous attendez avec impatience de vous remémorer les moments les plus magiques de cette journée ?</p>
+      <p>Il vous suffit de cliquer sur ce bouton et de rentrer le code</p>
+    </div>
+    <button>Je veux découvrir les photos de la journée</button>
+  </div>
+</section> -->
+
+<!-- MARRIED BLOCK -->
+<section>
+  <div class="cta mt-md">
+    <h2>Vous pouvez réserver votre séance dès à présent</h2>
+    <div class="text-block">
+      <p>
+        N'hésitez pas à me contacter pour en savoir plus sur mes services, ainsi
+        que pour réserver votre séance. Je suis impatients de vous connaitre
+        afin de capturer le mariage qui vous ressemble
+      </p>
+    </div>
+    <button
+      class="primary-color button-outline"
+      (click)="navigate(ROUTING.Wedding)"
+    >
+      Nous voulons faire connaissance
+    </button>
+  </div>
+</section>

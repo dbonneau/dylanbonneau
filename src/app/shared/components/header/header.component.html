@@ -1,0 +1,35 @@
+<nav
+  [ngClass]="{
+    hide: hide || scrolledTheme,
+    scrolled: scrolled || scrolledTheme
+  }"
+>
+  <div></div>
+  <!-- <span class="logo">Dylan</span> -->
+  <div class="open-menu">
+    <i class="icon icon-menu" (click)="toggleMenu()"></i>
+  </div>
+  <ul
+    class="main-menu"
+    [ngStyle]="{ display: 'flex', top: height ? '0' : '-1000%' }"
+  >
+    <li *ngIf="scrolled || scrolledTheme">
+      <a href="#"><img src="/assets/images/logo/logo.png" alt="logo" /></a>
+    </li>
+    <li *ngIf="!scrolled && !scrolledTheme">
+      <a href="#"
+        ><img src="/assets/images/logo/logo-white.png" alt="logo-white"
+      /></a>
+    </li>
+    <li><a class="link" [href]="redirect(ROUTING.About)">À propos</a></li>
+    <li><a class="link" [href]="redirect(ROUTING.Contacts)">me contacter</a></li>
+    <li><a class="link" [href]="redirect(ROUTING.Wedding)">mariage</a></li>
+    <!-- <li><a class='link' [href]="redirect(ROUTING.Galeries)">Galeries</a></li> -->
+    <!-- <li><a class='link' href="#">Clients</a></li> -->
+    <div class="close-menu">
+      <i class="icon icon-x" (click)="toggleMenu()"></i>
+    </div>
+  </ul>
+</nav>
+
+<div class="header" *ngIf="scrolledTheme"></div>

@@ -4,29 +4,53 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:ci": "ng serve --configuration production",
     "build": "ng build",
+    "build:ci": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
+    "watch:ci": "ng build --watch --configuration production",
     "test": "ng test",
-    "commit": "npx cz"
+    "test:ci": "ng test --browsers ChromeHeadlessCI --code-coverage --watch=false",
+    "test:chrome": "ng test --browsers Chrome --code-coverage --watch=true",
+    "lint": "npm run lint:styles && ng lint --type-check",
+    "lint:styles": "stylelint \"src/app/**/*.scss\" \"src/assets/styles/**/*.scss\" --fix",
+    "lint:ci": "ng lint",
+    "lint:fix": "eslint -c .eslintrc.json --ext .ts src/ --fix",
+    "commit": "git-cz"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~12.2.0",
-    "@angular/common": "~12.2.0",
-    "@angular/compiler": "~12.2.0",
-    "@angular/core": "~12.2.0",
-    "@angular/forms": "~12.2.0",
-    "@angular/platform-browser": "~12.2.0",
-    "@angular/platform-browser-dynamic": "~12.2.0",
-    "@angular/router": "~12.2.0",
+    "@angular/animations": "~13.3.11",
+    "@angular/cdk": "^13.3.9",
+    "@angular/common": "~13.3.11",
+    "@angular/compiler": "~13.3.11",
+    "@angular/core": "~13.3.11",
+    "@angular/forms": "~13.3.11",
+    "@angular/material": "^13.3.9",
+    "@angular/platform-browser": "~13.3.11",
+    "@angular/platform-browser-dynamic": "~13.3.11",
+    "@angular/router": "~13.3.11",
+    "@commitlint/cli": "^11.0.0",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
+    "commitizen": "^4.2.2",
+    "cz-customizable": "^6.3.0",
+    "highlight.js": "^11.2.0",
+    "ngx-highlightjs": "^4.1.4",
     "rxjs": "~6.6.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-property-sort-order-smacss": "^7.1.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
+    "stylelint-no-unsupported-browser-features": "^5.0.1",
+    "stylelint-scss": "^3.20.1",
     "tslib": "^2.3.0",
+    "tslint": "^6.1.3",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.2.2",
-    "@angular/cli": "~12.2.2",
-    "@angular/compiler-cli": "~12.2.0",
+    "@angular-devkit/build-angular": "~13.3.9",
+    "@angular/cli": "~13.3.9",
+    "@angular/compiler-cli": "~13.3.11",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.8.0",
@@ -35,6 +59,16 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.3.5"
+    "typescript": "~4.6.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

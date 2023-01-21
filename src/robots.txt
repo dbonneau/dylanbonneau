@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /demo/
+Sitemap: https://www.dylanbonneau.fr/sitemap.xml

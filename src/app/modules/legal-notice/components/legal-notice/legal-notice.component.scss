@@ -1,0 +1,25 @@
+.text-block {
+  margin: 10px 0;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 48px);
+  min-height: calc(100vh - 300px);
+  text-align: center;
+  padding: 24px;
+
+  h1,
+  h2,
+  p {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 900px) {
+      max-width: 1000px;
+    }
+  }
+}

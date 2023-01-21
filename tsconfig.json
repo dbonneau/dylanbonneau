@@ -19,8 +19,27 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+        "@app/*": ["app/*"],
+        "@env/*": ["environments/*"],
+        "@core/*": ["app/core/*"],
+        "@api/*": ["app/core/api/*"],
+        "@shared/*": ["app/shared/*"],
+        "@consts/*": ["app/shared/consts/*"],
+        "@directives/*": ["app/shared/directives/*"],
+        "@tools/*": ["app/core/tools/*"],
+        "@models/*": ["app/core/models/*"],
+        "@material/*": ["app/modules/angular-material/*"],
+        "@generated/*": ["app/generated/*"],
+      }
   },
+  "exclude": [
+    "e2e/**",
+    "src/generated/**",
+    "**/*.json",
+    "*.json"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
