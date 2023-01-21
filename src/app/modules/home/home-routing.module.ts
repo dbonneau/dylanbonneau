@@ -8,7 +8,7 @@ const routes: Routes = [
         component: BodyComponent,
         data: {
             title: 'Dylan Bonneau - Photographe de mariage',
-            description: 'Photographe de mariage & créateur d\'histoires. Je vous conseille et vous accompagne tout au long de votre journée.'        }
+            description: ' Je vous accompagne dans votre histoire, pour des photos qui vous ressemblent'        }
     }
 ];
 

@@ -4,62 +4,68 @@
 <!-- FIRST BLOCK -->
 <section class="promo-photo">
   <div class="cta cta-img">
-    <h1>
-      Photographe de mariage <br />
-      & créateur d'histoires
-    </h1>
+    <h1>Dylan, Photographe de mariage</h1>
+    <h2>
+      Je vous accompagne dans votre histoire,<br />
+      pour des photos qui vous ressemblent
+    </h2>
     <app-arrow-scroll></app-arrow-scroll>
   </div>
 </section>
 
+<section>
+  <div class="sensitivity">
+    <div class="img">
+      <img src="https://i.goopics.net/rqgl1g.jpg" alt="fenetre-chateau-robe-dentelle-lustre-lumiere-naturelle-portrait" />
+    </div>
+    <div class="text">
+      <p>
+        A chaque fois que je prends mon appareil photo, c'est comme si je
+        pouvais regarder à travers cette fenêtre et saisir les instants les plus
+        précieux. Ma sensibilité me permet d'apercevoir les détails des plus
+        subtils, les regards complices et les sourires émus qui composents votre
+        journée.
+      </p>
+      <p>
+        C'est un véritable plaisir, qui me touche profondément d'être le témoin
+        de l'amour que se donnent deux personnes. L'amour est un sentiment
+        complexe et magnifique qui prend des formes différentes pour chaque
+        couple.
+      </p>
+      <p>
+        C'est quelque chose qui m'inspire, qui me remplit d'émotions et qui me
+        donne l'impression que tout est possible. C'est un privilège de pouvoir
+        capturer ces moments pour les partager avec le monde entier.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- ABOUT BLOCK -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="section-header mt-xxl">
-      <h2 class="title" data-title="Rennes, Nantes et Caen">
+<section>
+  <div class="about">
+    <div class="text">
+      <h3>Salut, je m'appelle Dylan</h3>
+      <p>Je suis ravi de vous présenter mon univers.</p>
+      <p>
+        Imaginons un rendez-vous autour d'un café, d'un chocolat chaud ou d'un
+        thé, où nous pourrons décrire et discuter de votre relation, comme un
+        roman captivant qui se déroule sous nos yeux. Chacun des moments
+        capturés sera comme les chapitres d'une merveilleuse romance, mettant en
+        lumière l'évolution et l'ivresse de votre amour.
+      </p>
+      <button
+        (click)="navigate(ROUTING.About)"
+        class="button-outline cta-about"
+      >
+        Nous voulons te connaître
+      </button>
+    </div>
+    <div class="img">
+      <h2 class="title with-subtitle" data-title="En france et à l'étranger">
         Photographe de mariage
       </h2>
-      <h3>Bonjour, je suis Dylan Bonneau</h3>
-    </div>
-
-    <div class="section-body grid">
-      <div>
-        <img
-          class="img-profile"
-          src="https://i.goopics.net/uayjvt.jpg"
-          alt="dylan-bonneau-profile-portrait-mer-noir-blanc"
-        />
-      </div>
-
-      <div>
-        <div class="text-block">
-          <p class="text">
-            Je suis ravi de vous présenter mon univers photographique.
-          </p>
-          <p class="text">
-            Mon objectif est de vous offrir des photos uniques et authentiques,
-            reflétant votre histoire et votre amour. Je m'efforce de capturer
-            l'essence même de votre jour de mariage, en mettant en avant vos
-            émotions et votre personnalité.
-          </p>
-          <p class="text">
-            Je suis convaincu que chaque mariage est unique et je prends un soin
-            particulier à comprendre vos souhaits et vos besoins afin de créer
-            des souvenirs inoubliables de cet événement spécial.
-          </p>
-          <p class="text">
-            Je vous invite à parcourir mon site pour découvrir mon travail et à
-            me contacter si vous avez des questions ou si vous souhaitez
-            réserver une séance.
-          </p>
-        </div>
-        <button
-          (click)="navigate(ROUTING.About)"
-          class="button-outline cta-about"
-        >
-          Nous voulons te connaître
-        </button>
-      </div>
+      <img src="https://i.goopics.net/uayjvt.jpg" alt="dylan-bonneau-profile-portrait-mer-noir-blanc" />
     </div>
   </div>
 </section>
