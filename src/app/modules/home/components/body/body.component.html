@@ -69,10 +69,11 @@
 </section>
 
 <section class="testimonials">
+  <h2 class="title">Ils se sont dit oui devant mon appareil</h2>
   <div class="testimonial-wrapper" *ngFor="let testimonial of testimonials">
     <div class="testimonial-img-wrapper">
       <div class="img">
-        <img [src]="testimonial?.imgUrl" [alt]="testimonial?.authors">
+        <img [src]="testimonial?.imgUrl" [alt]="testimonial?.algImg">
       </div>
     </div>
     <div class="testimonial-text-wrapper">
@@ -91,7 +92,7 @@
 </section>
 
 <!-- MARRIED BLOCK -->
-<section class="married">
+<!-- <section class="married">
   <div class="cta cta-img">
     <h2>Vous allez vous marier ?</h2>
     <div class="text-block">
@@ -105,7 +106,7 @@
       Nous voulons contempler notre histoire
     </button>
   </div>
-</section>
+</section> -->
 
 <!-- ASSISTED BLOCK -->
 <!-- <section>
@@ -121,10 +122,11 @@
 </section> -->
 
 <!-- MARRIED BLOCK -->
-<section>
-  <div class="cta mt-md">
-    <h2>Vous voulez que je vous accompagne ?</h2>
-    <h3>Confiez moi votre mariage idéal !</h3>
+<div>
+  <div class="cta">
+    <h2 class="title with-subtitle" data-title="Confiez moi votre mariage idéal !">
+      Vous voulez que je vous accompagne ?
+    </h2>
     <div class="text-block">
       <p>
         N'hésitez pas à me contacter dès maintenant pour discuter de vos projets de mariage et pour réserver votre date.
@@ -134,4 +136,4 @@
       Nous voulons faire connaissance
     </button>
   </div>
-</section>
+</div>
