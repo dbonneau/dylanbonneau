@@ -7,12 +7,13 @@
   min-height: 100vh;
 }
 
-
 .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 0 4px;
+  max-width: 1500px;
+  margin: auto;
 }
 
 .column {
