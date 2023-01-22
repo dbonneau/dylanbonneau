@@ -23,7 +23,7 @@ export class IconsComponent implements OnInit {
     'bxs-chevron-down', 'bxs-chevron-up', 'bxs-chevron-right',
     'bxs-chevron-left', 'bxs-info-circle', 'bx-info-circle',
     'bx-minus', 'bx-plus', 'bxs-right-arrow', 'bxs-left-arrow',
-    'bxs-up-arrow', 'bxs-down-arrow'
+    'bxs-up-arrow', 'bxs-down-arrow', 'bxs-quote-alt-right', 'bxs-quote-alt-left'
   ];
 
   constructor() {

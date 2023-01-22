@@ -13,10 +13,37 @@
   </div>
 </section>
 
+<!-- ABOUT BLOCK -->
+<section>
+  <div class="about">
+    <div class="text">
+      <h3>Salut, je m'appelle Dylan</h3>
+      <p>Je suis ravi de vous présenter mon univers.</p>
+      <p>
+        Imaginons un rendez-vous autour d'un café, d'un chocolat chaud ou d'un
+        thé, où nous pourrons décrire et discuter de votre relation, comme un
+        roman captivant qui se déroule sous nos yeux. Chacun des moments
+        capturés sera comme les chapitres d'une merveilleuse romance, mettant en
+        lumière l'évolution et l'ivresse de votre amour.
+      </p>
+      <button (click)="navigate(ROUTING.About)" class="button-outline cta-about">
+        Nous voulons te connaître
+      </button>
+    </div>
+    <div class="img">
+      <h2 class="title with-subtitle" data-title="En france et à l'étranger">
+        Photographe de mariage
+      </h2>
+      <img src="https://i.goopics.net/uayjvt.jpg" alt="dylan-bonneau-profile-portrait-mer-noir-blanc" />
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="sensitivity">
     <div class="img">
-      <img src="https://i.goopics.net/rqgl1g.jpg" alt="fenetre-chateau-robe-dentelle-lustre-lumiere-naturelle-portrait" />
+      <img src="https://i.goopics.net/rqgl1g.jpg"
+        alt="fenetre-chateau-robe-dentelle-lustre-lumiere-naturelle-portrait" />
     </div>
     <div class="text">
       <p>
@@ -41,31 +68,24 @@
   </div>
 </section>
 
-<!-- ABOUT BLOCK -->
-<section>
-  <div class="about">
-    <div class="text">
-      <h3>Salut, je m'appelle Dylan</h3>
-      <p>Je suis ravi de vous présenter mon univers.</p>
-      <p>
-        Imaginons un rendez-vous autour d'un café, d'un chocolat chaud ou d'un
-        thé, où nous pourrons décrire et discuter de votre relation, comme un
-        roman captivant qui se déroule sous nos yeux. Chacun des moments
-        capturés sera comme les chapitres d'une merveilleuse romance, mettant en
-        lumière l'évolution et l'ivresse de votre amour.
-      </p>
-      <button
-        (click)="navigate(ROUTING.About)"
-        class="button-outline cta-about"
-      >
-        Nous voulons te connaître
-      </button>
+<section class="testimonials">
+  <div class="testimonial-wrapper" *ngFor="let testimonial of testimonials">
+    <div class="testimonial-img-wrapper">
+      <div class="img">
+        <img [src]="testimonial?.imgUrl" [alt]="testimonial?.authors">
+      </div>
     </div>
-    <div class="img">
-      <h2 class="title with-subtitle" data-title="En france et à l'étranger">
-        Photographe de mariage
-      </h2>
-      <img src="https://i.goopics.net/uayjvt.jpg" alt="dylan-bonneau-profile-portrait-mer-noir-blanc" />
+    <div class="testimonial-text-wrapper">
+      <h3>{{ testimonial?.city | uppercase}}</h3>
+      <h4>{{ testimonial?.region }}</h4>
+      <div class="testimonial-text">
+        <p *ngFor="let text of testimonial?.texts">
+          {{ text }}
+        </p>
+      </div>
+      <div class="authors">
+        {{ testimonial?.authors }}
+      </div>
     </div>
   </div>
 </section>
@@ -103,18 +123,14 @@
 <!-- MARRIED BLOCK -->
 <section>
   <div class="cta mt-md">
-    <h2>Vous pouvez réserver votre séance dès à présent</h2>
+    <h2>Vous voulez que je vous accompagne ?</h2>
+    <h3>Confiez moi votre mariage idéal !</h3>
     <div class="text-block">
       <p>
-        N'hésitez pas à me contacter pour en savoir plus sur mes services, ainsi
-        que pour réserver votre séance. Je suis impatients de vous connaitre
-        afin de capturer le mariage qui vous ressemble
+        N'hésitez pas à me contacter dès maintenant pour discuter de vos projets de mariage et pour réserver votre date.
       </p>
     </div>
-    <button
-      class="primary-color button-outline"
-      (click)="navigate(ROUTING.Wedding)"
-    >
+    <button class="primary-color button-outline" (click)="navigate(ROUTING.Contacts)">
       Nous voulons faire connaissance
     </button>
   </div>
