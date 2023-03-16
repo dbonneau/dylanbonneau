@@ -22,7 +22,7 @@ section {
 }
 
 .cta-img {
-  background-color: #0000004a;
+  background-color: #0000001a;
   color: white;
   padding-top: 18.75rem;
   height: calc(100vh - 18.75rem) !important;
@@ -81,26 +81,6 @@ h2 {
   padding: 0 4rem;
 }
 
-.title {
-  display: block;
-  position: relative;
-  margin-bottom: 0.625rem;
-  padding-bottom: 1rem;
-  font-size: 2.8rem;
-  line-height: 1;
-
-  &::after {
-    content: attr(data-title);
-    display: block;
-    margin-top: 0.938rem;
-    color: $primary;
-    font-size: 1.15rem;
-    font-weight: 500;
-    letter-spacing: 0.188rem;
-    text-transform: uppercase;
-  }
-}
-
 .title-sm {
   color: $grey-3;
   font-size: 1.6rem;
@@ -131,6 +111,8 @@ h2 {
   align-items: center;
   justify-content: center;
   flex-direction: column-reverse;
+  padding-top: 100px;
+  height: 100%;
 
   .img {
     padding: 24px;
@@ -166,8 +148,9 @@ h2 {
   }
 
   @media screen and (min-width: 1280px) {
+    height: 100vh;
     flex-direction: row;
-    padding-top: 250px;
+    padding-top: 0;
 
     .img {
       margin-left: 100px;
@@ -233,7 +216,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
 
   .img {
     padding: 24px;
@@ -267,7 +250,7 @@ h2 {
 
     .img {
       img {
-        margin: 150px 0 30px 200px;
+        margin: 0 0 30px 200px;
       }
     }
 
@@ -281,7 +264,9 @@ h2 {
   padding: 32px;
 
   .title {
-    margin: 100px auto;
+    @media screen and (min-width: 1280px) {
+      margin: 100px auto;
+    }
   }
 
   .testimonial-wrapper {

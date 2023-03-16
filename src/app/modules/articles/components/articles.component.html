@@ -1,0 +1,62 @@
+<!-- MENU -->
+<app-header [scrolledTheme]="true"></app-header>
+
+<div class="block">
+  <h1 class="title with-subtitle" data-title="le Blog">
+    Photographe de mariage
+  </h1>
+  <div class="text-block">
+    <p>
+      Vous êtes sur le point de vivre le plus beau jour de votre vie ? Vous êtes
+      à la recherche d'un photographe de mariage pour capturer les moments les
+      plus précieux de votre journée ? Vous êtes tombé au bon endroit !
+    </p>
+    <p>
+      Mon but aujourd'hui ? Vous aider dans le préparation de votre mariage ! Je
+      suis là pour vous offrir des conseils amusants, des astuces pour des
+      photos incroyables, et des idées pour que vous puissiez immortaliser votre
+      amour à jamais. Rejoignez moi pour une aventure photographique inoubliable
+      !
+    </p>
+  </div>
+  <app-spinner *ngIf="loading"></app-spinner>
+  <app-infobox *ngIf="error" title="Une erreur est survenue, veuillez réessayer ultérieurement" [type]="EInfoBox.ERROR"></app-infobox>
+  
+  <app-infobox *ngIf="!lastArticle" title="Auncun article pour le moments" [type]="EInfoBox.WARNING"></app-infobox>
+
+  <ng-container *ngIf="!loading">
+    <div class="last-article" *ngIf="lastArticle" (click)="navigateTo(lastArticle)">
+      <div class="image">
+        <img
+          [src]="lastArticle.fields.featureImage"
+          [alt]="lastArticle.fields.description"
+        />
+      </div>
+      <div class="content-container">
+        <div class="content">
+          <h2>{{ lastArticle.fields.title }}</h2>
+          <h3>{{ lastArticle.fields.subtitle }}</h3>
+          <em class="description">{{ lastArticle.fields.description }}</em>
+        </div>
+      </div>
+    </div>
+    <div class="articles">
+      <article class="article" *ngFor="let article of articles" (click)="navigateTo(lastArticle)">
+        <div class="image">
+          <img
+            [src]="article?.fields?.featureImage"
+            [alt]="article?.fields?.description"
+          />
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <h2>{{ article?.fields?.title }}</h2>
+            <h3>{{ article?.fields?.subtitle }}</h3>
+            <em class="description">{{ article?.fields?.description }}</em>
+            <button class="is-medium primary-color">Lire l'article</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </ng-container>
+</div>

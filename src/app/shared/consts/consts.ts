@@ -3,6 +3,7 @@ export const ROUTING_GALERIES = 'galeries';
 export const ROUTING_CONTACTS = 'me-contacter';
 export const ROUTING_ABOUT = 'a-propos';
 export const ROUTING_WEDDING = 'mariage';
+export const ROUTING_BLOGS = 'blogs';
 export const ROUTING_LEGAL_NOTICE = 'mentions-legales';
 
 export const ROUTING_DEMO = 'demo';
@@ -28,6 +29,8 @@ export const ROUTING = {
   About: `/${ROUTING_ABOUT}`,
   // Module wedding
   Wedding: `/${ROUTING_WEDDING}`,
+  // Module blogs
+  Blogs: `/${ROUTING_BLOGS}`,
   // Module legal notice
   legalNotice: `/${ROUTING_LEGAL_NOTICE}`,
 };

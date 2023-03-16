@@ -50,11 +50,27 @@ strong {
 }
 
 .title {
+  display: block;
+  position: relative;
+  margin-bottom: 0.625rem;
+  padding-bottom: 1rem;
+  font-size: 2.8rem;
+  line-height: 1;
+
+  &::after {
+    content: attr(data-title);
+    display: block;
+    margin-top: 0.938rem;
+    color: $primary;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.188rem;
+    text-transform: uppercase;
+  }
+
   &:not(.with-subtitle) {
     margin-bottom: 80px;
   }
-  
-  font-size: 3.125rem;
 }
 
 .subtitle {
