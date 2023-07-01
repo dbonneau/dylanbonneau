@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import {
   ROUTING_ABOUT,
   ROUTING_BLOGS,
-  ROUTING_CONTACTS,
   ROUTING_DEMO,
   ROUTING_GALERIES,
   ROUTING_LEGAL_NOTICE,
@@ -26,13 +25,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/galeries/galeries.module').then(
         (m) => m.GaleriesModule
-      ),
-  },
-  {
-    path: ROUTING_CONTACTS,
-    loadChildren: () =>
-      import('./modules/contacts/contacts.module').then(
-        (m) => m.ContactsModule
       ),
   },
   {

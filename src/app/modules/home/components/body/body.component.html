@@ -26,7 +26,10 @@
         capturés sera comme les chapitres d'une merveilleuse romance, mettant en
         lumière l'évolution et l'ivresse de votre amour.
       </p>
-      <button (click)="navigate(ROUTING.About)" class="button-outline cta-about">
+      <button
+        (click)="navigate(ROUTING.About)"
+        class="button-outline cta-about"
+      >
         Nous voulons te connaître
       </button>
     </div>
@@ -34,7 +37,10 @@
       <h2 class="title with-subtitle" data-title="En france et à l'étranger">
         Photographe de mariage
       </h2>
-      <img src="https://i.goopics.net/uayjvt.jpg" alt="dylan-bonneau-profile-portrait-mer-noir-blanc" />
+      <img
+        src="https://i.goopics.net/uayjvt.jpg"
+        alt="dylan-bonneau-profile-portrait-mer-noir-blanc"
+      />
     </div>
   </div>
 </section>
@@ -42,8 +48,10 @@
 <section>
   <div class="sensitivity">
     <div class="img">
-      <img src="https://i.goopics.net/yhzxbf.jpg"
-        alt="fenetre-chateau-robe-dentelle-lustre-lumiere-naturelle-portrait" />
+      <img
+        src="https://i.goopics.net/yhzxbf.jpg"
+        alt="fenetre-chateau-robe-dentelle-lustre-lumiere-naturelle-portrait"
+      />
     </div>
     <div class="text">
       <p>
@@ -73,11 +81,11 @@
   <div class="testimonial-wrapper" *ngFor="let testimonial of testimonials">
     <div class="testimonial-img-wrapper">
       <div class="img">
-        <img [src]="testimonial?.imgUrl" [alt]="testimonial?.algImg">
+        <img [src]="testimonial?.imgUrl" [alt]="testimonial?.algImg" />
       </div>
     </div>
     <div class="testimonial-text-wrapper">
-      <h3>{{ testimonial?.city | uppercase}}</h3>
+      <h3>{{ testimonial?.city | uppercase }}</h3>
       <h4>{{ testimonial?.region }}</h4>
       <div class="testimonial-text">
         <p *ngFor="let text of testimonial?.texts">
@@ -89,6 +97,66 @@
       </div>
     </div>
   </div>
+</section>
+
+<section class="pricing-table-section">
+  <h2 class="title">
+    Des prix qui reflètent la valeur inestimable <br> de votre mariage
+  </h2>
+
+  <div class="pricing-table">
+    <div class="pricing-plan">
+      <h3>Essentielle</h3>
+      <img class="illustrations" src="/assets/images/svg/love.svg" alt="">
+      <div class="price">
+        <p class="from">À partir de</p>
+        <p class="amount">1799€</p>
+      </div>
+      <ul>
+        <li> <em class='icon icon-check'></em> séance fiançailles</li>
+        <li> <em class='icon icon-check'></em> 8 heures de présence le jour J</li>
+        <li> <em class='icon icon-check'></em> Au moins 400 photos HD</li>
+        <li> <em class='icon icon-check'></em> 1 livre photo de 50 pages offert</li>
+        <li class="disabled"> <em class='icon icon-x'></em> Day After</li>
+      </ul>
+      <!-- <button class="button-outline is-medium">Sélectionner</button> -->
+    </div>
+
+    <div class="pricing-plan popular">
+      <h3>Prestige</h3>
+      <img class="illustrations" src="/assets/images/svg/couple.svg" alt="">
+      <div class="price">
+        <p class="from">À partir de</p>
+        <p class="amount">2299€</p>
+      </div>
+      <ul>
+        <li> <em class='icon icon-check'></em> séance fiançailles</li>
+        <li> <em class='icon icon-check'></em> 12 heures de présence le jour J</li>
+        <li> <em class='icon icon-check'></em> Au moins 500 photos HD</li>
+        <li> <em class='icon icon-check'></em> 1 livre photo de 80 pages offert</li>
+        <li class="disabled"> <em class='icon icon-x'></em> Day After</li>
+      </ul>
+      <!-- <button class="is-medium primary-color">Sélectionner</button> -->
+    </div>
+
+    <div class="pricing-plan">
+      <h3>Éternité</h3>
+      <img class="illustrations" src="/assets/images/svg/wedding.svg" alt="">
+      <div class="price">
+        <p class="from">À partir de</p>
+        <p class="amount">2899€</p>
+      </div>
+      <ul>
+        <li> <em class='icon icon-check'></em> séance fiançailles</li>
+        <li> <em class='icon icon-check'></em> 12 heures de présence le jour J</li>
+        <li> <em class='icon icon-check'></em> Au moins 500 photos HD</li>
+        <li> <em class='icon icon-check'></em> 1 livre photo de 80 pages offert</li>
+        <li> <em class='icon icon-check'></em> Day After</li>
+      </ul>
+      <!-- <button class="button-outline is-medium">Sélectionner</button> -->
+    </div>
+  </div>
+  
 </section>
 
 <!-- MARRIED BLOCK -->
@@ -124,16 +192,24 @@
 <!-- MARRIED BLOCK -->
 <div>
   <div class="cta">
-    <h2 class="title with-subtitle" data-title="Confiez moi votre mariage idéal !">
+    <h2
+      class="title with-subtitle"
+      data-title="Confiez moi votre mariage idéal !"
+    >
       Vous voulez que je vous accompagne ?
     </h2>
     <div class="text-block">
       <p>
-        N'hésitez pas à me contacter dès maintenant pour discuter de vos projets de mariage et pour réserver votre date.
+        N'hésitez pas à me contacter dès maintenant pour discuter de vos projets
+        de mariage et pour réserver votre date.
       </p>
     </div>
-    <button class="primary-color button-outline" (click)="navigate(ROUTING.Contacts)">
-      Nous voulons faire connaissance
-    </button>
+
+    <a
+      class="button primary-color button-outline"
+      target="_blank"
+      href="https://calendly.com/dylanbonneau/appel-telephonique"
+      >Prendre un RDV</a
+    >
   </div>
 </div>
