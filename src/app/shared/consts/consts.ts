@@ -1,6 +1,5 @@
 export const ROUTING_HOME = 'home';
 export const ROUTING_GALERIES = 'galeries';
-export const ROUTING_CONTACTS = 'me-contacter';
 export const ROUTING_ABOUT = 'a-propos';
 export const ROUTING_WEDDING = 'mariage';
 export const ROUTING_BLOGS = 'blogs';
@@ -21,8 +20,6 @@ export const ROUTING = {
   Forms: `/${ROUTING_DEMO}/${ROUTING_FORMS}`,
   // Module Home
   Home: `/${ROUTING_HOME}`,
-  // Module Contacts
-  Contacts: `/${ROUTING_CONTACTS}`,
   // Module Galeries
   Galeries: `/${ROUTING_GALERIES}`,
   // Module about
