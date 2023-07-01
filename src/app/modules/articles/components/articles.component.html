@@ -41,7 +41,7 @@
       </div>
     </div>
     <div class="articles">
-      <article class="article" *ngFor="let article of articles" (click)="navigateTo(lastArticle)">
+      <article class="article" *ngFor="let article of articles" (click)="navigateTo(article)">
         <div class="image">
           <img
             [src]="article?.fields?.featureImage"

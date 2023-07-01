@@ -18,12 +18,17 @@
     <url>
         <loc>https://dylanbonneau.fr/blogs</loc>
         <lastmod>2023-03-16</lastmod>
-        <priority>0.3</priority>
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>https://dylanbonneau.fr/blogs/comment-choisir-son-photographe-de-mariage</loc>
         <lastmod>2023-03-16</lastmod>
-        <priority>1</priority>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dylanbonneau.fr/blogs/mariage-derval-mathilde-sebastien</loc>
+        <lastmod>2023-07-01</lastmod>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://dylanbonneau.fr/mentions-legales</loc>

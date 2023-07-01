@@ -6,9 +6,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ArticlesRoutingModule } from './articles-routing.module';
 import { ArticlesComponent } from './components/articles.component';
+import { Article_2022_07_30_01_Component } from './components/2022-07-30-mathilde-sebastien/article-2022-07-30-01.component';
 import { Article_2023_03_16_01_Component } from './components/2023-03-16-comment-choisir-son-photographe-de-mariage/article-2023-03-16-01.component';
 
-const ARTICLES = [Article_2023_03_16_01_Component];
+const ARTICLES = [Article_2022_07_30_01_Component, Article_2023_03_16_01_Component];
 
 @NgModule({
   declarations: [ArticlesComponent, ...ARTICLES],

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ROUTES } from 'src/app/shared/consts/routes';
+import { Article_2022_07_30_01_Component } from './components/2022-07-30-mathilde-sebastien/article-2022-07-30-01.component';
 import { Article_2023_03_16_01_Component } from './components/2023-03-16-comment-choisir-son-photographe-de-mariage/article-2023-03-16-01.component';
 import { ArticlesComponent } from './components/articles.component';
 
@@ -12,6 +13,15 @@ const routes: Routes = [
       title: 'Blog Photographe de mariage - Dylan Bonneau',
       description:
         "Mon but aujourd'hui ? Vous aider dans le préparation de votre mariage !",
+    },
+  },
+  {
+    path: ROUTES.Article_2022_07_30_01,
+    component: Article_2022_07_30_01_Component,
+    data: {
+      title: 'Un mariage inoubliable sous le soleil de Derval',
+      description:
+        "Le soleil rayonne sur Derval, c'est un jour idéal pour un mariage. Je retrouve Mathilde et sa témoin tôt le matin, et je peux déjà ressentir l'excitation et les émotions de la journée.",
     },
   },
   {

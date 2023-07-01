@@ -1,0 +1,130 @@
+<!-- MENU -->
+<app-header [scrolledTheme]="true"></app-header>
+
+<article>
+  <img
+    class="mb-xl img-title"
+    src="https://i.goopics.net/x3wjsh.jpg"
+    alt="mariage_petales_bouquet_sortie_eglise_rire_main_dans_main"
+  />
+
+  <h1 class="title with-subtitle" data-title="Mathilde & Sébastien">
+    Un mariage inoubliable sous le soleil de Derval
+  </h1>
+  <!-- <span class="date">30 Juillet 2022</span> -->
+
+  <div class="block">
+    <div class="fixed-div">
+      <div class="sticky_div">
+        <div class="large bold">Table des Matières</div>
+        <div id="toc" class="toc">
+          <a
+            class="tocitem"
+            [class.active]="preparatifsIsActive"
+            (click)="scroll(preparatifs)"
+            >Les préparatifs du mariage</a
+          >
+          <a
+            class="tocitem"
+            [class.active]="mairieIsActive"
+            (click)="scroll(mairie)"
+            >La cérémonie civil à la mairie</a
+          >
+          <a
+            class="tocitem"
+            [class.active]="egliseIsActive"
+            (click)="scroll(eglise)"
+            >La cérémonie religieuse à l'église</a
+          >
+          <a
+            class="tocitem"
+            [class.active]="pauseIsActive"
+            (click)="scroll(pause)"
+            >La pause dans le parc</a
+          >
+          <a
+            class="tocitem"
+            [class.active]="soireeIsActive"
+            (click)="scroll(soiree)"
+            >La soirée de mariage</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div #preparatifs>
+        <p>
+          Le soleil rayonne sur <strong>Derval</strong>, c'est un jour idéal
+          pour un <strong>mariage</strong>. Je retrouve
+          <strong>Mathilde et sa témoin</strong> tôt le matin, et je peux déjà
+          ressentir l'excitation et les émotions de la journée.
+        </p>
+        <p>
+          <strong>3000 Litres de cafés</strong> plus tard comme si elle avait
+          besoin d'une source d'énergie supplémentaire pour faire face à
+          <strong>l'une des journées les plus importantes de sa vie</strong>, on
+          pouvait voir à quel point elle était <strong>nerveuse</strong>, mais
+          en même temps combien elle était <strong>heureuse</strong>.
+        </p>
+        <p>
+          Après avoir passé un bon moment de la matinée au côté de
+          <strong>Mathilde</strong>, j'ai dû me précipiter à l'autre bout de la
+          ville pour retrouver <strong>Sébastien et ses enfants</strong> qui se
+          <strong>préparaient</strong> également pour le mariage.
+        </p>
+        <p>
+          Finalement, j'ai réussi à arriver à temps pour les voir dans toute
+          leur élégance, prêts à entrer dans une
+          <strong>nouvelle étape de leur vie.</strong>
+        </p>
+      </div>
+      <div #mairie>
+        <p>
+          <strong>13h approchant</strong>, il était enfin temps d'<strong
+            >aller à la mairie</strong
+          >
+          pour célébrer le
+          <strong>mariage officiel de Mathilde et Sébastien.</strong>
+          L'atmosphère était solennelle tandis que les deux mariés prononçaient
+          leurs vœux devant <strong>le maire et leurs témoins.</strong>
+          <strong> Les larmes coulaient</strong> sur les joues des invités
+          tandis qu'ils assistaient à cet <strong>événement émouvant.</strong>
+        </p>
+      </div>
+      <div #eglise>
+        <p>
+          Après <strong>la mairie</strong>, nous sommes allés à
+          <strong>l'église pour la bénédiction religieuse.</strong> La
+          <strong>cérémonie religieuse</strong> était tout aussi émouvante que
+          la <strong>cérémonie à la mairie</strong>, avec
+          <strong>des chants, des prières et des moments de réflexion.</strong>
+          <strong>Les mariés</strong> étaient radieux alors qu'ils scellaient
+          leur <strong>amour devant Dieu.</strong> C'était un<strong>
+            moment magique et inoubliable</strong
+          >
+          pour tout le monde.
+        </p>
+      </div>
+      <div #pause>
+        <p>
+          S'en est suivi une <strong>pause à l'ombre</strong> dans un
+          <strong>joli parc</strong> pour prendre des
+          <strong>photos de groupe</strong> et
+          <strong>nous désaltérer.</strong> C'était
+          <strong>une occasion</strong> pour les
+          <strong>invités de se détendre</strong> et de prendre
+          <strong>des souvenirs ensemble.</strong>
+        </p>
+      </div>
+      <div #soiree>
+        <p>
+          Puis, vint le temps de <strong>la soirée.</strong>
+          <strong> Les invités se sont déhanchés</strong> sur la
+          <strong>piste de danse</strong> jusqu'au
+          <strong>bout de la nuit</strong> pour célébrer
+          <strong>l'union de Mathilde et de Sébastien</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</article>
