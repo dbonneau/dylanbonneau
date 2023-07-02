@@ -12,26 +12,29 @@
       </div>
       <div class="links-main">
         <div class="links-column">
-          <a class="link" [href]="redirect(ROUTING.About)">{{
-            "à propos" | uppercase
-          }}</a>
+          <a class="link" [href]="redirect(ROUTING.About)">
+            {{ "à propos" | uppercase }}
+          </a>
         </div>
         <div class="links-column">
-          <a class="link" [href]="redirect(ROUTING.Wedding)">{{
-            "mariage" | uppercase
-          }}</a>
+          <a class="link" [href]="redirect(ROUTING.Wedding)">
+            {{ "mariage" | uppercase }}
+          </a>
         </div>
         <div class="links-column">
-          <a class="link" [href]="redirect(ROUTING.legalNotice)">{{
-            "mentions légales" | uppercase
-          }}</a>
+          <a class="link" [href]="redirect(ROUTING.legalNotice)">
+            {{ "mentions légales" | uppercase }}
+          </a>
         </div>
-        <a
-          class="button is-medium primary-color button-hover-white"
-          target="_blank"
-          href="https://calendly.com/dylanbonneau/appel-telephonique"
-          >Prendre un RDV</a
-        >
+        <div class="links-column">
+          <a
+            class="link"
+            target="_blank"
+            href="https://calendly.com/dylanbonneau/appel-telephonique"
+          >
+            {{ " Prendre un RDV" | uppercase }}
+          </a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
