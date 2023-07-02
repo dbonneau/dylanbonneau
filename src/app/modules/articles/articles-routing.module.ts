@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ROUTES } from 'src/app/shared/consts/routes';
-import { Article_2022_07_30_01_Component } from './components/2022-07-30-mathilde-sebastien/article-2022-07-30-01.component';
-import { Article_2023_03_16_01_Component } from './components/2023-03-16-comment-choisir-son-photographe-de-mariage/article-2023-03-16-01.component';
+import { Article_2022_07_30_01_Component } from './components/2022/2022-07-30-mathilde-sebastien/article-2022-07-30-01.component';
+import { Article_2023_03_16_01_Component } from './components/2023/2023-03-16-comment-choisir-son-photographe-de-mariage/article-2023-03-16-01.component';
+import { Article_2023_07_02_01_Component } from './components/2023/2023-07-02-day-after/article-2023-07-02-01.component';
 import { ArticlesComponent } from './components/articles.component';
 
 const routes: Routes = [
@@ -31,6 +32,15 @@ const routes: Routes = [
       title: 'Comment choisir son photographe de mariage ?',
       description:
         "Opter pour un photographe est l'une des décisions les plus importantes que vous devrez prendre pour votre mariage.",
+    },
+  },
+  {
+    path: ROUTES.Article_2023_07_02_01,
+    component: Article_2023_07_02_01_Component,
+    data: {
+      title: 'Qu\'est-ce qu\'une séance photo \'Day After\'',
+      description:
+        "La séance photo 'Day After' est une opportunité extraordinaire de revivre ces instants magiques, de créer des souvenirs intimes et authentiques, et d'immortaliser votre amour à travers des clichés exceptionnels.",
     },
   },
 ];

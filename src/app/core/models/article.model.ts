@@ -22,7 +22,7 @@ export enum articleCategorie {
 }
 
 export class Article {
-  createdTime: string;
+  createdTime: Date;
   fields: {
     active: boolean,
     author: {
@@ -40,7 +40,7 @@ export class Article {
   id: string;
 
   constructor(json?: Article) {
-    this.createdTime = json?.createdTime ?? '';
+    this.createdTime = new Date(json?.createdTime ?? '');
     this.fields = {
       active: json?.fields?.active ?? false,
       author: {

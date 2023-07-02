@@ -38,7 +38,9 @@ export class ArticlesComponent implements OnInit {
     this.error = false;
     this._airtableService.getArticles().subscribe({
       next: (response: Article[]) => {
-        this.articles = response?.reverse();
+        this.articles = response.sort((a: Article, b: Article) => {
+          return a.createdTime.valueOf() - b.createdTime.valueOf();
+        }).reverse();
         this.getActivedArticles();
         this.getLastArticles();
         this.loading = false;

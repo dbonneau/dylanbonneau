@@ -5,7 +5,6 @@
   }"
 >
   <div></div>
-  <!-- <span class="logo">Dylan</span> -->
   <div class="open-menu">
     <i class="icon icon-menu" (click)="toggleMenu()"></i>
   </div>
@@ -24,9 +23,7 @@
     <li><a class="link" [href]="redirect(ROUTING.About)">À propos</a></li>
     <li><a class="link" [href]="redirect(ROUTING.Wedding)">mariage</a></li>
     <li><a class="link" [href]="redirect(ROUTING.Blogs)">blogs</a></li>
-    <!-- <li><a class='link' [href]="redirect(ROUTING.Galeries)">Galeries</a></li> -->
-    <!-- <li><a class='link' href="#">Clients</a></li> -->
-    <a class="button is-medium primary-color button-hover-white" target="_blank" href="https://calendly.com/dylanbonneau/appel-telephonique">Prendre un RDV</a>
+    <a class="button is-medium primary-color button-hover-white" target="_blank" href="https://calendly.com/dylanbonneau/appel-telephonique">{{ " Prendre un RDV" | uppercase }}</a>
     <div class="close-menu">
       <i class="icon icon-x" (click)="toggleMenu()"></i>
     </div>
