@@ -8,6 +8,7 @@ import { spinnerComponent } from './components/spinner/spinner.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { InfoboxComponent } from './components/infobox/infobox.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { LazyImgDirective } from './directives/lazy-img.directive';
 
 const components = [
   HeaderComponent,
@@ -19,10 +20,12 @@ const components = [
 
 const material = [MatSnackBarModule, MatExpansionModule];
 
+const directive = [LazyImgDirective];
+
 @NgModule({
-  declarations: [...components],
+  declarations: [...components, ...directive],
   imports: [CommonModule, ReactiveFormsModule, FormsModule],
-  exports: [...components, ...material],
+  exports: [...components, ...material, ...directive],
   providers: [],
 })
 export class SharedModule {}
