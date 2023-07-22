@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import {
   ActivatedRoute,
   NavigationCancel,
@@ -11,6 +11,7 @@ import { map } from 'rxjs/internal/operators/map';
 import { filter } from 'rxjs/internal/operators/filter';
 import { mergeMap } from 'rxjs/internal/operators/mergeMap';
 import { SEOService } from './core/services/seo.service';
+import { environment } from 'src/environments/environment';
 
 declare const gtag: Function; // <------------Important: the declartion for gtag is required!
 @Component({
@@ -24,8 +25,17 @@ export class AppComponent implements OnInit {
   constructor(
     private readonly _router: Router,
     private readonly _activatedRoute: ActivatedRoute,
-    private readonly _seoService: SEOService
-  ) {}
+    private readonly _seoService: SEOService,
+    private elementRef: ElementRef
+  ) {
+    if (!environment.production) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.src =
+        'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js';
+      this.elementRef.nativeElement.appendChild(s);
+    }
+  }
 
   ngOnInit() {
     this._router.events
