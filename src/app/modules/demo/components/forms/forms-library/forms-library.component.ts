@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-forms-library',
@@ -24,12 +24,12 @@ export class FormsLibraryComponent implements OnInit {
 </mat-form-field>`;
 
     // Form
-    public form: FormGroup;
+    public form: UntypedFormGroup;
     public submitted = false;
     public hide: boolean = false;
 
     constructor(
-        private readonly _fb: FormBuilder
+        private readonly _fb: UntypedFormBuilder
     ) {
         const formGroup = {
             email: ['', [Validators.required, Validators.email]],
