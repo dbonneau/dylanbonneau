@@ -15,22 +15,21 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: url(https://i.goopics.net/wl9j27.jpg);
+  background-image: url(https://i.postimg.cc/wBPqSG1b/mobile-anais-jeremy-bretteville-sur-laize-eglise-couple-mariage-14680.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-position-x: 75%;
+
+  @media screen and (min-width: 600px) {
+    background-image: url(https://i.postimg.cc/bvRMnDh0/anais-jeremy-bretteville-sur-laize-eglise-couple-mariage-14680.webp);
+    background-position-x: 75%;
+  }
 }
 
 .cta-img {
   color: white;
   padding-top: 18.75rem;
   height: calc(100vh - 18.75rem) !important;
-}
-
-.cta-white {
-  top: 20%;
-  position: relative;
 }
 
 .text-block {
@@ -74,37 +73,6 @@ h2 {
   max-width: 75%;
   margin: 0 auto;
   text-align: center;
-}
-
-.container {
-  position: relative;
-  margin: 0 auto;
-  padding: 0 4rem;
-}
-
-.title-sm {
-  color: $grey-3;
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: 0.313rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-
-  :nth-child(1) {
-    margin-right: 1.5rem;
-  }
-
-  :nth-child(2) {
-    text-align: left;
-  }
-}
-
-.img-profile {
-  float: right;
 }
 
 .about {
@@ -170,17 +138,6 @@ h2 {
   margin: 24px 0;
 }
 
-.married {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-image: url(https://i.goopics.net/60n6d9.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
 @media (max-width: 900px) {
   .container {
     padding: 0 1.25rem;
@@ -189,21 +146,6 @@ h2 {
   .cta {
     button {
       font-size: 0.938rem;
-    }
-  }
-
-  .grid {
-    display: flex;
-    justify-content: center;
-
-    :nth-child(1) {
-      margin: auto;
-    }
-
-    :nth-child(2) {
-      margin-top: 1.563rem;
-      margin-left: 0;
-      text-align: center;
     }
   }
 }
@@ -309,14 +251,10 @@ h2 {
         margin: 0;
       }
 
-      .testimonial-text,
-      .authors {
-        padding: 24px;
-      }
-
       .testimonial-text {
         p {
           font-size: 1rem;
+          margin: 8px 24px;
         }
       }
 
@@ -347,69 +285,6 @@ h2 {
         flex: 1;
       }
     }
-  }
-}
-
-.pricing-table {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0 10px;
-}
-
-.pricing-plan {
-  flex-basis: 100%;
-  max-width: 250px;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 20px;
-  scale: 0.9;
-
-  @media (min-width: 768px) {
-    flex-basis: calc(50% - 10px);
-    margin-bottom: 0;
-  }
-
-  @media (min-width: 1024px) {
-    flex-basis: calc(33.33% - 10px);
-  }
-}
-
-.popular {
-  max-width: 350px;
-  background-color: $yellow-100;
-  border: 2px solid $primary;
-  position: relative;
-  scale: 1;
-
-  &::before {
-    content: "Le plus populaire";
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $primary;
-    padding: 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-  }
-}
-
-.price {
-  margin: 24px 20px;
-
-  .from {
-    font-size: 0.75rem;
-  }
-
-  .amount {
-    font-weight: bold;
-    font-size: 2rem;
-  }
-
-  p {
-    margin: 0;
   }
 }
 
@@ -472,4 +347,25 @@ ul {
 
 .link {
   color: $black;
+}
+
+.mobile {
+  display: block;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: block;
+  }
+}
+
+
+
+.container {
+  display: flex;
+  position: relative;
 }
