@@ -1,7 +1,5 @@
-<!-- MENU -->
 <app-header></app-header>
 
-<!-- FIRST BLOCK -->
 <section class="promo-photo">
   <div class="cta cta-img">
     <h1>Dylan, votre photographe de mariage sur Rennes</h1>
@@ -49,7 +47,9 @@
   </div>
   <div class="img">
     <img
-      src="https://i.goopics.net/cqxy4m.jpg"
+      width="619"
+      height="929"
+      src="https://i.postimg.cc/RVdB4PPd/petite-fille-mariage-yeux-ferme-penser-reflechir-concentration.webp"
       alt="petite-fille-mariage-yeux-ferme-penser-reflechir-concentration"
     />
   </div>
@@ -98,8 +98,17 @@
   </div>
   <div class="img">
     <img
-      class="makeup"
-      src="https://i.goopics.net/eujcp8.jpg"
+      width="565"
+      height="707"
+      class="makeup mobile"
+      src="https://i.postimg.cc/gkt6rKjy/mobile-maquillage-pinceau-oeil-preparatif-mariage-femme-visage.webp"
+      alt="mobile-maquillage-pinceau-oeil-preparatif-mariage-femme-visage"
+    />
+    <img
+      width="916"
+      height="515"
+      class="makeup desktop"
+      src="https://i.postimg.cc/26BfFr78/maquillage-pinceau-oeil-preparatif-mariage-femme-visage.webp"
       alt="maquillage-pinceau-oeil-preparatif-mariage-femme-visage"
     />
   </div>
@@ -137,7 +146,9 @@
   <div class="sensitivity">
     <div class="img">
       <img
-        src="https://i.goopics.net/yhzxbf.jpg"
+        width="600"
+        height="900"
+        src="https://i.postimg.cc/zGV87sNM/fenetre-chateau-robe-dentelle-lustre-lumiere-naturelle-portrait.webp"
         alt="fenetre-chateau-robe-dentelle-lustre-lumiere-naturelle-portrait"
       />
     </div>
@@ -229,7 +240,9 @@
         régions avoisinantes
       </h2>
       <img
-        src="https://i.goopics.net/uayjvt.jpg"
+        width="430"
+        height="287"
+        src="https://i.postimg.cc/xCfym3D0/dylan-bonneau-profile-portrait-mer-noir-blanc.webp"
         alt="dylan-bonneau-profile-portrait-mer-noir-blanc"
       />
     </div>
@@ -238,159 +251,46 @@
 
 <section class="testimonials">
   <h2 class="title">Ils se sont dit oui devant mon appareil</h2>
-  <div class="testimonial-wrapper" *ngFor="let testimonial of testimonials">
-    <div class="testimonial-img-wrapper">
-      <div class="img">
-        <img [src]="testimonial?.imgUrl" [alt]="testimonial?.algImg" />
+  <div class="container">
+    <div
+      class="testimonial-wrapper"
+      *ngFor="let testimonial of testimonials; let i = index"
+    >
+      <div *ngIf="i === counter" class="testimonial-img-wrapper">
+        <div class="img">
+          <img
+            @fade
+            class="mobile"
+            [width]="testimonial?.imgMobile?.width"
+            [height]="testimonial?.imgMobile?.height"
+            [src]="testimonial?.imgMobile?.url"
+            [alt]="testimonial?.imgMobile?.alt"
+          />
+          <img
+            @fade
+            class="desktop"
+            [width]="testimonial?.img?.width"
+            [height]="testimonial?.img?.height"
+            [src]="testimonial?.img?.url"
+            [alt]="testimonial?.img?.alt"
+          />
+        </div>
+      </div>
+      <div *ngIf="i === counter" class="testimonial-text-wrapper">
+        <h3 @fade class="mt-0">{{ testimonial?.city | uppercase }}</h3>
+        <h4 @fade>{{ testimonial?.region }}</h4>
+        <div class="testimonial-text">
+          <p @fade *ngFor="let text of testimonial?.texts">
+            {{ text }}
+          </p>
+        </div>
+        <div class="authors">
+          {{ testimonial?.authors }}
+        </div>
       </div>
     </div>
-    <div class="testimonial-text-wrapper">
-      <h3>{{ testimonial?.city | uppercase }}</h3>
-      <h4>{{ testimonial?.region }}</h4>
-      <div class="testimonial-text">
-        <p *ngFor="let text of testimonial?.texts">
-          {{ text }}
-        </p>
-      </div>
-      <div class="authors">
-        {{ testimonial?.authors }}
-      </div>
-    </div>
+  </div>
+  <div class="flex content-center" *ngIf="testimonials.length > 1">
+    <button type="button" (click)="onNext()">→</button>
   </div>
 </section>
-
-<section class="pricing-table-section">
-  <h2 class="title">
-    Des prix qui reflètent la valeur inestimable <br />
-    de votre mariage
-  </h2>
-
-  <div class="pricing-table">
-    <div class="pricing-plan">
-      <h3>Essentielle</h3>
-      <img
-        class="illustrations"
-        src="/assets/images/svg/love.svg"
-        alt="illustration love undraw"
-      />
-      <div class="price">
-        <p class="from">À partir de</p>
-        <p class="amount">1799€</p>
-      </div>
-      <ul>
-        <li><em class="icon icon-check"></em> séance fiançailles</li>
-        <li>
-          <em class="icon icon-check"></em> 8 heures de présence le jour J
-        </li>
-        <li><em class="icon icon-check"></em> Au moins 400 photos HD</li>
-        <li>
-          <em class="icon icon-check"></em> 1 livre photo de 50 pages offert
-        </li>
-        <li class="disabled"><em class="icon icon-x"></em> Day After</li>
-      </ul>
-      <!-- <button class="button-outline is-medium">Sélectionner</button> -->
-    </div>
-
-    <div class="pricing-plan popular">
-      <h3>Prestige</h3>
-      <img
-        class="illustrations"
-        src="/assets/images/svg/couple.svg"
-        alt="illustration couple undraw"
-      />
-      <div class="price">
-        <p class="from">À partir de</p>
-        <p class="amount">2299€</p>
-      </div>
-      <ul>
-        <li><em class="icon icon-check"></em> séance fiançailles</li>
-        <li>
-          <em class="icon icon-check"></em> 12 heures de présence le jour J
-        </li>
-        <li><em class="icon icon-check"></em> Au moins 500 photos HD</li>
-        <li>
-          <em class="icon icon-check"></em> 1 livre photo de 80 pages offert
-        </li>
-        <li class="disabled"><em class="icon icon-x"></em> Day After</li>
-      </ul>
-      <!-- <button class="is-medium primary-color">Sélectionner</button> -->
-    </div>
-
-    <div class="pricing-plan">
-      <h3>Éternité</h3>
-      <img
-        class="illustrations"
-        src="/assets/images/svg/wedding.svg"
-        alt="illustration wedding undraw"
-      />
-      <div class="price">
-        <p class="from">À partir de</p>
-        <p class="amount">2899€</p>
-      </div>
-      <ul>
-        <li><em class="icon icon-check"></em> séance fiançailles</li>
-        <li>
-          <em class="icon icon-check"></em> 12 heures de présence le jour J
-        </li>
-        <li><em class="icon icon-check"></em> Au moins 500 photos HD</li>
-        <li>
-          <em class="icon icon-check"></em> 1 livre photo de 80 pages offert
-        </li>
-        <li><em class="icon icon-check"></em> Day After</li>
-      </ul>
-      <!-- <button class="button-outline is-medium">Sélectionner</button> -->
-    </div>
-  </div>
-
-  <div class="cta">
-    <h2
-      class="title with-subtitle"
-      data-title="Confiez moi votre mariage idéal !"
-    >
-      Vous voulez que je vous accompagne ?
-    </h2>
-    <div class="text-block">
-      <p>
-        N'hésitez pas à me contacter dès maintenant pour discuter de vos projets
-        de mariage et pour réserver votre date.
-      </p>
-    </div>
-
-    <a
-      class="button primary-color button-outline"
-      target="_blank"
-      href="https://calendly.com/dylanbonneau/appel-telephonique"
-      >Prendre un RDV</a
-    >
-  </div>
-</section>
-
-<!-- MARRIED BLOCK -->
-<!-- <section class="married">
-  <div class="cta cta-img">
-    <h2>Vous allez vous marier ?</h2>
-    <div class="text-block">
-      <p>
-        Quelle merveilleuse nouvelle ! Je suis ravi pour vous et je suis honoré
-        que vous ayez pensé à moi pour vous accompagner dans cette étape si
-        importante de votre vie.
-      </p>
-    </div>
-    <button class="white-color" (click)="navigate(ROUTING.Wedding)">
-      Nous voulons contempler notre histoire
-    </button>
-  </div>
-</section> -->
-
-<!-- ASSISTED BLOCK -->
-<!-- <section>
-  <div class="cta cta-white">
-    <h2>Vous avez assisté à un mariage ?</h2>
-    <div class="text-block">
-      <p>Nous nous sommes rencontrés il y a peu et vous voulez contempler les photos ?</p>
-      <p>Vous attendez avec impatience de vous remémorer les moments les plus magiques de cette journée ?</p>
-      <p>Il vous suffit de cliquer sur ce bouton et de rentrer le code</p>
-    </div>
-    <button>Je veux découvrir les photos de la journée</button>
-  </div>
-</section> -->

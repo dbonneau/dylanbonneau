@@ -1,11 +1,24 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ROUTING } from 'src/app/shared/consts/consts';
+import {
+  trigger,
+  transition,
+  state,
+  style,
+  animate,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
   styleUrls: ['./body.component.scss'],
+  animations: [
+    trigger('fade', [
+      state('void', style({ opacity: 0 })),
+      transition('void <=> *', [animate('0.5s ease-in-out')]),
+    ]),
+  ],
 })
 export class BodyComponent {
   public ROUTING = ROUTING;
@@ -31,8 +44,18 @@ export class BodyComponent {
     //   ],
     // },
     {
-      imgUrl: 'https://i.goopics.net/nyeakr.jpg',
-      algImg: 'Mathilde-Sebastien-bisous-mairie-derval-enfant-couple',
+      img: {
+        url: 'https://i.postimg.cc/pX76bT32/Mathilde-Sebastien-bisous-mairie-derval-enfant-couple.webp',
+        width: 1244,
+        height: 700,
+        alt: 'Mathilde-Sebastien-bisous-mairie-derval-enfant-couple',
+      },
+      imgMobile: {
+        url: 'https://i.postimg.cc/jjTnLHBZ/mobile-Mathilde-Sebastien-bisous-mairie-derval-enfant-couple.webp',
+        width: 600,
+        height: 338,
+        alt: 'mobile-Mathilde-Sebastien-bisous-mairie-derval-enfant-couple',
+      },
       authors: 'Mathilde & Sebastien',
       city: 'Derval',
       region: 'Loire-Atlantique, France',
@@ -51,7 +74,25 @@ export class BodyComponent {
       ],
     },
   ];
+  counter: number = 0;
+
   constructor(private readonly router: Router) {}
+
+  onNext() {
+    if (this.counter != this.testimonials.length - 1) {
+      this.counter++;
+    } else {
+      this.counter = 0;
+    }
+  }
+
+  onPrevious() {
+    if (this.counter > 0) {
+      this.counter--;
+    } else {
+      this.counter = this.testimonials.length - 1;
+    }
+  }
 
   navigate(url: string): void {
     this.router.navigate([url]);
