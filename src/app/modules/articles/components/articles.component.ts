@@ -19,9 +19,9 @@ export class ArticlesComponent implements OnInit {
   public ROUTES = ROUTES;
 
   constructor(
-    private readonly _router: Router,
-    private readonly _route: ActivatedRoute,
-    private readonly _airtableService: AirtableService
+    private readonly router: Router,
+    private readonly route: ActivatedRoute,
+    private readonly airtableService: AirtableService
   ) {}
 
   ngOnInit(): void {
@@ -30,13 +30,13 @@ export class ArticlesComponent implements OnInit {
 
   navigateTo(article?: Article): void {
     const url = article?.fields?.link;
-    this._router.navigate([url], { relativeTo: this._route });
+    this.router.navigate([url], { relativeTo: this.route });
   }
 
   getArticles() {
     this.loading = true;
     this.error = false;
-    this._airtableService.getArticles().subscribe({
+    this.airtableService.getArticles().subscribe({
       next: (response: Article[]) => {
         this.articles = response.sort((a: Article, b: Article) => {
           return a.createdTime.valueOf() - b.createdTime.valueOf();

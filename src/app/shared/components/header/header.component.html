@@ -1,32 +1,28 @@
-<nav
-  [ngClass]="{
+<nav [ngClass]="{
     hide: hide || scrolledTheme,
     scrolled: scrolled || scrolledTheme
-  }"
->
+  }">
   <div></div>
   <div class="open-menu">
     <i class="icon icon-menu" (click)="toggleMenu()"></i>
   </div>
-  <ul
-    class="main-menu"
-    [ngStyle]="{ display: 'flex', top: height ? '0' : '-1000%' }"
-  >
+  <ul class="main-menu" [ngStyle]="{ display: 'flex', top: height ? '0' : '-1000%' }">
     <li *ngIf="scrolled || scrolledTheme">
       <a href="#"><img src="/assets/images/logo/logo.png" alt="logo" /></a>
     </li>
     <li *ngIf="!scrolled && !scrolledTheme">
-      <a href="#"
-        ><img src="/assets/images/logo/logo-white.png" alt="logo-white"
-      /></a>
+      <a href="#"><img src="/assets/images/logo/logo-white.png" alt="logo-white" /></a>
     </li>
-    <li><a class="link" [href]="redirect(ROUTING.About)">À propos</a></li>
-    <li><a class="link" [href]="redirect(ROUTING.Wedding)">mariage</a></li>
-    <li><a class="link" [href]="redirect(ROUTING.Blogs)">blogs</a></li>
-    <a class="button is-medium primary-color button-hover-white" target="_blank" href="https://calendly.com/dylanbonneau/appel-telephonique">{{ " Prendre un RDV" | uppercase }}</a>
-    <div class="close-menu">
+    <li><a class="link" [href]="ROUTING.About">À propos</a></li>
+    <li><a class="link" [href]="ROUTING.Wedding">mariage</a></li>
+    <li><a class="link" [href]="ROUTING.Blogs">blogs</a></li>
+    <li *ngIf="!scrolled && !scrolledTheme"><a class="button is-medium button-hover-white" target="_blank"
+        href="https://calendly.com/dylanbonneau/appel-telephonique">{{ " Prendre un RDV" | uppercase }}</a></li>
+    <li><a *ngIf="scrolled || scrolledTheme" class="button is-medium button-outline" target="_blank"
+        href="https://calendly.com/dylanbonneau/appel-telephonique">{{ " Prendre un RDV" | uppercase }}</a></li>
+    <li class="close-menu">
       <i class="icon icon-x" (click)="toggleMenu()"></i>
-    </div>
+    </li>
   </ul>
 </nav>
 

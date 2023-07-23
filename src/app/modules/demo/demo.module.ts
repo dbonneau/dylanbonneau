@@ -22,32 +22,31 @@ import { TranslateModule } from '@ngx-translate/core';
 import { AngularMaterialModule } from 'src/app/angular-material/angular-material.module';
 
 @NgModule({
-  declarations: [
-    StyleguideComponent,
-    MenuDemoComponent,
-    ButtonsComponent,
-    ColorsComponent,
-    IconsComponent,
-    FilterPipe,
-    IconsLibraryComponent,
-    IconsUsageComponent,
-    IconsContributeComponent,
-    ColorsLibraryComponent,
-    ButtonsLibraryComponent,
-    FormsComponent,
-    FormsLibraryComponent
-  ],
-  imports: [
-    CommonModule,
-    HighlightModule,
-    FormsModule,
-    ReactiveFormsModule,
-    DemoRoutingModule,
-    AngularMaterialModule,
-    SharedModule,
-    TranslateModule
-  ],
-  entryComponents: [],
-  exports: [DemoRoutingModule, MenuDemoComponent]
+    declarations: [
+        StyleguideComponent,
+        MenuDemoComponent,
+        ButtonsComponent,
+        ColorsComponent,
+        IconsComponent,
+        FilterPipe,
+        IconsLibraryComponent,
+        IconsUsageComponent,
+        IconsContributeComponent,
+        ColorsLibraryComponent,
+        ButtonsLibraryComponent,
+        FormsComponent,
+        FormsLibraryComponent
+    ],
+    imports: [
+        CommonModule,
+        HighlightModule,
+        FormsModule,
+        ReactiveFormsModule,
+        DemoRoutingModule,
+        AngularMaterialModule,
+        SharedModule,
+        TranslateModule
+    ],
+    exports: [DemoRoutingModule, MenuDemoComponent]
 })
 export class DemoModule {}

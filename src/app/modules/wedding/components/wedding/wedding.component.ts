@@ -9,9 +9,9 @@ import { ROUTING } from 'src/app/shared/consts/consts';
 })
 export class WeddingComponent {
   public ROUTING = ROUTING;
-  constructor(private readonly _router: Router) {}
+  constructor(private readonly router: Router) {}
 
   navigate(url: string): void {
-    this._router.navigate([url]);
+    this.router.navigate([url]);
   }
 }

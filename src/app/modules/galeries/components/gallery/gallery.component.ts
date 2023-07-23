@@ -13,10 +13,10 @@ export class GalleryComponent implements OnInit {
   public gallery: Gallery;
 
   constructor(
-    private readonly _route: ActivatedRoute,
-    private readonly _airtableService: AirtableService
+    private readonly route: ActivatedRoute,
+    private readonly airtableService: AirtableService
   ) {
-    this.weddingId = this._route.snapshot.paramMap.get('weddingId') ?? '';
+    this.weddingId = this.route.snapshot.paramMap.get('weddingId') ?? '';
     this.gallery = new Gallery();
   }
 
@@ -25,7 +25,7 @@ export class GalleryComponent implements OnInit {
   }
 
   getWedding() {
-    this._airtableService
+    this.airtableService
       .getWedding(this.weddingId)
       .subscribe((response: Gallery) => {
         this.gallery = response;

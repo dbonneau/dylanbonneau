@@ -23,9 +23,9 @@ export class AppComponent implements OnInit {
   loading = false;
 
   constructor(
-    private readonly _router: Router,
-    private readonly _activatedRoute: ActivatedRoute,
-    private readonly _seoService: SEOService,
+    private readonly router: Router,
+    private readonly activatedRoute: ActivatedRoute,
+    private readonly seoService: SEOService,
     private elementRef: ElementRef
   ) {
     if (!environment.production) {
@@ -38,13 +38,13 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._router.events
+    this.router.events
       .pipe(
         filter(
           (event) =>
             event instanceof NavigationEnd || event instanceof NavigationStart
         ),
-        map(() => this._activatedRoute),
+        map(() => this.activatedRoute),
         map((route) => {
           while (route.firstChild) route = route.firstChild;
           return route;
@@ -53,18 +53,18 @@ export class AppComponent implements OnInit {
         mergeMap((route) => route.data)
       )
       .subscribe((event) => {
-        this._seoService.updateTitle(event['title']);
+        this.seoService.updateTitle(event['title']);
         //Updating Description tag dynamically with title
-        this._seoService.updateDescription(
+        this.seoService.updateDescription(
           event['title'] + event['description']
         );
-        this._seoService.createLinkForCanonicalURL(event['canonical']);
+        this.seoService.createLinkForCanonicalURL(event['canonical']);
         gtag('event', 'page_view', {
           page_path: event?.urlAfterRedirects,
         });
       });
 
-    this._router.events.subscribe((event) => {
+    this.router.events.subscribe((event) => {
       switch (true) {
         case event instanceof NavigationStart: {
           this.loading = true;

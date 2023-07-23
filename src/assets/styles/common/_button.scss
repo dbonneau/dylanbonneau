@@ -54,11 +54,12 @@ button,
 
     &.primary-color {
       background: $primary;
+      color: $black;
 
       &:hover:not([disabled]) {
         border-color: $primary;
         background-color: transparent;
-        color: $primary;
+        color: $black;
       }
     }
 
@@ -117,12 +118,12 @@ button,
       &.primary-color {
         border-color: $primary;
         background-color: transparent;
-        color: $primary;
+        color: $black;
 
         &:hover:not([disabled]) {
           border-color: $primary;
           background-color: $primary;
-          color: $white;
+          color: $black;
         }
       }
 

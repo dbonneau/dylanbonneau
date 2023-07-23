@@ -13,9 +13,9 @@ export class GaleriesComponent implements OnInit {
   public galleries: Gallery[];
 
   constructor(
-    private readonly _router: Router,
-    private readonly _route: ActivatedRoute,
-    private readonly _airtableService: AirtableService
+    private readonly router: Router,
+    private readonly route: ActivatedRoute,
+    private readonly airtableService: AirtableService
   ) {
     this.galleries = [];
   }
@@ -25,11 +25,11 @@ export class GaleriesComponent implements OnInit {
   }
 
   navigateTo(url: string): void {
-    this._router.navigate([url], { relativeTo: this._route });
+    this.router.navigate([url], { relativeTo: this.route });
   }
 
   getWeddings() {
-    this._airtableService.getWeddings().subscribe((response: Gallery[]) => {
+    this.airtableService.getWeddings().subscribe((response: Gallery[]) => {
         this.galleries = response;
     })
   }

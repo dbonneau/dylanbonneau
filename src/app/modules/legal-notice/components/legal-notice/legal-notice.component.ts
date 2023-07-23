@@ -9,11 +9,11 @@ import { ROUTING } from 'src/app/shared/consts/consts';
 })
 export class LegalNoticeComponent {
     constructor(
-        private readonly _router: Router
+        private readonly router: Router
     ) { }
 
     navigateToWedding(): void {
-        this._router.navigate([ROUTING.Wedding]);
+        this.router.navigate([ROUTING.Wedding]);
     }
 
 }
