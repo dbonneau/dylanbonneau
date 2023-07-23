@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
-import { CacheInterceptor } from './core/interceptors/cache.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,9 +18,7 @@ import { CacheInterceptor } from './core/interceptors/cache.interceptor';
     HttpClientModule,
     CoreModule,
   ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true },
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
