@@ -51,9 +51,9 @@ export class BodyComponent {
       ],
     },
   ];
-  constructor(private readonly _router: Router) {}
+  constructor(private readonly router: Router) {}
 
   navigate(url: string): void {
-    this._router.navigate([url]);
+    this.router.navigate([url]);
   }
 }

@@ -13,9 +13,9 @@
     <li *ngIf="!scrolled && !scrolledTheme">
       <a href="#"><img src="/assets/images/logo/logo-white.png" alt="logo-white" /></a>
     </li>
-    <li><a class="link" [href]="redirect(ROUTING.About)">À propos</a></li>
-    <li><a class="link" [href]="redirect(ROUTING.Wedding)">mariage</a></li>
-    <li><a class="link" [href]="redirect(ROUTING.Blogs)">blogs</a></li>
+    <li><a class="link" [href]="ROUTING.About">À propos</a></li>
+    <li><a class="link" [href]="ROUTING.Wedding">mariage</a></li>
+    <li><a class="link" [href]="ROUTING.Blogs">blogs</a></li>
     <li *ngIf="!scrolled && !scrolledTheme"><a class="button is-medium button-hover-white" target="_blank"
         href="https://calendly.com/dylanbonneau/appel-telephonique">{{ " Prendre un RDV" | uppercase }}</a></li>
     <li><a *ngIf="scrolled || scrolledTheme" class="button is-medium button-outline" target="_blank"

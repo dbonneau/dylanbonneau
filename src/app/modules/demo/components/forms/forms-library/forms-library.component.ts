@@ -29,13 +29,13 @@ export class FormsLibraryComponent implements OnInit {
     public hide: boolean = false;
 
     constructor(
-        private readonly _fb: UntypedFormBuilder
+        private readonly fb: UntypedFormBuilder
     ) {
         const formGroup = {
             email: ['', [Validators.required, Validators.email]],
             password: ['', Validators.required],
         };
-        this.form = this._fb.group(formGroup);
+        this.form = this.fb.group(formGroup);
     }
 
     ngOnInit() {

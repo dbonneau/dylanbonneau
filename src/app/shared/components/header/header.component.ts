@@ -1,4 +1,3 @@
-import { PlatformLocation } from '@angular/common';
 import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { ROUTING } from 'src/app/shared/consts/consts';
 
@@ -31,7 +30,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  constructor(private readonly _platformLocation: PlatformLocation) {
+  constructor() {
     this.scrolledTheme = false;
   }
 
@@ -39,9 +38,5 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.height = !this.height ? 100 : 0;
-  }
-
-  redirect(route: string) : string {
-    return `${(this._platformLocation as any).location.origin}${route}`;
   }
 }
