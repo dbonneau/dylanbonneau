@@ -54,7 +54,8 @@ button,
 
     &.primary-color {
       background: $primary;
-      color: $black;
+      color: $secondary;
+      font-weight: bold;
 
       &:hover:not([disabled]) {
         border-color: $primary;

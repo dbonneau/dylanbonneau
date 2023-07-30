@@ -100,7 +100,7 @@ h2 {
   .text {
     max-width: 550px;
     margin-bottom: 100px;
-    text-align: center;
+    text-align: justify;
 
     :first-child {
       margin-top: 0;
@@ -175,7 +175,7 @@ h2 {
   .text {
     padding: 30px;
     max-width: 550px;
-    text-align: center;
+    text-align: justify;
   }
 
   @media screen and (min-width: 600px) {
@@ -345,10 +345,6 @@ ul {
   }
 }
 
-.link {
-  color: $black;
-}
-
 .mobile {
   display: block;
   @media screen and (min-width: 600px) {
@@ -362,8 +358,6 @@ ul {
     display: block;
   }
 }
-
-
 
 .container {
   display: flex;
