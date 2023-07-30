@@ -34,6 +34,12 @@ export class AppComponent implements OnInit {
       s.src =
         'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js';
       this.elementRef.nativeElement.appendChild(s);
+    } else {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.src =
+        'https://www.googletagmanager.com/gtag/js?id=G-TGL5TBR57Y';
+      this.elementRef.nativeElement.appendChild(s);
     }
   }
 

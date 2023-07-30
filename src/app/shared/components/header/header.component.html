@@ -37,7 +37,7 @@
     <li><a class="link" [href]="ROUTING.Blogs">blogs</a></li>
     <li *ngIf="!scrolled && !scrolledTheme">
       <a
-        class="button is-medium button-hover-white"
+        class="button is-medium button-hover-white primary-color"
         target="_blank"
         href="https://calendly.com/dylanbonneau/appel-telephonique"
         >{{ " Prendre un RDV" | uppercase }}</a
@@ -46,7 +46,7 @@
     <li>
       <a
         *ngIf="scrolled || scrolledTheme"
-        class="button is-medium button-outline"
+        class="button is-medium primary-color"
         target="_blank"
         href="https://calendly.com/dylanbonneau/appel-telephonique"
         >{{ " Prendre un RDV" | uppercase }}</a
