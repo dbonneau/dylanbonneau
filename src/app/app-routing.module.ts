@@ -4,7 +4,6 @@ import {
   ROUTING_ABOUT,
   ROUTING_BLOGS,
   ROUTING_DEMO,
-  ROUTING_GALERIES,
   ROUTING_LEGAL_NOTICE,
   ROUTING_WEDDING,
 } from './shared/consts/consts';
@@ -19,13 +18,6 @@ const routes: Routes = [
     path: ROUTING_DEMO,
     loadChildren: () =>
       import('./modules/demo/demo.module').then((m) => m.DemoModule),
-  },
-  {
-    path: ROUTING_GALERIES,
-    loadChildren: () =>
-      import('./modules/galeries/galeries.module').then(
-        (m) => m.GaleriesModule
-      ),
   },
   {
     path: ROUTING_ABOUT,

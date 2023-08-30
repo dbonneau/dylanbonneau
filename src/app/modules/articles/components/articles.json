@@ -1,0 +1,50 @@
+[
+  {
+    "author": {
+      "email": "bonneaudylan1@gmail.com",
+      "name": "Dylan BONNEAU"
+    },
+    "categories": ["conseils", "tendances"],
+    "description": "Pour vous aider à naviguer dans l'aventure du mariage, j'ai élaboré un kit de survie pour votre mariage : une checklist complète pour vous guider tout au long du processus. Peu importe si vous prévoyez une cérémonie intime ou une grande célébration, cette checklist vous permettra d'aborder votre grand jour avec confiance et sérénité.",
+    "featureImage": "https://i.postimg.cc/sgrxHX6N/Mathilde-maquillage-naturel-cheveux-fleurs-champetre.webp",
+    "subtitle": "la checklist pour un mariage sans stress",
+    "link": "le-kit-de-survie-votre-guide-pour-votre-mariage",
+    "title": "kit de survie : le guide pour votre mariage"
+  },
+  {
+    "author": {
+      "email": "bonneaudylan1@gmail.com",
+      "name": "Dylan BONNEAU"
+    },
+    "categories": ["conseils", "tendances"],
+    "description": "Imaginez-vous, fraîchement mariés, prêts à prolonger la magie de votre mariage. Les souvenirs de votre grand jour sont encore vifs dans votre esprit, et vous voulez les conserver précieusement.",
+    "featureImage": "https://i.postimg.cc/BZB54Xk2/blog-anais-jeremy-bellengreville-perquette-porte-feuille-arbres-couple.webp",
+    "subtitle": "5 étapes pour l'organiser",
+    "link": "qu-est-ce-qu-une-seance-photo-day-after",
+    "title": "Qu'est-ce qu'une séance photo \"Day After\" ?"
+  },
+  {
+    "author": {
+      "email": "bonneaudylan1@gmail.com",
+      "name": "Dylan BONNEAU"
+    },
+    "categories": ["mariage"],
+    "description": "Le soleil rayonne sur Derval, c'est un jour idéal pour un mariage. Je retrouve Mathilde et sa témoin tôt le matin, et je peux déjà ressentir l'excitation et les émotions de la journée.",
+    "featureImage": "https://i.postimg.cc/8zJrJ5KK/mariage-petales-bouquet-sortie-eglise-rire-main-dans-main.webp",
+    "subtitle": "Mathilde & Sébastien",
+    "link": "mariage-derval-mathilde-sebastien",
+    "title": "Un mariage inoubliable sous le soleil de Derval"
+  },
+  {
+    "author": {
+      "email": "bonneaudylan1@gmail.com",
+      "name": "Dylan BONNEAU"
+    },
+    "categories": ["conseils"],
+    "description": "Vous vous apprêtez à vivre le jour le plus important de votre vie et vous voulez que tout soit parfait. Vous passez des heures à planifier chaque détails, à choisir les robes, les costumes, les fleurs, la musique, la nourriture, et encore beaucoup d'autre chose. Mais avez-vous déjà pensé à la personne qui va capturer pour toujours les souvenirs de ce jour magique ?",
+    "featureImage": "https://i.postimg.cc/FsfBRb42/mariage-bisous-couple-baiser-passion-embrasse-romantique-amoureux.webp",
+    "subtitle": "5 étapes pour le sélectionner",
+    "link": "comment-choisir-son-photographe-de-mariage",
+    "title": "Comment choisir son photographe de mariage ?"
+  }
+]
