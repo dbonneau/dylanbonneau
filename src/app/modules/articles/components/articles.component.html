@@ -19,44 +19,46 @@
       !
     </p>
   </div>
-  <app-spinner *ngIf="loading"></app-spinner>
-  <app-infobox *ngIf="error" title="Une erreur est survenue, veuillez réessayer ultérieurement" [type]="EInfoBox.ERROR"></app-infobox>
-  
-  <app-infobox *ngIf="!lastArticle" title="Auncun article pour le moments" [type]="EInfoBox.WARNING"></app-infobox>
 
-  <ng-container *ngIf="!loading">
-    <div class="last-article" *ngIf="lastArticle" (click)="navigateTo(lastArticle)">
+  <app-infobox
+    *ngIf="!articles.length"
+    title="Auncun article pour le moments"
+    [type]="EInfoBox.WARNING"
+  ></app-infobox>
+
+  <div
+    class="last-article"
+    *ngIf="articles.length > 1"
+    (click)="navigateTo(articles[0])"
+  >
+    <div class="image">
+      <img [src]="articles[0].featureImage" [alt]="articles[0].description" />
+    </div>
+    <div class="content-container">
+      <div class="content">
+        <h2>{{ articles[0].title }}</h2>
+        <h3>{{ articles[0].subtitle }}</h3>
+        <em class="description">{{ articles[0].description }}</em>
+      </div>
+    </div>
+  </div>
+  <div class="articles">
+    <article
+      class="article"
+      *ngFor="let article of articles | slice : 1"
+      (click)="navigateTo(article)"
+    >
       <div class="image">
-        <img
-          [src]="lastArticle.fields.featureImage"
-          [alt]="lastArticle.fields.description"
-        />
+        <img [src]="article?.featureImage" [alt]="article?.description" />
       </div>
       <div class="content-container">
         <div class="content">
-          <h2>{{ lastArticle.fields.title }}</h2>
-          <h3>{{ lastArticle.fields.subtitle }}</h3>
-          <em class="description">{{ lastArticle.fields.description }}</em>
+          <h2>{{ article?.title }}</h2>
+          <h3>{{ article?.subtitle }}</h3>
+          <em class="description">{{ article?.description }}</em>
+          <button class="is-medium primary-color">Lire l'article</button>
         </div>
       </div>
-    </div>
-    <div class="articles">
-      <article class="article" *ngFor="let article of articles" (click)="navigateTo(article)">
-        <div class="image">
-          <img
-            [src]="article?.fields?.featureImage"
-            [alt]="article?.fields?.description"
-          />
-        </div>
-        <div class="content-container">
-          <div class="content">
-            <h2>{{ article?.fields?.title }}</h2>
-            <h3>{{ article?.fields?.subtitle }}</h3>
-            <em class="description">{{ article?.fields?.description }}</em>
-            <button class="is-medium primary-color">Lire l'article</button>
-          </div>
-        </div>
-      </article>
-    </div>
-  </ng-container>
+    </article>
+  </div>
 </div>

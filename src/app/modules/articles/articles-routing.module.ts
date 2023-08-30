@@ -5,6 +5,7 @@ import { Article_2022_07_30_01_Component } from './components/2022/2022-07-30-ma
 import { Article_2023_03_16_01_Component } from './components/2023/2023-03-16-comment-choisir-son-photographe-de-mariage/article-2023-03-16-01.component';
 import { Article_2023_07_02_01_Component } from './components/2023/2023-07-02-day-after/article-2023-07-02-01.component';
 import { ArticlesComponent } from './components/articles.component';
+import { Article_2023_08_29_01_Component } from './components/2023/2023-08-29-kit-de-survie/article-2023-08-29-01.component';
 
 const routes: Routes = [
   {
@@ -38,9 +39,18 @@ const routes: Routes = [
     path: ROUTES.Article_2023_07_02_01,
     component: Article_2023_07_02_01_Component,
     data: {
-      title: 'Qu\'est-ce qu\'une séance photo \'Day After\'',
+      title: "Qu'est-ce qu'une séance photo 'Day After'",
       description:
         "La séance photo 'Day After' est une opportunité extraordinaire de revivre ces instants magiques, de créer des souvenirs intimes et authentiques, et d'immortaliser votre amour à travers des clichés exceptionnels.",
+    },
+  },
+  {
+    path: ROUTES.Article_2023_08_29_01,
+    component: Article_2023_08_29_01_Component,
+    data: {
+      title: 'kit de survie : le guide pour votre mariage',
+      description:
+        'un kit de survie pour votre mariage : une checklist complète pour vous guider tout au long du processus',
     },
   },
 ];

@@ -22,42 +22,30 @@ export enum articleCategorie {
 }
 
 export class Article {
-  createdTime: Date;
-  fields: {
-    active: boolean,
-    author: {
-      email: string;
-      id: string;
-      name: string;
-    };
-    categories: articleCategorie[];
-    description: string;
-    featureImage: string; // URL de l'image en vedette
-    subtitle: string;
-    title: string;
-    link: string;
+  public author: {
+    email: string;
+    name: string;
   };
-  id: string;
+  public categories: articleCategorie[];
+  public description: string;
+  public featureImage: string; // URL de l'image en vedette
+  public subtitle: string;
+  public title: string;
+  public link: string;
 
   constructor(json?: Article) {
-    this.createdTime = new Date(json?.createdTime ?? '');
-    this.fields = {
-      active: json?.fields?.active ?? false,
-      author: {
-        email: json?.fields?.author?.email ?? '',
-        id: json?.fields?.author?.id ?? '',
-        name: json?.fields?.author?.name ?? ''
-      },
-      categories:
-        json?.fields?.categories?.map((category) => {
-          return category ?? null;
-        }) ?? [],
-      description: json?.fields?.description ?? '',
-      featureImage: json?.fields?.featureImage ?? '',
-      subtitle: json?.fields?.subtitle ?? '',
-      title: json?.fields?.title ?? '',
-      link: json?.fields?.link ?? ''
+    this.author = {
+      email: json?.author?.email ?? '',
+      name: json?.author?.name ?? '',
     };
-    this.id = json?.id ?? '';
+    this.categories =
+      json?.categories?.map((category) => {
+        return category ?? null;
+      }) ?? [];
+    this.description = json?.description ?? '';
+    this.featureImage = json?.featureImage ?? '';
+    this.subtitle = json?.subtitle ?? '';
+    this.title = json?.title ?? '';
+    this.link = json?.link ?? '';
   }
 }
