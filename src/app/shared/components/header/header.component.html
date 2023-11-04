@@ -12,23 +12,13 @@
     class="main-menu"
     [ngStyle]="{ display: 'flex', top: height ? '0' : '-1000%' }"
   >
-    <li *ngIf="scrolled || scrolledTheme">
+    <li>
       <a href="#">
         <img
           width="200"
           height="24"
           src="/assets/images/logo/logo.webp"
           alt="logo header"
-        />
-      </a>
-    </li>
-    <li *ngIf="!scrolled && !scrolledTheme">
-      <a href="#">
-        <img
-          width="200"
-          height="24"
-          src="/assets/images/logo/logo-white.webp"
-          alt="logo-white header"
         />
       </a>
     </li>
