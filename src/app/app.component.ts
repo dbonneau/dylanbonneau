@@ -13,7 +13,6 @@ import { mergeMap } from 'rxjs/internal/operators/mergeMap';
 import { SEOService } from './core/services/seo.service';
 import { environment } from 'src/environments/environment';
 
-declare const gtag: Function; // <------------Important: the declartion for gtag is required!
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -33,12 +32,6 @@ export class AppComponent implements OnInit {
       s.type = 'text/javascript';
       s.src =
         'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js';
-      this.elementRef.nativeElement.appendChild(s);
-    } else {
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.src =
-        'https://www.googletagmanager.com/gtag/js?id=G-TGL5TBR57Y';
       this.elementRef.nativeElement.appendChild(s);
     }
   }
@@ -65,9 +58,6 @@ export class AppComponent implements OnInit {
           event['title'] + event['description']
         );
         this.seoService.createLinkForCanonicalURL(event['canonical']);
-        gtag('event', 'page_view', {
-          page_path: event?.urlAfterRedirects,
-        });
       });
 
     this.router.events.subscribe((event) => {
