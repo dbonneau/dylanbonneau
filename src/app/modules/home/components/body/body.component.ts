@@ -26,13 +26,13 @@ export class BodyComponent {
     public testimonials = [
         {
             img: {
-                url: 'https://i.goopics.net/ghd675.jpg',
+                url: 'https://i.postimg.cc/FsfBRb42/mariage-bisous-couple-baiser-passion-embrasse-romantique-amoureux.webp',
                 width: 1244,
                 height: 700,
                 alt: 'Mathilde-Sebastien-bisous-mairie-derval-enfant-couple',
             },
             imgMobile: {
-                url: 'https://i.goopics.net/ghd675.jpg',
+                url: 'https://i.postimg.cc/FsfBRb42/mariage-bisous-couple-baiser-passion-embrasse-romantique-amoureux.webp',
                 width: 600,
                 height: 338,
                 alt: 'mobile-Mathilde-Sebastien-bisous-mairie-derval-enfant-couple',
