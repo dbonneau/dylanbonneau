@@ -1,0 +1,31 @@
+{
+  "window.zoomLevel": 0,
+  "explorer.confirmDragAndDrop": true,
+  "explorer.confirmDelete": true,
+  "workbench.tree.indent": 16,
+  "workbench.tree.renderIndentGuides": "always",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.linkedEditing": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSaveMode": "file"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSaveMode": "file"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.formatOnSaveMode": "file"
+  },
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  "stylelint.snippet": ["css", "less", "postcss", "scss"],
+  "stylelint.customSyntax": "postcss-scss",
+  "files.eol": "\n"
+}

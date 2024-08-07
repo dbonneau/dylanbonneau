@@ -2,50 +2,64 @@
   [ngClass]="{
     hide: hide || scrolledTheme,
     scrolled: scrolled || scrolledTheme
-  }"
->
+  }">
   <div></div>
   <div class="open-menu">
-    <i class="icon icon-menu" (click)="toggleMenu()"></i>
+    <button
+      type="button"
+      class="icon icon-menu"
+      (click)="toggleMenu()"></button>
   </div>
   <ul
     class="main-menu"
-    [ngStyle]="{ display: 'flex', top: height ? '0' : '-1000%' }"
-  >
+    [ngStyle]="{ display: 'flex', top: height ? '0' : '-1000%' }">
     <li>
       <a href="#">
         <img
           width="200"
           height="24"
           src="/assets/images/logo/logo.webp"
-          alt="logo header"
-        />
+          alt="logo header" />
       </a>
-    </li>
-    <li><a class="link" [href]="ROUTING.About">À propos</a></li>
-    <li><a class="link" [href]="ROUTING.Wedding">mariage</a></li>
-    <li><a class="link" [href]="ROUTING.Blogs">blogs</a></li>
-    <li *ngIf="!scrolled && !scrolledTheme">
-      <a
-        class="button is-medium button-hover-white primary-color"
-        target="_blank"
-        href="https://calendly.com/dylanbonneau/appel-telephonique"
-        >{{ " Prendre un RDV" | uppercase }}</a
-      >
     </li>
     <li>
       <a
-        *ngIf="scrolled || scrolledTheme"
-        class="button is-medium primary-color"
+        class="link"
+        [href]="ROUTING.About">
+        {{ 'about_me.title' | translate }}
+      </a>
+    </li>
+    <li>
+      <a
+        class="link"
+        [href]="ROUTING.Wedding">
+        {{ 'wedding.title' | translate }}
+      </a>
+    </li>
+    <li>
+      <a
+        class="link"
+        [href]="ROUTING.Blogs">
+        {{ 'blogs.title' | translate }}
+      </a>
+    </li>
+    <li>
+      <a
+        class="button is-medium button-hover-white primary-color"
+        [class.button-hover-white]="!scrolled && !scrolledTheme"
         target="_blank"
-        href="https://calendly.com/dylanbonneau/appel-telephonique"
-        >{{ " Prendre un RDV" | uppercase }}</a
-      >
+        [href]="ROUTING.calendly">
+        {{ 'common.action.appointment' | translate | uppercase }}
+      </a>
     </li>
     <li class="close-menu">
-      <i class="icon icon-x" (click)="toggleMenu()"></i>
+      <button
+        class="icon icon-x"
+        (click)="toggleMenu()"></button>
     </li>
   </ul>
 </nav>
 
-<div class="header" *ngIf="scrolledTheme"></div>
+@if (scrolledTheme) {
+  <div class="header"></div>
+}

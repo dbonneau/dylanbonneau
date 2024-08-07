@@ -1,11 +1,6 @@
 {
-  "plugins": [
-    "stylelint-declaration-block-no-ignored-properties",
-    "stylelint-no-unsupported-browser-features"
-  ],
-  "extends": [
-    "stylelint-config-property-sort-order-smacss"
-  ],
+  "plugins": ["stylelint-declaration-block-no-ignored-properties", "stylelint-no-unsupported-browser-features"],
+  "extends": ["stylelint-config-property-sort-order-smacss"],
   "rules": {
     "at-rule-disallowed-list": null,
     "at-rule-empty-line-before": null,
@@ -32,7 +27,7 @@
       "/^.*margin.*/": ["em", "px", "%"],
       "/^.*padding.*/": ["em", "px", "%"],
       "font-size": ["em", "px", "rem"],
-      "line-height": [],
+      "line-height": []
     },
     "font-family-name-quotes": "always-where-recommended",
     "function-comma-newline-after": null,
@@ -51,12 +46,7 @@
     "max-nesting-depth": [
       4,
       {
-        "ignoreAtRules": [
-          "each",
-          "media",
-          "supports",
-          "include"
-        ]
+        "ignoreAtRules": ["each", "media", "supports", "include"]
       }
     ],
     "media-feature-name-no-vendor-prefix": true,
@@ -85,7 +75,7 @@
         "severity": "warning",
         "ignore": ["calc", "rem", "outline", "css-appearance", "css-gradients", "flexbox"],
         "ignorePartialSupport": true
-      },
+      }
     ],
     "rule-empty-line-before": [
       "always-multi-line",
@@ -98,8 +88,7 @@
     "selector-class-pattern": [
       "^[a-z0-9\\-]+$",
       {
-        "message":
-          "Selector should be written in lowercase with hyphens (selector-class-pattern)"
+        "message": "Selector should be written in lowercase with hyphens (selector-class-pattern)"
       }
     ],
     "selector-list-comma-newline-after": "always",

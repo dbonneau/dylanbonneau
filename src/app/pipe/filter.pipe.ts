@@ -1,25 +1,25 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter'
+  name: 'filter',
+  standalone: true
 })
 export class FilterPipe implements PipeTransform {
-
-  transform(valueArray: string[], sName: string): any {
-
+  public transform(valueArray: string[], sName: string): string[] {
+    let result;
     if (sName === '') {
-      return valueArray;
-    }
+      result = valueArray;
+    } else {
+      const arrayTmp = [];
 
-    const arrayTmp = [];
-
-    for (const value of valueArray) {
-      if (value.includes(sName)) {
-        arrayTmp.push(value);
+      for (const value of valueArray) {
+        if (value.includes(sName)) {
+          arrayTmp.push(value);
+        }
       }
+
+      result = arrayTmp;
     }
-
-    return arrayTmp;
+    return result;
   }
-
 }

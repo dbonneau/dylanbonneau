@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IconsLibraryComponent } from './icons-library.component';
 
@@ -6,12 +6,11 @@ describe('IconsLibraryComponent', () => {
   let component: IconsLibraryComponent;
   let fixture: ComponentFixture<IconsLibraryComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ IconsLibraryComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [IconsLibraryComponent]
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(IconsLibraryComponent);

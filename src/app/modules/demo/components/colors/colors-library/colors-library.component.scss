@@ -1,5 +1,4 @@
-@import 'variables';
-@import 'utils';
+@use 'variables';
 
 .selected-color {
   position: relative;
@@ -14,8 +13,8 @@ span {
   width: 100px;
   height: 100%;
   transform: scale(1.15);
-  background-color: $white;
-  color: $black;
+  background-color: var(--white);
+  color: var(--black);
   line-height: 120px;
   text-align: center;
 }
@@ -96,7 +95,7 @@ footer {
   padding: 0;
   overflow: hidden;
   transition: .5s cubic-bezier(.175, .885, .32, 1.275);
-  background: $white;
+  background: var(--white);
   box-shadow: 0 5px 20px rgba(rgb(128, 128, 128), .1);
 
   &:hover {
@@ -192,7 +191,7 @@ footer {
 }
 
 .font-white {
-  color: $white;
+  color: var(--white);
 }
 
 @media screen and (max-width: 768px) {

@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component } from '@angular/core';
+import { MatTabsModule } from '@angular/material/tabs';
+
+import { ColorsLibraryComponent } from './colors-library/colors-library.component';
 
 @Component({
   selector: 'app-colors',
-  templateUrl: './colors.component.html',
-  styleUrls: ['./colors.component.scss']
+  standalone: true,
+  imports: [MatTabsModule, ColorsLibraryComponent],
+  templateUrl: './colors.component.html'
 })
-export class ColorsComponent implements OnInit {
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class ColorsComponent {}

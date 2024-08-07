@@ -1,39 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component } from '@angular/core';
+import { MatTabsModule } from '@angular/material/tabs';
+
+import { IconsContributeComponent } from './icons-contribute/icons-contribute.component';
+import { IconsLibraryComponent } from './icons-library/icons-library.component';
+import { IconsUsageComponent } from './icons-usage/icons-usage.component';
 
 @Component({
   selector: 'app-icons',
-  templateUrl: './icons.component.html',
-  styleUrls: ['./icons.component.scss']
+  standalone: true,
+  imports: [MatTabsModule, IconsUsageComponent, IconsLibraryComponent, IconsContributeComponent],
+  templateUrl: './icons.component.html'
 })
-export class IconsComponent implements OnInit {
-  public selectedIcon: string = '';
-  public searchName = '';
-
-  listIcons: string[] = [
-    'check', 'more-horizontal', 'more-vertical',
-    'heart', 'heart-solid', 'star', 'star-solid', 'wallet', 'x', 'search',
-    'image', 'images', 'camera', 'price-tag', 'price-tags', 'credit-card',
-    'location', 'location2', 'calendar', 'pie-chart', 'stats-dots', 'stats-bars',
-    'gift', 'trash', 'airplane', 'menu', 'earth', 'google',
-    'facebook', 'instagram', 'youtube', 'youtube2', 'previous', 'next',
-    'bxs-user', 'bx-user', 'bx-code-block', 'bx-git-repo-forked',
-    'bx-git-pull-request', 'bx-git-merge', 'bx-git-compare',
-    'bx-git-commit', 'bx-git-branch', 'bx-terminal', 'bx-code',
-    'bx-code-curly', 'bxs-data', 'bxs-component', 'bx-code-alt',
-    'bxs-chevron-down', 'bxs-chevron-up', 'bxs-chevron-right',
-    'bxs-chevron-left', 'bxs-info-circle', 'bx-info-circle',
-    'bx-minus', 'bx-plus', 'bxs-right-arrow', 'bxs-left-arrow',
-    'bxs-up-arrow', 'bxs-down-arrow', 'bxs-quote-alt-right', 'bxs-quote-alt-left'
-  ];
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
-  resetSearch() {
-    this.searchName = '';
-  }
-
-}
+export class IconsComponent {}
