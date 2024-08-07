@@ -1,14 +1,13 @@
-@import 'variables';
-@import 'icons';
-@import 'mixins';
-@import 'button';
-@import 'utils';
-@import 'search';
-@import 'colorPalettes';
-@import 'sizes';
-@import 'typography';
-@import 'form';
-@import '~highlight.js/styles/atom-one-dark.css';
+@use 'variables';
+@use 'icons';
+@use 'mixins';
+@use 'button';
+@use 'utils';
+@use 'search';
+@use 'colorPalettes';
+@use 'sizes';
+@use 'typography';
+@use 'form';
 
 /* You can add global styles to this file, and also import other style files */
 body,
@@ -17,7 +16,7 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-  color: $black;
+  color: var(--black);
 }
 
 * {

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormsLibraryComponent } from './forms-library.component';
 
@@ -6,12 +6,11 @@ describe('FormsLibraryComponent', () => {
   let component: FormsLibraryComponent;
   let fixture: ComponentFixture<FormsLibraryComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FormsLibraryComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [FormsLibraryComponent]
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FormsLibraryComponent);

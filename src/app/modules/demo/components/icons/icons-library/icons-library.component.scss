@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 .grid-icons {
   padding: 16px 8px;
@@ -15,7 +15,7 @@
 
 .search-cont .search-box {
   display: flex;
-  color: $black;
+  color: var(--black);
 
   em {
     margin: auto;

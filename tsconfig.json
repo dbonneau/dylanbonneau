@@ -4,67 +4,29 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "module": "ES2022",
+    "useDefineForClassFields": false,
+    "lib": ["ES2022", "dom"],
     "paths": {
-      "@app/*": [
-        "app/*"
-      ],
-      "@env/*": [
-        "environments/*"
-      ],
-      "@core/*": [
-        "app/core/*"
-      ],
-      "@api/*": [
-        "app/core/api/*"
-      ],
-      "@shared/*": [
-        "app/shared/*"
-      ],
-      "@consts/*": [
-        "app/shared/consts/*"
-      ],
-      "@directives/*": [
-        "app/shared/directives/*"
-      ],
-      "@tools/*": [
-        "app/core/tools/*"
-      ],
-      "@models/*": [
-        "app/core/models/*"
-      ],
-      "@material/*": [
-        "app/modules/angular-material/*"
-      ],
-      "@generated/*": [
-        "app/generated/*"
-      ]
-    },
-    "useDefineForClassFields": false
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["src/assets/*"],
+      "@env/*": ["src/environments/*"]
+    }
   },
-  "exclude": [
-    "e2e/**",
-    "src/generated/**",
-    "**/*.json",
-    "*.json"
-  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

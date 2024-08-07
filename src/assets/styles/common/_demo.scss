@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 .wrapper {
   max-width: 1200px;
@@ -14,7 +14,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: $grey-3;
+  color: var(--grey-3);
 }
 
 h1 {
@@ -57,12 +57,12 @@ li {
     }
   }
 
-  @media screen and (max-width: $mobile-breakpoint) {
+  @media screen and (max-width: var(--mobile-breakpoint)) {
     flex-direction: column;
-    //background-color: $grey-f;
+    //background-color: var(--grey-f);
     margin: 20px 0;
     padding: 20px 10px 10px;
-    border: 1px solid $grey-d;
+    border: 1px solid var(--grey-d);
 
     .demo {
       width: 100%;
