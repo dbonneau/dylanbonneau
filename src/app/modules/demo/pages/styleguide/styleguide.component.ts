@@ -1,44 +1,51 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit, HostListener, inject } from '@angular/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { WINDOW } from '@app/core/services/window.service';
+
 import { ROUTING } from '../../../../shared/consts/consts';
+import { ButtonsComponent } from '../../components/buttons/buttons.component';
+import { ColorsComponent } from '../../components/colors/colors.component';
+import { FormsComponent } from '../../components/forms/forms.component';
+import { IconsComponent } from '../../components/icons/icons.component';
+import { MenuDemoComponent } from '../../components/menu-demo/menu-demo.component';
 const SCROLL_TOP = 200;
-const SCROLL_FRACTION = 7;
 
 @Component({
   selector: 'app-styleguide',
+  standalone: true,
+  imports: [CommonModule, MatSidenavModule, MenuDemoComponent, IconsComponent, FormsComponent, ColorsComponent, ButtonsComponent],
   templateUrl: './styleguide.component.html',
   styleUrls: ['./styleguide.component.scss']
 })
 export class StyleguideComponent implements OnInit {
-  scrolled = false;
-  windowSize: any;
-  ROUTING = ROUTING;
+  public scrolled = false;
+  public windowSize: any;
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
+  public readonly ROUTING = ROUTING;
+  private readonly _window = inject(WINDOW);
+
+  @HostListener('window:resize', ['$event']) public onResize(event: any): void {
     this.windowSize = event.target.innerWidth;
   }
 
-  @HostListener('window:scroll', [])
-  onScroll() {
-    this.scrolled = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop) > SCROLL_TOP;
+  @HostListener('window:scroll', []) public onScroll(): void {
+    this.scrolled = (this._window.scrollY || document.documentElement.scrollTop || document.body.scrollTop) > SCROLL_TOP;
   }
 
-  ngOnInit() {
-    this.windowSize = window.innerWidth;
+  public ngOnInit(): void {
+    this.windowSize = this._window.innerWidth;
   }
 
-  scrollToTop(): void {
-    (function smoothScroll() {
-      const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      if (currentScroll > 0) {
-        window.requestAnimationFrame(smoothScroll);
-        window.scrollTo(0, currentScroll - currentScroll / SCROLL_FRACTION);
-      }
-    })();
+  public scrollToTop(): void {
+    this._window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
-  thisIsPage(thisRoute: string): boolean {
-    return window.location.href.includes(thisRoute);
+  public thisIsPage(thisRoute: string): boolean {
+    return this._window.location.href.includes(thisRoute);
   }
-
 }

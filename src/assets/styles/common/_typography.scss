@@ -1,4 +1,4 @@
-@import "../modules/fonts/fonts";
+@use "../modules/fonts/fonts";
 
 /**
  * Titles
@@ -61,7 +61,7 @@ strong {
     content: attr(data-title);
     display: block;
     margin-top: 0.938rem;
-    color: $primary;
+    color: var(--primary);
     font-size: 1.15rem;
     font-weight: 500;
     letter-spacing: 0.188rem;

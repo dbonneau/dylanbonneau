@@ -1,0 +1,66 @@
+<!-- MENU -->
+<app-header [scrolledTheme]="true"></app-header>
+
+<div class="block">
+  <h1
+    class="title with-subtitle"
+    data-title="le Blog">
+    Photographe de mariage
+  </h1>
+  <div class="text-block">
+    <p>
+      Vous êtes sur le point de vivre le plus beau jour de votre vie ? Vous êtes à la recherche d'un photographe de mariage pour capturer
+      les moments les plus précieux de votre journée ? Vous êtes tombé au bon endroit !
+    </p>
+    <p>
+      Mon but aujourd'hui ? Vous aider dans le préparation de votre mariage ! Je suis là pour vous offrir des conseils amusants, des astuces
+      pour des photos incroyables, et des idées pour que vous puissiez immortaliser votre amour à jamais. Rejoignez moi pour une aventure
+      photographique inoubliable !
+    </p>
+  </div>
+
+  @if (articles.length) {
+    <div
+      class="last-article"
+      (click)="navigateTo(articles[0])">
+      <div class="image">
+        <img
+          [src]="articles[0].featureImage"
+          [alt]="articles[0].description" />
+      </div>
+      <div class="content-container">
+        <div class="content">
+          <h2>{{ articles[0].title }}</h2>
+          <h3>{{ articles[0].subtitle }}</h3>
+          <em class="description">{{ articles[0].description }}</em>
+        </div>
+      </div>
+    </div>
+  } @else {
+    <app-infobox
+      title="Auncun article pour le moments"
+      [type]="EInfoBox.WARNING">
+    </app-infobox>
+  }
+  <div class="articles">
+    @for (article of articles | slice: 1; track article) {
+      <article
+        class="article"
+        (click)="navigateTo(article)">
+        <div class="image">
+          <img
+            [src]="article?.featureImage"
+            [alt]="article?.description" />
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <h2>{{ article?.title }}</h2>
+            <h3>{{ article?.subtitle }}</h3>
+            <em class="description">{{ article?.description }}</em>
+            <button class="is-medium primary-color">Lire l'article</button>
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+</div>

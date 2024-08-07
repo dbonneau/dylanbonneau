@@ -10,7 +10,7 @@ export enum articleType {
   TEXT = 'text',
   IMAGE = 'image',
   BUTTON = 'button',
-  LINK = 'link',
+  LINK = 'link'
 }
 
 export enum articleCategorie {
@@ -18,7 +18,7 @@ export enum articleCategorie {
   MARIAGE = 'mariage',
   PLANIFICATION = 'planification',
   TENANCES = 'tendances',
-  DESTINATION = 'destination',
+  DESTINATION = 'destination'
 }
 
 export class Article {
@@ -36,7 +36,7 @@ export class Article {
   constructor(json?: Article) {
     this.author = {
       email: json?.author?.email ?? '',
-      name: json?.author?.name ?? '',
+      name: json?.author?.name ?? ''
     };
     this.categories =
       json?.categories?.map((category) => {

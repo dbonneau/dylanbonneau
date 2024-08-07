@@ -1,65 +1,70 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
-import {
-  ActivatedRoute,
-  NavigationCancel,
-  NavigationEnd,
-  NavigationError,
-  NavigationStart,
-  Router,
-} from '@angular/router';
-import { map } from 'rxjs/internal/operators/map';
+import { DOCUMENT } from '@angular/common';
+import { Component, ElementRef, Inject, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet } from '@angular/router';
+import { environment } from '@env/environment';
 import { filter } from 'rxjs/internal/operators/filter';
+import { map } from 'rxjs/internal/operators/map';
 import { mergeMap } from 'rxjs/internal/operators/mergeMap';
+
+// Import { SEOService } from './core/services/seo.service';
 import { SEOService } from './core/services/seo.service';
-import { environment } from 'src/environments/environment';
+import { HomeComponent } from './modules/home/home.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { SpinnerComponent } from './shared/components/spinner/spinner.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, HomeComponent, FooterComponent, SpinnerComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  loading = false;
+  public loading = false;
 
   constructor(
+    @Inject(DOCUMENT) private readonly document: Document,
     private readonly router: Router,
     private readonly activatedRoute: ActivatedRoute,
     private readonly seoService: SEOService,
     private elementRef: ElementRef
-  ) {
+  ) {}
+
+  public ngOnInit(): void {
+    this.addHighlight();
+    this.seo();
+    this.load();
+  }
+
+  private addHighlight(): void {
     if (!environment.production) {
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.src =
-        'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js';
-      this.elementRef.nativeElement.appendChild(s);
+      const script = this.document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js';
+      this.elementRef.nativeElement.appendChild(script);
     }
   }
 
-  ngOnInit() {
+  private seo(): void {
     this.router.events
       .pipe(
-        filter(
-          (event) =>
-            event instanceof NavigationEnd || event instanceof NavigationStart
-        ),
+        filter((event) => event instanceof NavigationEnd || event instanceof NavigationStart),
         map(() => this.activatedRoute),
-        map((route) => {
-          while (route.firstChild) route = route.firstChild;
-          return route;
-        }),
+        map((route) => route.firstChild ?? route),
         filter((route) => route.outlet === 'primary'),
         mergeMap((route) => route.data)
       )
       .subscribe((event) => {
-        this.seoService.updateTitle(event['title']);
-        //Updating Description tag dynamically with title
-        this.seoService.updateDescription(
-          event['title'] + event['description']
-        );
-        this.seoService.createLinkForCanonicalURL(event['canonical']);
+        if (event['title']) {
+          this.seoService.updateTitle(event['title']);
+          // Updating Description tag dynamically with title
+          this.seoService.updateDescription(event['title'] + event['description']);
+          this.seoService.createLinkForCanonicalURL(event['canonical']);
+        }
       });
+  }
 
+  private load(): void {
     this.router.events.subscribe((event) => {
       switch (true) {
         case event instanceof NavigationStart: {

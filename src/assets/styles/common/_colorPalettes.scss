@@ -2,468 +2,468 @@
 //	----------------------------------------------------------------------------
 
 .background-black {
-  background-color: $black;
+  background-color: var(--black);
 }
 
 .background-white {
-  background-color: $white;
+  background-color: var(--white);
 }
 
 .background-grey-1 {
-  background-color: $grey-1;
+  background-color: var(--grey-1);
 }
 
 .background-grey-2 {
-  background-color: $grey-2;
+  background-color: var(--grey-2);
 }
 
 .background-grey-3 {
-  background-color: $grey-3;
+  background-color: var(--grey-3);
 }
 
 .background-grey-4 {
-  background-color: $grey-4;
+  background-color: var(--grey-4);
 }
 
 .background-grey-5 {
-  background-color: $grey-5;
+  background-color: var(--grey-5);
 }
 
 .background-grey-6 {
-  background-color: $grey-6;
+  background-color: var(--grey-6);
 }
 
 .background-grey-7 {
-  background-color: $grey-7;
+  background-color: var(--grey-7);
 }
 
 .background-grey-8 {
-  background-color: $grey-8;
+  background-color: var(--grey-8);
 }
 
 .background-grey-9 {
-  background-color: $grey-9;
+  background-color: var(--grey-9);
 }
 
 .background-grey-a {
-  background-color: $grey-a;
+  background-color: var(--grey-a);
 }
 
 .background-grey-b {
-  background-color: $grey-b;
+  background-color: var(--grey-b);
 }
 
 .background-grey-c {
-  background-color: $grey-c;
+  background-color: var(--grey-c);
 }
 
 .background-grey-d {
-  background-color: $grey-d;
+  background-color: var(--grey-d);
 }
 
 .background-grey-e {
-  background-color: $grey-e;
+  background-color: var(--grey-e);
 }
 
 .background-grey-f {
-  background-color: $grey-f;
+  background-color: var(--grey-f);
 }
 
 /* colors */
 
 .background-blue {
-  background-color: $blue;
+  background-color: var(--blue);
 }
 
 .background-red {
-  background-color: $red;
+  background-color: var(--red);
 }
 
 .background-yellow {
-  background-color: $yellow;
+  background-color: var(--yellow);
 }
 
 .background-green {
-  background-color: $green;
+  background-color: var(--green);
 }
 
 /* Blue */
 
 .background-blue-100 {
-  background-color: $blue-100;
+  background-color: var(--blue)-100;
 }
 
 .background-blue-200 {
-  background-color: $blue-200;
+  background-color: var(--blue)-200;
 }
 
 .background-blue-300 {
-  background-color: $blue-300;
+  background-color: var(--blue)-300;
 }
 
 .background-blue-400 {
-  background-color: $blue-400;
+  background-color: var(--blue)-400;
 }
 
 .background-blue-500 {
-  background-color: $blue-500;
+  background-color: var(--blue)-500;
 }
 
 .background-blue-600 {
-  background-color: $blue-600;
+  background-color: var(--blue)-600;
 }
 
 .background-blue-700 {
-  background-color: $blue-700;
+  background-color: var(--blue)-700;
 }
 
 /* Green */
 
 .background-green-100 {
-  background-color: $green-100;
+  background-color: var(--green)-100;
 }
 
 .background-green-200 {
-  background-color: $green-200;
+  background-color: var(--green)-200;
 }
 
 .background-green-300 {
-  background-color: $green-300;
+  background-color: var(--green)-300;
 }
 
 .background-green-400 {
-  background-color: $green-400;
+  background-color: var(--green)-400;
 }
 
 .background-green-500 {
-  background-color: $green-500;
+  background-color: var(--green)-500;
 }
 
 .background-green-600 {
-  background-color: $green-600;
+  background-color: var(--green)-600;
 }
 
 .background-green-700 {
-  background-color: $green-700;
+  background-color: var(--green)-700;
 }
 
 /* Red */
 
 .background-red-100 {
-  background-color: $red-100;
+  background-color: var(--red)-100;
 }
 
 .background-red-200 {
-  background-color: $red-200;
+  background-color: var(--red)-200;
 }
 
 .background-red-300 {
-  background-color: $red-300;
+  background-color: var(--red)-300;
 }
 
 .background-red-400 {
-  background-color: $red-400;
+  background-color: var(--red)-400;
 }
 
 .background-red-500 {
-  background-color: $red-500;
+  background-color: var(--red)-500;
 }
 
 .background-red-600 {
-  background-color: $red-600;
+  background-color: var(--red)-600;
 }
 
 .background-red-700 {
-  background-color: $red-700;
+  background-color: var(--red)-700;
 }
 
 /* Yellow */
 
 .background-yellow-100 {
-  background-color: $yellow-100;
+  background-color: var(--yellow)-100;
 }
 
 .background-yellow-200 {
-  background-color: $yellow-200;
+  background-color: var(--yellow)-200;
 }
 
 .background-yellow-300 {
-  background-color: $yellow-300;
+  background-color: var(--yellow)-300;
 }
 
 .background-yellow-400 {
-  background-color: $yellow-400;
+  background-color: var(--yellow)-400;
 }
 
 .background-yellow-500 {
-  background-color: $yellow-500;
+  background-color: var(--yellow)-500;
 }
 
 .background-yellow-600 {
-  background-color: $yellow-600;
+  background-color: var(--yellow)-600;
 }
 
 .background-yellow-700 {
-  background-color: $yellow-700;
+  background-color: var(--yellow)-700;
 }
 
 /* Theme colors */
 
 .background-primary {
-  background-color: $primary;
+  background-color: var(--primary);
 }
 
 .background-success {
-  background-color: $success;
+  background-color: var(--success);
 }
 
 .background-warning {
-  background-color: $warning;
+  background-color: var(--warning);
 }
 
 .background-danger {
-  background-color: $danger;
+  background-color: var(--danger);
 }
 
 .background-light {
-  background-color: $light;
+  background-color: var(--light);
 }
 
 .background-secondary {
-  background-color: $secondary;
+  background-color: var(--secondary);
 }
 
 //	text color
 //	----------------------------------------------------------------------------
 
 .colors-black {
-  color: $black;
+  color: var(--black);
 }
 
 .colors-white {
-  color: $white;
+  color: var(--white);
 }
 
 .colors-grey-1 {
-  color: $grey-1;
+  color: var(--grey-1);
 }
 
 .colors-grey-2 {
-  color: $grey-2;
+  color: var(--grey-2);
 }
 
 .colors-grey-3 {
-  color: $grey-3;
+  color: var(--grey-3);
 }
 
 .colors-grey-4 {
-  color: $grey-4;
+  color: var(--grey-4);
 }
 
 .colors-grey-5 {
-  color: $grey-5;
+  color: var(--grey-5);
 }
 
 .colors-grey-6 {
-  color: $grey-6;
+  color: var(--grey-6);
 }
 
 .colors-grey-7 {
-  color: $grey-7;
+  color: var(--grey-7);
 }
 
 .colors-grey-8 {
-  color: $grey-8;
+  color: var(--grey-8);
 }
 
 .colors-grey-9 {
-  color: $grey-9;
+  color: var(--grey-9);
 }
 
 .colors-grey-a {
-  color: $grey-a;
+  color: var(--grey-a);
 }
 
 .colors-grey-b {
-  color: $grey-b;
+  color: var(--grey-b);
 }
 
 .colors-grey-c {
-  color: $grey-c;
+  color: var(--grey-c);
 }
 
 .colors-grey-d {
-  color: $grey-d;
+  color: var(--grey-d);
 }
 
 .colors-grey-e {
-  color: $grey-e;
+  color: var(--grey-e);
 }
 
 .colors-grey-f {
-  color: $grey-f;
+  color: var(--grey-f);
 }
 
 /* colors */
 
 .colors-blue {
-  color: $blue;
+  color: var(--blue);
 }
 
 .colors-red {
-  color: $red;
+  color: var(--red);
 }
 
 .colors-yellow {
-  color: $yellow;
+  color: var(--yellow);
 }
 
 .colors-green {
-  color: $green;
+  color: var(--green);
 }
 
 /* Blue */
 
 .colors-blue-100 {
-  color: $blue-100;
+  color: var(--blue)-100;
 }
 
 .colors-blue-200 {
-  color: $blue-200;
+  color: var(--blue)-200;
 }
 
 .colors-blue-300 {
-  color: $blue-300;
+  color: var(--blue)-300;
 }
 
 .colors-blue-400 {
-  color: $blue-400;
+  color: var(--blue)-400;
 }
 
 .colors-blue-500 {
-  color: $blue-500;
+  color: var(--blue)-500;
 }
 
 .colors-blue-600 {
-  color: $blue-600;
+  color: var(--blue)-600;
 }
 
 .colors-blue-700 {
-  color: $blue-700;
+  color: var(--blue)-700;
 }
 
 /* Green */
 
 .colors-green-100 {
-  color: $green-100;
+  color: var(--green)-100;
 }
 
 .colors-green-200 {
-  color: $green-200;
+  color: var(--green)-200;
 }
 
 .colors-green-300 {
-  color: $green-300;
+  color: var(--green)-300;
 }
 
 .colors-green-400 {
-  color: $green-400;
+  color: var(--green)-400;
 }
 
 .colors-green-500 {
-  color: $green-500;
+  color: var(--green)-500;
 }
 
 .colors-green-600 {
-  color: $green-600;
+  color: var(--green)-600;
 }
 
 .colors-green-700 {
-  color: $green-700;
+  color: var(--green)-700;
 }
 
 /* Red */
 
 .colors-red-100 {
-  color: $red-100;
+  color: var(--red)-100;
 }
 
 .colors-red-200 {
-  color: $red-200;
+  color: var(--red)-200;
 }
 
 .colors-red-300 {
-  color: $red-300;
+  color: var(--red)-300;
 }
 
 .colors-red-400 {
-  color: $red-400;
+  color: var(--red)-400;
 }
 
 .colors-red-500 {
-  color: $red-500;
+  color: var(--red)-500;
 }
 
 .colors-red-600 {
-  color: $red-600;
+  color: var(--red)-600;
 }
 
 .colors-red-700 {
-  color: $red-700;
+  color: var(--red)-700;
 }
 
 /* Yellow */
 
 .colors-yellow-100 {
-  color: $yellow-100;
+  color: var(--yellow)-100;
 }
 
 .colors-yellow-200 {
-  color: $yellow-200;
+  color: var(--yellow)-200;
 }
 
 .colors-yellow-300 {
-  color: $yellow-300;
+  color: var(--yellow)-300;
 }
 
 .colors-yellow-400 {
-  color: $yellow-400;
+  color: var(--yellow)-400;
 }
 
 .colors-yellow-500 {
-  color: $yellow-500;
+  color: var(--yellow)-500;
 }
 
 .colors-yellow-600 {
-  color: $yellow-600;
+  color: var(--yellow)-600;
 }
 
 .colors-yellow-700 {
-  color: $yellow-700;
+  color: var(--yellow)-700;
 }
 
 /* Theme colors */
 
 .primary-color {
-  color: $primary;
+  color: var(--primary);
 }
 
 .colors-success {
-  color: $success;
+  color: var(--success);
 }
 
 .colors-warning {
-  color: $warning;
+  color: var(--warning);
 }
 
 .colors-danger {
-  color: $danger;
+  color: var(--danger);
 }
 
 .colors-light {
-  color: $light;
+  color: var(--light);
 }
 
 .colors-secondary {
-  color: $secondary;
+  color: var(--secondary);
 }

@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 * {
   box-sizing: border-box;
@@ -12,8 +12,8 @@
   right: 0;
   left: 0;
   margin-top: -130px;
-  background: $white;
-  color: $black;
+  background: var(--white);
+  color: var(--black);
 }
 
 img {
@@ -27,12 +27,12 @@ img {
 nav {
   display: flex;
   position: absolute;
-  z-index: $menu-z-index;
+  z-index: var(--menu-z-index);
   justify-content: center;
   width: 100%;
   padding-top: 20px;
   transition: background-color .25s ease;
-  color: $white;
+  color: var(--white);
 
   .main-menu {
     display: flex;
@@ -50,7 +50,7 @@ nav {
 
 .link {
   display: inline-block;
-  padding: 30px 20px;
+  margin: 30px 20px;
   font-size: 1rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -71,7 +71,7 @@ nav {
     .main-menu {
       display: none;
       position: fixed;
-      z-index: $menu-z-index;
+      z-index: var(--menu-z-index);
       top: 0;
       right: 0;
       left: 0;
@@ -80,7 +80,7 @@ nav {
       justify-content: center;
       height: 100vh;
       transition: top .25s ease;
-      background: $primary;
+      background: var(--primary);
 
       .close-menu {
         display: block;

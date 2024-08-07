@@ -1,149 +1,153 @@
-/**
+:root {
+  /**
   COMMON VARIABLES
  */
 
-$header-height: 0;
-$header-account-width: 320px;
-$menu-size-width: 70px; // also defined in consts.ts for animation purposes
-$menu-size: 85px; // also defined in consts.ts for animation purposes
-$sidebar-size: 368px; // also defined in consts.ts for animation purposes
+--header-height: 0;
+--header-account-width: 320px;
+--menu-size-width: 70px; // also defined in consts.ts for animation purposes
+--menu-size: 85px; // also defined in consts.ts for animation purposes
+--sidebar-size: 368px; // also defined in consts.ts for animation purposes
 
 /* Paths */
-$theme-images-path: '~/assets/images/';
-$common-images-path: '~/assets/images/common/';
-$theme-fonts-path: '~/assets/fonts/';
+--theme-images-path: '~/assets/images/';
+--common-images-path: '~/assets/images/common/';
+--theme-fonts-path: '~/assets/fonts/';
 
 /* Colors */
-$black: #000;
-$white: #FFF;
-$grey-1: #111;
-$grey-2: #272727;
-$grey-3: #333;
-$grey-4: #4A4A4A;
-$grey-5: #555;
-$grey-6: #666;
-$grey-7: #777;
-$grey-8: #888;
-$grey-9: #999;
-$grey-a: #AEAEAE;
-$grey-b: #BBB;
-$grey-c: #CCC;
-$grey-d: #DDD;
-$grey-e: #EEE;
-$grey-f: #F3F3F3;
+--black: #000;
+--white: #FFF;
+--grey-1: #111;
+--grey-2: #272727;
+--grey-3: #333;
+--grey-4: #4A4A4A;
+--grey-5: #555;
+--grey-6: #666;
+--grey-7: #777;
+--grey-8: #888;
+--grey-9: #999;
+--grey-a: #AEAEAE;
+--grey-b: #BBB;
+--grey-c: #CCC;
+--grey-d: #DDD;
+--grey-e: #EEE;
+--grey-f: #F3F3F3;
 
 /* grid Breakpoints */
-$sm: 600px;
-$md: 960px;
-$lg: 1280px;
-$xl: 1600px;
-$mobile-breakpoint: $sm;
+--sm: 600px;
+--md: 960px;
+--lg: 1280px;
+--xl: 1600px;
+--mobile-breakpoint: var(--sm);
 
-$xs-max: $sm - 1px;
-$sm-max: $md - 1px;
-$md-max: $lg - 1px;
-$lg-max: $xl - 1px;
+--xs-max: var(--sm - 1px);
+--sm-max: var(--md - 1px);
+--md-max: var(--lg - 1px);
+--lg-max: var(--xl - 1px);
 
-$grid-cols: 12;
+--grid-cols: 12;
 
 /* Miscellaneous */
-$cpt-min-height: 80px;
+--cpt-min-height: 80px;
 
 //	============================================================================
 //	COLORS - VARIABLES
 //
 //	============================================================================
 
-$blue: #0088E3;
-$red: #F03A47;
-$yellow: #FFA500;
-$green: #00CB56;
+--blue: #0088E3;
+--red: #F03A47;
+--yellow: #FFA500;
+--green: #00CB56;
 
 //	Blue
 //	----------------------------------------------------------------------------
-$blue-100: #F5FAFE;
-$blue-200: #E0F1FC;
-$blue-300: #8FCBF3;
-$blue-400: $blue; // Base color
-$blue-500: #004776;
-$blue-600: #003152;
-$blue-700: #00223A;
+--blue-100: #F5FAFE;
+--blue-200: #E0F1FC;
+--blue-300: #8FCBF3;
+--blue-400: var(--blue); // Base color
+--blue-500: #004776;
+--blue-600: #003152;
+--blue-700: #00223A;
 
 //	Green
 //	----------------------------------------------------------------------------
-$green-100: #F5FDF8;
-$green-200: #E0F9EB;
-$green-300: #8FE8B5;
-$green-400: $green; // Base color
-$green-500: #006A2D;
-$green-600: #00491F;
-$green-700: #003818;
+--green-100: #F5FDF8;
+--green-200: #E0F9EB;
+--green-300: #8FE8B5;
+--green-400: var(--green); // Base color
+--green-500: #006A2D;
+--green-600: #00491F;
+--green-700: #003818;
 
 //	Red
 //	----------------------------------------------------------------------------
-$red-100: #FEF7F8;
-$red-200: #FDE7E9;
-$red-300: #F8A8AE;
-$red-400: $red; // Base color
-$red-500: #7D1E25;
-$red-600: #56151A;
-$red-700: #3C0F12;
+--red-100: #FEF7F8;
+--red-200: #FDE7E9;
+--red-300: #F8A8AE;
+--red-400: var(--red); // Base color
+--red-500: #7D1E25;
+--red-600: #56151A;
+--red-700: #3C0F12;
 
 //	Yellow
 //	----------------------------------------------------------------------------
-$yellow-100: #FFFBF5;
-$yellow-200: #FFF4E0;
-$yellow-300: #FFD78F;
-$yellow-400: $yellow; // Base color
-$yellow-500: #855600;
-$yellow-600: #5C3B00;
-$yellow-700: #482E00;
+--yellow-100: #FFFBF5;
+--yellow-200: #FFF4E0;
+--yellow-300: #FFD78F;
+--yellow-400: var(--yellow); // Base color
+--yellow-500: #855600;
+--yellow-600: #5C3B00;
+--yellow-700: #482E00;
 
 //	Theme colors
 //	----------------------------------------------------------------------------
-$primary: #EEAB27;
-$secondary: #21232C;
-$primary-color: $secondary;
-$tertiary: #151626;
 
-$background-color: #202234;
 
-$success: $green;
-$warning: $yellow;
-$danger: $red;
-$light: $grey-e;
+--primary: #EEAB27;
+--secondary: #21232C;
+--primary-color: var(--secondary);
+--tertiary: #151626;
+
+--background-color: #202234;
+
+--success: var(--green);
+--warning: var(--yellow);
+--danger: var(--red);
+--light: var(--grey-e);
 
 /**
    Links and Button settings
   */
-$link-color: $primary-color;
-//  $link-hover-color: $primary-color-darker;
+--link-color: var(--primary-color);
+//  --link-hover-color: var(--primary-color-darker);
 
-$btn-font-size: 15px;
-$btn-border-width: 1px;
-$btn-radius: 0;
+--btn-font-size: 15px;
+--btn-border-width: 1px;
+--btn-radius: 0;
 
-$btn-height: 34px;
-$btn-h-padding: 15px;
+--btn-height: 34px;
+--btn-h-padding: 15px;
 
-$btn-color: $white;
-$btn-bg-color: $grey-3;
-$btn-border-color: transparent;
+--btn-color: var(--white);
+--btn-bg-color: var(--grey-3);
+--btn-border-color: transparent;
 
-$btn-hover-color: $white;
-$btn-hover-bg-color: $grey-3;
-$btn-hover-border-color: transparent;
+--btn-hover-color: var(--white);
+--btn-hover-bg-color: var(--grey-3);
+--btn-hover-border-color: transparent;
 
-$btn-disabled-color: $white;
-$btn-disabled-bg-color: #F5D7AB;
-$btn-disabled-border-color: transparent;
-$btn-disabled-opacity: 1;
+--btn-disabled-color: var(--white);
+--btn-disabled-bg-color: #F5D7AB;
+--btn-disabled-border-color: transparent;
+--btn-disabled-opacity: 1;
 
-$btn-medium-line-height: 50px;
-$btn-medium-h-padding: 15px;
-$btn-medium-font-size: 15px;
+--btn-medium-line-height: 50px;
+--btn-medium-h-padding: 15px;
+--btn-medium-font-size: 15px;
 
 //	z-index value - All z-index values must be stored here
 //	----------------------------------------------------------------------------
-$base-z-index: 1;
-$menu-z-index: 2;
+--base-z-index: 1;
+--menu-z-index: 2;
+}

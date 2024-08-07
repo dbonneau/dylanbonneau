@@ -14,36 +14,38 @@
       </div>
       <div class="links-main">
         <div class="links-column">
-          <a class="link" [href]="ROUTING.About">
-            {{ "à propos" | uppercase }}
+          <a
+            class="link"
+            [href]="ROUTING.About">
+            {{ 'à propos' | uppercase }}
           </a>
         </div>
         <div class="links-column">
-          <a class="link" [href]="ROUTING.Wedding">
-            {{ "mariage" | uppercase }}
+          <a
+            class="link"
+            [href]="ROUTING.Wedding">
+            {{ 'mariage' | uppercase }}
           </a>
         </div>
         <div class="links-column">
-          <a class="link" [href]="ROUTING.legalNotice">
-            {{ "mentions légales" | uppercase }}
+          <a
+            class="link"
+            [href]="ROUTING.legalNotice">
+            {{ 'mentions légales' | uppercase }}
           </a>
         </div>
         <div class="links-column">
           <a
             class="link"
             target="_blank"
-            href="https://calendly.com/dylanbonneau/appel-telephonique"
-          >
-            {{ " Prendre un RDV" | uppercase }}
+            href="https://calendly.com/dylanbonneau/appel-telephonique">
+            {{ ' Prendre un RDV' | uppercase }}
           </a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>
-        &copy; {{ dataNow | date : "yyyy" }} Dylan BONNEAU. Tous droits
-        réservés.
-      </div>
+      <div>&copy; {{ dataNow | date: 'yyyy' }} Dylan BONNEAU. Tous droits réservés.</div>
     </div>
   </div>
 </footer>

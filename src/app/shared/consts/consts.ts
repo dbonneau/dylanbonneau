@@ -27,4 +27,6 @@ export const ROUTING = {
   Blogs: `/${ROUTING_BLOGS}`,
   // Module legal notice
   legalNotice: `/${ROUTING_LEGAL_NOTICE}`,
+  // Calendly
+  calendly: `https://calendly.com/dylanbonneau/appel-telephonique`
 };
