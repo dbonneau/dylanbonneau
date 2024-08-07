@@ -100,10 +100,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "dylanbonneau:build:production"
+                          "buildTarget": "dylanbonneau:build:production"
                         },
                         "development": {
-                            "browserTarget": "dylanbonneau:build:development"
+                          "buildTarget": "dylanbonneau:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -111,7 +111,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "dylanbonneau:build"
+                      "buildTarget": "dylanbonneau:build"
                     }
                 },
                 "test": {
