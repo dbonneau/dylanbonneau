@@ -50,7 +50,13 @@ export class AppComponent implements OnInit {
       .pipe(
         filter((event) => event instanceof NavigationEnd || event instanceof NavigationStart),
         map(() => this.activatedRoute),
-        map((route) => route.firstChild ?? route),
+        map((route) => {
+          while (route.firstChild) {
+            // eslint-disable-next-line no-param-reassign
+            route = route.firstChild;
+          }
+          return route;
+        }),
         filter((route) => route.outlet === 'primary'),
         mergeMap((route) => route.data)
       )
@@ -58,7 +64,7 @@ export class AppComponent implements OnInit {
         if (event['title']) {
           this.seoService.updateTitle(event['title']);
           // Updating Description tag dynamically with title
-          this.seoService.updateDescription(event['title'] + event['description']);
+          this.seoService.updateDescription(`${event['title']} : ${event['description']}`);
           this.seoService.createLinkForCanonicalURL(event['canonical']);
         }
       });

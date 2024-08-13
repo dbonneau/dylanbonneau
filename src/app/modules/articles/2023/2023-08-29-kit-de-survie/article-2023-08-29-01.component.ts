@@ -1,4 +1,3 @@
-
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { HeaderComponent } from '@app/shared/components/header/header.component';
 @Component({
