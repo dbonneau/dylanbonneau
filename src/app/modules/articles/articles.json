@@ -4,12 +4,24 @@
       "email": "bonneaudylan1@gmail.com",
       "name": "Dylan BONNEAU"
     },
+    "categories": ["conseils"],
+    "description": "Ne laissez pas le stress gâcher l'expérience de votre mariage. Avec le kit de survie ultime, vous pouvez être sûr de profiter pleinement de chaque instant de cette journée spéciale. Suivez mes conseils et préparez-vous à vivre un mariage inoubliable et sans stress !",
+    "featureImage": "https://i.postimg.cc/02LPFJ87/kit-de-survie-ultime-titre.webp",
+    "subtitle": "Kit survie mariage",
+    "link": "kit-de-survie-ultime-mariage",
+    "title": "Le Kit de Survie Ultime pour un Mariage Mémorable et Sans Stress!"
+  },
+  {
+    "author": {
+      "email": "bonneaudylan1@gmail.com",
+      "name": "Dylan BONNEAU"
+    },
     "categories": ["conseils", "tendances"],
     "description": "Pour vous aider à naviguer dans l'aventure du mariage, j'ai élaboré un kit de survie pour votre mariage : une checklist complète pour vous guider tout au long du processus. Peu importe si vous prévoyez une cérémonie intime ou une grande célébration, cette checklist vous permettra d'aborder votre grand jour avec confiance et sérénité.",
     "featureImage": "https://i.postimg.cc/133Lb7NM/kit-de-survie-mariage-Jour-J-title.webp",
-    "subtitle": "la checklist pour un mariage sans stress",
+    "subtitle": "Pour un mariage sans stress",
     "link": "le-kit-de-survie-votre-guide-pour-votre-mariage",
-    "title": "kit de survie : le guide pour votre mariage"
+    "title": "kit de survie : la liste des indispensable du Jour-J"
   },
   {
     "author": {

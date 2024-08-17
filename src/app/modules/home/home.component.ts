@@ -35,9 +35,9 @@ export class HomeComponent {
       city: 'bretteville sur laize',
       region: 'Calvados, France',
       texts: [
-        `Nous tenons à te remercier pour ton travail exceptionnel lors de notre mariage. Les photos sont absolument magnifiques et les prises de vue à l’intérieur du domaine sont vraiment bien pensées. Lors de la mise en scène, que ce soit pour nos photos de couple ou celle avec nos filles qui rendent les photos très émouvantes, pleine d’amour et de partage pour ce moment si magique !`,
+        `Nous tenons à te remercier pour ton travail exceptionnel lors de notre mariage. Les photos sont absolument magnifiques et les prises de vue à l’intérieur du domaine sont vraiment bien pensées. Lors de la mise en scène, que ce soit pour nos photos de couple ou celles avec nos filles qui rendent les photos très émouvantes, pleines d’amour et de partage pour ce moment si magique !`,
         `Ta patience et ta créativité lors de nos échanges nous ont tout de suite convenu, nous sommes ravis de t’avoir choisi.`,
-        `Grâce à toi Dylan, nous avons des souvenirs inoubliables que nous chérirons pour toujours, nous hésiterons pas as te recommander par notre entourage qui comme nous veut s’offrir de magnifiques photos pour leurs événements.`
+        `Grâce à toi Dylan, nous avons des souvenirs inoubliables que nous chérirons pour toujours, nous n'hésiterons pas as te recommander par notre entourage qui comme nous veut s’offrir de magnifiques photos pour leurs événements.`
       ]
     },
     {

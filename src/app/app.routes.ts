@@ -5,6 +5,7 @@ import { Article_2022_07_30_01_Component } from './modules/articles/2022/2022-07
 import { Article_2023_03_16_01_Component } from './modules/articles/2023/2023-03-16-comment-choisir-son-photographe-de-mariage/article-2023-03-16-01.component';
 import { Article_2023_07_02_01_Component } from './modules/articles/2023/2023-07-02-day-after/article-2023-07-02-01.component';
 import { Article_2023_08_29_01_Component } from './modules/articles/2023/2023-08-29-kit-de-survie/article-2023-08-29-01.component';
+import { Article_2024_08_11_01_Component } from './modules/articles/2024/2024-08-11-kit-ultime/article-2024-08-11-01.component';
 import { ArticlesComponent } from './modules/articles/articles.component';
 import { StyleguideComponent } from './modules/demo/pages/styleguide/styleguide.component';
 import { PageNotFoundComponent } from './modules/errors/page-not-found/page-not-found.component';
@@ -57,6 +58,7 @@ export const routes: Routes = [
         data: {
           title: 'Un mariage inoubliable sous le soleil de Derval',
           description:
+            // eslint-disable-next-line max-len
             "Le soleil rayonne sur Derval, c'est un jour idéal pour un mariage. Je retrouve Mathilde et sa témoin tôt le matin, et je peux déjà ressentir l'excitation et les émotions de la journée."
         }
       },
@@ -74,6 +76,7 @@ export const routes: Routes = [
         data: {
           title: "Qu'est-ce qu'une séance photo 'Day After'",
           description:
+            // eslint-disable-next-line max-len
             "La séance photo 'Day After' est une opportunité extraordinaire de revivre ces instants magiques, de créer des souvenirs intimes et authentiques, et d'immortaliser votre amour à travers des clichés exceptionnels."
         }
       },
@@ -81,8 +84,18 @@ export const routes: Routes = [
         path: ROUTES.Article_2023_08_29_01,
         component: Article_2023_08_29_01_Component,
         data: {
-          title: 'kit de survie : le guide pour votre mariage',
+          title: 'kit de survie : la liste des indispensable du Jour-J',
           description: 'un kit de survie pour votre mariage : une checklist complète pour vous guider tout au long du processus'
+        }
+      },
+      {
+        path: ROUTES.Article_2024_08_11_01,
+        component: Article_2024_08_11_01_Component,
+        data: {
+          title: 'Le Kit de Survie Ultime pour un Mariage Mémorable et Sans Stress!',
+          description:
+            // eslint-disable-next-line max-len
+            "Ne laissez pas le stress gâcher l'expérience de votre mariage. Avec le kit de survie ultime, vous pouvez être sûr de profiter pleinement de chaque instant de cette journée spéciale. Suivez mes conseils et préparez-vous à vivre un mariage inoubliable et sans stress !"
         }
       }
     ]
