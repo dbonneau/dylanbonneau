@@ -42,64 +42,64 @@
     <div class="fixed-div">
       <div class="sticky_div">
         <div class="large bold">Table des Matières</div>
-        <div
+        <ul
           id="toc"
           class="toc">
-          <a
+          <li
             class="tocitem"
             [class.active]="budgetIsActive"
             (click)="scroll(budget)">
             Budget
-          </a>
-          <a
+          </li>
+          <li
             class="tocitem"
             [class.active]="lieuxIsActive"
             (click)="scroll(lieux)">
             Lieux du mariage
-          </a>
-          <a
+          </li>
+          <li
             class="tocitem"
             [class.active]="dateIsActive"
             (click)="scroll(date)">
             Date du mariage
-          </a>
-          <a
+          </li>
+          <li
             class="tocitem"
             [class.active]="teamIsActive"
             (click)="scroll(team)">
             L'équipe de mariage
-          </a>
-          <a
+          </li>
+          <li
             class="tocitem"
             [class.active]="listInviteIsActive"
             (click)="scroll(listInvite)">
             Liste d'invités
-          </a>
-          <a
+          </li>
+          <li
             class="tocitem"
             [class.active]="ceremonieIsActive"
             (click)="scroll(ceremonie)">
             Cérémonies
-          </a>
-          <a
+          </li>
+          <li
             class="tocitem"
             [class.active]="dressIsActive"
             (click)="scroll(dress)">
             Tenues
-          </a>
-          <a
+          </li>
+          <li
             class="tocitem"
             [class.active]="organiserIsActive"
             (click)="scroll(organiser)">
             Organiser
-          </a>
-          <a
+          </li>
+          <li
             class="tocitem"
             [class.active]="conclusionIsActive"
             (click)="scroll(conclusion)">
             Conclusion
-          </a>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="content">
