@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { HeaderComponent } from '@app/shared/components/header/header.component';
+import { ROUTES } from '@app/shared/consts/routes';
 @Component({
   selector: 'app-article-2023-08-29-01',
   standalone: true,
@@ -8,45 +9,39 @@ import { HeaderComponent } from '@app/shared/components/header/header.component'
   styleUrls: ['./article-2023-08-29-01.component.scss']
 })
 export class Article_2023_08_29_01_Component {
-  @ViewChild('mouchoirs') private mouchoirs?: ElementRef<HTMLDivElement>;
-  public mouchoirsIsActive = false;
+  @ViewChild('sante') private sante?: ElementRef<HTMLDivElement>;
+  public santeIsActive = false;
 
-  @ViewChild('deodorant') private deodorant?: ElementRef<HTMLDivElement>;
-  public deodorantIsActive = false;
+  @ViewChild('manger') private manger?: ElementRef<HTMLDivElement>;
+  public mangerIsActive = false;
 
-  @ViewChild('trousse') private trousse?: ElementRef<HTMLDivElement>;
-  public trousseIsActive = false;
+  @ViewChild('imprevus') private imprevus?: ElementRef<HTMLDivElement>;
+  public imprevusIsActive = false;
 
-  @ViewChild('chaussures') private chaussures?: ElementRef<HTMLDivElement>;
-  public chaussuresIsActive = false;
+  @ViewChild('beaute') private beaute?: ElementRef<HTMLDivElement>;
+  public beauteIsActive = false;
 
-  @ViewChild('ravitaillement')
-  private ravitaillement?: ElementRef<HTMLDivElement>;
-  public ravitaillementIsActive = false;
-
-  @ViewChild('eventail') private eventail?: ElementRef<HTMLDivElement>;
-  public eventailIsActive = false;
-
-  @ViewChild('parapluie') private parapluie?: ElementRef<HTMLDivElement>;
-  public parapluieIsActive = false;
-
-  @ViewChild('prestataires') private prestataires?: ElementRef<HTMLDivElement>;
-  public prestatairesIsActive = false;
+  @ViewChild('indispensable')
+  private indispensable?: ElementRef<HTMLDivElement>;
+  public indispensableIsActive = false;
 
   @ViewChild('conclusion') private conclusion?: ElementRef<HTMLDivElement>;
   public conclusionIsActive = false;
 
+  @ViewChild('print') private print?: ElementRef<HTMLDivElement>;
+  public printIsActive = false;
+
   @HostListener('window:scroll', ['$event']) public isScrolledStyle(): void {
-    this.mouchoirsIsActive = this.isScrolledIntoView(this.mouchoirs);
-    this.deodorantIsActive = this.isScrolledIntoView(this.deodorant);
-    this.trousseIsActive = this.isScrolledIntoView(this.trousse);
-    this.chaussuresIsActive = this.isScrolledIntoView(this.chaussures);
-    this.ravitaillementIsActive = this.isScrolledIntoView(this.ravitaillement);
-    this.eventailIsActive = this.isScrolledIntoView(this.eventail);
-    this.parapluieIsActive = this.isScrolledIntoView(this.parapluie);
-    this.prestatairesIsActive = this.isScrolledIntoView(this.prestataires);
+    this.santeIsActive = this.isScrolledIntoView(this.sante);
+    this.mangerIsActive = this.isScrolledIntoView(this.manger);
+    this.imprevusIsActive = this.isScrolledIntoView(this.imprevus);
+    this.beauteIsActive = this.isScrolledIntoView(this.beaute);
+    this.indispensableIsActive = this.isScrolledIntoView(this.indispensable);
     this.conclusionIsActive = this.isScrolledIntoView(this.conclusion);
+    this.printIsActive = this.isScrolledIntoView(this.print);
   }
+
+  public readonly urlPDF = `assets/uploads/${ROUTES.Article_2023_08_29_01_PDF}`;
 
   public isScrolledIntoView(elementRef?: ElementRef<HTMLDivElement>): boolean {
     let result = false;

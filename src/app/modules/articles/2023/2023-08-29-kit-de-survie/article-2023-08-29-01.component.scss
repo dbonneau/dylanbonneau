@@ -61,11 +61,6 @@ article {
     &.checklist {
       max-width: none;
       max-height: none;
-
-      @media (min-width: 900px) {
-        margin: 24px 50%;
-      }
-      
     }
 
     &:not(.portrait) {

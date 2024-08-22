@@ -84,7 +84,7 @@ export const routes: Routes = [
         path: ROUTES.Article_2023_08_29_01,
         component: Article_2023_08_29_01_Component,
         data: {
-          title: 'kit de survie : la liste des indispensable du Jour-J',
+          title: 'kit de survie mariage : 50 accessoires indispensable',
           description: 'un kit de survie pour votre mariage : une checklist complète pour vous guider tout au long du processus'
         }
       },
