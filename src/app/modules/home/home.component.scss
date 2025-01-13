@@ -308,6 +308,7 @@ ul {
   height: 100px;
 }
 
+
 .presentation {
   padding: 0;
   width: 100%;
@@ -333,6 +334,14 @@ ul {
       object-fit: cover;
     }
   }
+}
+
+.sales {
+  @extend .presentation;
+
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
 }
 
 .mobile {
