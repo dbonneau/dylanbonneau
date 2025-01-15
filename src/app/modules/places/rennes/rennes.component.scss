@@ -84,10 +84,9 @@
     .its-me {
       width: 100%;
       height: 100%;
-      border-radius: 140px;
 
       @media screen and (min-width: 1280px) {
-        width: 250px;
+        width: 500px;
       }
     }
 
@@ -115,7 +114,7 @@
 
     .img {
       img {
-        margin: 0 0 30px 200px;
+        margin: 0 0 30px 24px;
       }
     }
   }
@@ -141,7 +140,7 @@ section {
 .it-was-in {
   background-color: var(--secondary);
   color: var(--white);
-  clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 99%, 0% 100%);
 }
 
 .its-your-turn {
@@ -150,16 +149,26 @@ section {
 }
 
 ul {
+  list-style: none;
+}
+
+.cta-about {
+  text-align: center;
+  padding: 0.938rem 2.188rem;
+  font-size: 1.563rem;
+  margin: 24px 0;
+}
+
+.list-actions {
   margin: 0;
   padding: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  list-style: none;
+
   max-width: 1500px;
 
   li {
-    padding: 40px;
     width: 300px;
     transition: box-shadow 0.3s;
     display: flex;
@@ -189,5 +198,135 @@ ul {
       font-size: 16px;
       line-height: 26px;
     }
+
+    @media screen and (min-width: 768px) {
+      padding: 24px;
+    }
+  }
+}
+
+.steps-bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 900px) {
+    flex-direction: row;
+  }
+}
+
+.illustration {
+  height: 150px;
+  width: 150px;
+  background-color: var(--grey-f);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    height: 250px;
+    width: 250px;
+  }
+
+  .number {
+    font-size: 2rem;
+    font-family: Oswald;
+    color: var(--grey-9);
+
+    @media screen and (min-width: 768px) {
+      margin-left: 32px;
+    }
+  }
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
+}
+
+.step-description-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.step-description {
+  flex: 1;
+  padding-top: 56px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+}
+
+.container-banner {
+  img {
+    object-fit: cover;
+    max-height: calc(100vh - 105px);
+    height: 100vh;
+    object-position: 27% 30%;
+  }
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  max-width: 600px;
+  text-align: start;
+}
+
+.two-flex-blocs {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+
+    div  {
+      padding: 24px;
+    }
+  }
+}
+
+.includes {
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary);
+  
+  color: var(--white);
+
+  & ul {
+    padding: 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    border-radius: 15px;
+    padding: 16px;
+  }
+}
+
+.formules {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    padding: 0 24px;
   }
 }

@@ -9,13 +9,12 @@ import { mergeMap } from 'rxjs/internal/operators/mergeMap';
 // Import { SEOService } from './core/services/seo.service';
 import { SEOService } from './core/services/seo.service';
 import { HomeComponent } from './modules/home/home.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
 import { SpinnerComponent } from './shared/components/spinner/spinner.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, FooterComponent, SpinnerComponent],
+  imports: [RouterOutlet, HomeComponent, SpinnerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

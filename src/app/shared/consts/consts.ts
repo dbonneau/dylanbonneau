@@ -9,6 +9,14 @@ export const ROUTING_ICONS = 'icons';
 export const ROUTING_COLORS = 'colors';
 export const ROUTING_BUTTONS = 'buttons';
 export const ROUTING_FORMS = 'forms';
+export const ROUTING_NOT_FOUND = '404';
+
+// PLACES
+export const ROUTING_PLACES = 'photographe-mariage-';
+export const PLACES = {
+  RENNES: 'rennes'
+};
+export const ROUTING_RENNES = `${ROUTING_PLACES}${PLACES.RENNES}`;
 
 export const ROUTING = {
   // Module Demo
@@ -27,6 +35,8 @@ export const ROUTING = {
   Blogs: `/${ROUTING_BLOGS}`,
   // Module legal notice
   legalNotice: `/${ROUTING_LEGAL_NOTICE}`,
+  // Module places
+  Rennes: `/${ROUTING_RENNES}`,
   // Calendly
   calendly: `https://calendly.com/dylanbonneau/appel-telephonique`
 };

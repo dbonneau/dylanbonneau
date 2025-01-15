@@ -1,7 +1,7 @@
-
 import { Component } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { Router } from '@angular/router';
+import { FooterComponent } from '@app/shared/components/footer/footer.component';
 import { HeaderComponent } from '@app/shared/components/header/header.component';
 import { ROUTING } from 'src/app/shared/consts/consts';
 import { ROUTES } from 'src/app/shared/consts/routes';
@@ -9,7 +9,7 @@ import { ROUTES } from 'src/app/shared/consts/routes';
 @Component({
   selector: 'app-wedding',
   standalone: true,
-  imports: [HeaderComponent, MatExpansionModule],
+  imports: [HeaderComponent, FooterComponent, MatExpansionModule],
   templateUrl: './wedding.component.html',
   styleUrls: ['./wedding.component.scss']
 })

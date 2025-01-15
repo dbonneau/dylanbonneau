@@ -11,8 +11,17 @@ import { StyleguideComponent } from './modules/demo/pages/styleguide/styleguide.
 import { PageNotFoundComponent } from './modules/errors/page-not-found/page-not-found.component';
 import { HomeComponent } from './modules/home/home.component';
 import { LegalNoticeComponent } from './modules/legal-notice/legal-notice.component';
+import { RennesComponent } from './modules/places/rennes/rennes.component';
 import { WeddingComponent } from './modules/wedding/wedding.component';
-import { ROUTING_ABOUT, ROUTING_BLOGS, ROUTING_DEMO, ROUTING_LEGAL_NOTICE, ROUTING_WEDDING } from './shared/consts/consts';
+import {
+  ROUTING_ABOUT,
+  ROUTING_BLOGS,
+  ROUTING_DEMO,
+  ROUTING_LEGAL_NOTICE,
+  ROUTING_NOT_FOUND,
+  ROUTING_RENNES,
+  ROUTING_WEDDING
+} from './shared/consts/consts';
 import { ROUTES } from './shared/consts/routes';
 
 export const routes: Routes = [
@@ -109,6 +118,15 @@ export const routes: Routes = [
     }
   },
   {
+    path: ROUTING_RENNES,
+    component: RennesComponent,
+    data: {
+      title: 'Photographe mariage Rennes - Dylan Bonneau',
+      description:
+        'Vous allez vous mariez à Rennes ? Je suis photographe de mariage, discret et passionné, pour capturer chaque émotion authentique de votre mariage en Bretagne'
+    }
+  },
+  {
     path: ROUTING_DEMO,
     component: StyleguideComponent,
     children: [
@@ -120,6 +138,10 @@ export const routes: Routes = [
   },
   {
     path: '**',
+    redirectTo: ROUTING_NOT_FOUND
+  },
+  {
+    path: ROUTING_NOT_FOUND,
     component: PageNotFoundComponent,
     data: {
       title: '404 - Dylan Bonneau - Photographe de mariage',

@@ -3,11 +3,9 @@
 @use 'mixins';
 @use 'button';
 @use 'utils';
-@use 'search';
 @use 'colorPalettes';
 @use 'sizes';
 @use 'typography';
-@use 'form';
 
 /* You can add global styles to this file, and also import other style files */
 body,
@@ -21,8 +19,8 @@ html {
 
 * {
   margin: 0;
-  font-family: 'Oswald script=latin rev=3',
-    Cardo,
+  font-family: Cardo,
     Raleway,
+    Oswald,
     sans-serif;
 }

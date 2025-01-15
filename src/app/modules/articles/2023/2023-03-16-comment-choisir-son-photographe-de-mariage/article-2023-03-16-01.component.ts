@@ -1,10 +1,10 @@
-
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { FooterComponent } from '@app/shared/components/footer/footer.component';
 import { HeaderComponent } from '@app/shared/components/header/header.component';
 @Component({
   selector: 'app-article-2023-03-16-01',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, FooterComponent],
   templateUrl: './article-2023-03-16-01.component.html',
   styleUrls: ['./article-2023-03-16-01.component.scss']
 })

@@ -1,13 +1,13 @@
-
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FooterComponent } from '@app/shared/components/footer/footer.component';
 import { HeaderComponent } from '@app/shared/components/header/header.component';
 import { ROUTING } from 'src/app/shared/consts/consts';
 
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, FooterComponent],
   templateUrl: './legal-notice.component.html',
   styleUrls: ['./legal-notice.component.scss']
 })
