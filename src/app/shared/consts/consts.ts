@@ -14,9 +14,11 @@ export const ROUTING_NOT_FOUND = '404';
 // PLACES
 export const ROUTING_PLACES = 'photographe-mariage-';
 export const PLACES = {
-  RENNES: 'rennes'
+  RENNES: 'rennes',
+  CAEN: 'caen'
 };
 export const ROUTING_RENNES = `${ROUTING_PLACES}${PLACES.RENNES}`;
+export const ROUTING_CAEN = `${ROUTING_PLACES}${PLACES.CAEN}`;
 
 export const ROUTING = {
   // Module Demo
@@ -37,6 +39,7 @@ export const ROUTING = {
   legalNotice: `/${ROUTING_LEGAL_NOTICE}`,
   // Module places
   Rennes: `/${ROUTING_RENNES}`,
+  Caen: `/${ROUTING_CAEN}`,
   // Calendly
   calendly: `https://calendly.com/dylanbonneau/appel-telephonique`
 };
