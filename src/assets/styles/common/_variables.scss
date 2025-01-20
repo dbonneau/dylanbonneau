@@ -104,9 +104,8 @@
 //	----------------------------------------------------------------------------
 
 
---primary: #EEAB27;
---secondary: #21232C;
---primary-color: var(--secondary);
+--primary: #7843e6;
+--secondary: #ffeff9;
 --tertiary: #151626;
 
 --background-color: #202234;
@@ -119,12 +118,11 @@
 /**
    Links and Button settings
   */
---link-color: var(--primary-color);
-//  --link-hover-color: var(--primary-color-darker);
+--link-color: var(--black);
 
 --btn-font-size: 15px;
 --btn-border-width: 1px;
---btn-radius: 0;
+--btn-radius: 15px;
 
 --btn-height: 34px;
 --btn-h-padding: 15px;
