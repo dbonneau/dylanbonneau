@@ -41,5 +41,5 @@ export const ROUTING = {
   Rennes: `/${ROUTING_RENNES}`,
   Caen: `/${ROUTING_CAEN}`,
   // Calendly
-  calendly: `https://calendly.com/dylanbonneau/appel-telephonique`
+  calendly: `https://calendly.com/dylanbonneau/contact`
 };
