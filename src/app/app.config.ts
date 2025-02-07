@@ -1,5 +1,5 @@
 import { registerLocaleData } from '@angular/common';
-import { HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import localeFr from '@angular/common/locales/fr';
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -21,7 +21,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(withFetch()),
     provideClientHydration(),
-    importProvidersFrom([HttpClientModule, BrowserAnimationsModule]),
+    importProvidersFrom([BrowserAnimationsModule]),
     TranslateModule.forRoot({
       defaultLanguage: 'fr',
       loader: {
