@@ -9,11 +9,10 @@ export enum EInfoBox {
 }
 
 @Component({
-  selector: 'app-infobox',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './infobox.component.html',
-  styleUrls: ['./infobox.component.scss']
+    selector: 'app-infobox',
+    imports: [CommonModule],
+    templateUrl: './infobox.component.html',
+    styleUrls: ['./infobox.component.scss']
 })
 export class InfoboxComponent {
   @Input() public title: string;

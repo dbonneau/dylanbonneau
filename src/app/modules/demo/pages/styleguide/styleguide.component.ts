@@ -12,11 +12,10 @@ import { MenuDemoComponent } from '../../components/menu-demo/menu-demo.componen
 const SCROLL_TOP = 200;
 
 @Component({
-  selector: 'app-styleguide',
-  standalone: true,
-  imports: [CommonModule, MatSidenavModule, MenuDemoComponent, IconsComponent, FormsComponent, ColorsComponent, ButtonsComponent],
-  templateUrl: './styleguide.component.html',
-  styleUrls: ['./styleguide.component.scss']
+    selector: 'app-styleguide',
+    imports: [CommonModule, MatSidenavModule, MenuDemoComponent, IconsComponent, FormsComponent, ColorsComponent, ButtonsComponent],
+    templateUrl: './styleguide.component.html',
+    styleUrls: ['./styleguide.component.scss']
 })
 export class StyleguideComponent implements OnInit {
   public scrolled = false;

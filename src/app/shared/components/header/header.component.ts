@@ -4,11 +4,10 @@ import { ROUTING } from '@app/shared/consts/consts';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'app-header',
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   @HostListener('window:scroll', ['$event']) public onWindowScroll(): void {

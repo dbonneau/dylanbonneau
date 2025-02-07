@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-colors-library',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './colors-library.component.html',
-  styleUrls: ['./colors-library.component.scss']
+    selector: 'app-colors-library',
+    imports: [CommonModule],
+    templateUrl: './colors-library.component.html',
+    styleUrls: ['./colors-library.component.scss']
 })
 export class ColorsLibraryComponent implements OnInit {
   public listColorsGrey: string[] = [

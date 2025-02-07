@@ -25,11 +25,10 @@ enum EStep {
 }
 
 @Component({
-  selector: 'app-caen',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent, CommonModule, MatExpansionModule],
-  templateUrl: './caen.component.html',
-  styleUrls: ['./caen.component.scss']
+    selector: 'app-caen',
+    imports: [HeaderComponent, FooterComponent, CommonModule, MatExpansionModule],
+    templateUrl: './caen.component.html',
+    styleUrls: ['./caen.component.scss']
 })
 export class CaenComponent implements AfterViewInit {
   public readonly ROUTING = ROUTING;

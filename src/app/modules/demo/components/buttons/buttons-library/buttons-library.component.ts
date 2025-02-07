@@ -4,11 +4,10 @@ import { HighlightModule } from 'ngx-highlightjs';
 import { Observable, Subscription, timer } from 'rxjs';
 
 @Component({
-  selector: 'app-buttons-library',
-  standalone: true,
-  imports: [HighlightModule],
-  templateUrl: './buttons-library.component.html',
-  styleUrls: ['./buttons-library.component.scss']
+    selector: 'app-buttons-library',
+    imports: [HighlightModule],
+    templateUrl: './buttons-library.component.html',
+    styleUrls: ['./buttons-library.component.scss']
 })
 export class ButtonsLibraryComponent {
   public code = `function myFunction() {

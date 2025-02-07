@@ -7,11 +7,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HighlightModule } from 'ngx-highlightjs';
 
 @Component({
-  selector: 'app-forms-library',
-  standalone: true,
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, FormsModule, TranslateModule, HighlightModule, MatIconModule],
-  templateUrl: './forms-library.component.html',
-  styleUrls: ['./forms-library.component.scss']
+    selector: 'app-forms-library',
+    imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, FormsModule, TranslateModule, HighlightModule, MatIconModule],
+    templateUrl: './forms-library.component.html',
+    styleUrls: ['./forms-library.component.scss']
 })
 export class FormsLibraryComponent {
   public formEmail = `<mat-form-field appearance="fill">

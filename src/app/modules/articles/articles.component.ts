@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Article } from '@app/models/article.model';
 import { FooterComponent } from '@app/shared/components/footer/footer.component';
 import { HeaderComponent } from '@app/shared/components/header/header.component';
@@ -11,8 +11,7 @@ import ArticlesJson from './articles.json';
 
 @Component({
   selector: 'app-articles',
-  standalone: true,
-  imports: [CommonModule, InfoboxComponent, HeaderComponent, RouterOutlet, FooterComponent],
+  imports: [CommonModule, InfoboxComponent, HeaderComponent, FooterComponent],
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.scss']
 })

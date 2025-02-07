@@ -2,11 +2,10 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { FooterComponent } from '@app/shared/components/footer/footer.component';
 import { HeaderComponent } from '@app/shared/components/header/header.component';
 @Component({
-  selector: 'app-article-2023-07-02-01',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent],
-  templateUrl: './article-2023-07-02-01.component.html',
-  styleUrls: ['./article-2023-07-02-01.component.scss']
+    selector: 'app-article-2023-07-02-01',
+    imports: [HeaderComponent, FooterComponent],
+    templateUrl: './article-2023-07-02-01.component.html',
+    styleUrls: ['./article-2023-07-02-01.component.scss']
 })
 export class Article_2023_07_02_01_Component {
   @ViewChild('benefices') private benefices?: ElementRef<HTMLDivElement>;

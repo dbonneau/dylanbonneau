@@ -7,12 +7,11 @@ import { HeaderComponent } from '@app/shared/components/header/header.component'
 import { ROUTING } from '@app/shared/consts/consts';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
-  animations: [trigger('fade', [state('void', style({ opacity: 0 })), transition('void <=> *', [animate('0.5s ease-in-out')])])]
+    selector: 'app-home',
+    imports: [CommonModule, HeaderComponent, FooterComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    animations: [trigger('fade', [state('void', style({ opacity: 0 })), transition('void <=> *', [animate('0.5s ease-in-out')])])]
 })
 export class HomeComponent {
   public counter = 0;

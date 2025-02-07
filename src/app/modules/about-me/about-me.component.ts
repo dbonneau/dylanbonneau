@@ -6,11 +6,10 @@ import { ROUTING } from 'src/app/shared/consts/consts';
 import { ROUTES } from 'src/app/shared/consts/routes';
 
 @Component({
-  selector: 'app-about-me',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent],
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss']
+    selector: 'app-about-me',
+    imports: [HeaderComponent, FooterComponent],
+    templateUrl: './about-me.component.html',
+    styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
   public readonly ROUTING = ROUTING;

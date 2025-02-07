@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { FilterPipe } from '@app/pipe/filter.pipe';
 
 @Component({
-  selector: 'app-icons-library',
-  standalone: true,
-  imports: [CommonModule, FormsModule, FilterPipe],
-  templateUrl: './icons-library.component.html',
-  styleUrls: ['./icons-library.component.scss']
+    selector: 'app-icons-library',
+    imports: [CommonModule, FormsModule, FilterPipe],
+    templateUrl: './icons-library.component.html',
+    styleUrls: ['./icons-library.component.scss']
 })
 export class IconsLibraryComponent {
   public selectedIcon = '';

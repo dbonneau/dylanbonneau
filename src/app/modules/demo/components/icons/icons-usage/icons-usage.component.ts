@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 import { HighlightModule } from 'ngx-highlightjs';
 
 @Component({
-  selector: 'app-icons-usage',
-  standalone: true,
-  imports: [HighlightModule],
-  templateUrl: './icons-usage.component.html',
-  styleUrls: ['./icons-usage.component.scss']
+    selector: 'app-icons-usage',
+    imports: [HighlightModule],
+    templateUrl: './icons-usage.component.html',
+    styleUrls: ['./icons-usage.component.scss']
 })
 export class IconsUsageComponent {
   public iconCheck = `<em class='icon icon-check'></em>`;

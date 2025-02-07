@@ -7,11 +7,10 @@ import { ROUTING } from 'src/app/shared/consts/consts';
 import { ROUTES } from 'src/app/shared/consts/routes';
 
 @Component({
-  selector: 'app-wedding',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent, MatExpansionModule],
-  templateUrl: './wedding.component.html',
-  styleUrls: ['./wedding.component.scss']
+    selector: 'app-wedding',
+    imports: [HeaderComponent, FooterComponent, MatExpansionModule],
+    templateUrl: './wedding.component.html',
+    styleUrls: ['./wedding.component.scss']
 })
 export class WeddingComponent {
   public readonly ROUTING = ROUTING;

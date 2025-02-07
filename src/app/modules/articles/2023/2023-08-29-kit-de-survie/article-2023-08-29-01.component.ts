@@ -3,11 +3,10 @@ import { FooterComponent } from '@app/shared/components/footer/footer.component'
 import { HeaderComponent } from '@app/shared/components/header/header.component';
 import { ROUTES } from '@app/shared/consts/routes';
 @Component({
-  selector: 'app-article-2023-08-29-01',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent],
-  templateUrl: './article-2023-08-29-01.component.html',
-  styleUrls: ['./article-2023-08-29-01.component.scss']
+    selector: 'app-article-2023-08-29-01',
+    imports: [HeaderComponent, FooterComponent],
+    templateUrl: './article-2023-08-29-01.component.html',
+    styleUrls: ['./article-2023-08-29-01.component.scss']
 })
 export class Article_2023_08_29_01_Component {
   @ViewChild('sante') private sante?: ElementRef<HTMLDivElement>;

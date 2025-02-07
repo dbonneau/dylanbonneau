@@ -25,11 +25,10 @@ enum EStep {
 }
 
 @Component({
-  selector: 'app-rennes',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent, CommonModule, MatExpansionModule],
-  templateUrl: './rennes.component.html',
-  styleUrls: ['./rennes.component.scss']
+    selector: 'app-rennes',
+    imports: [HeaderComponent, FooterComponent, CommonModule, MatExpansionModule],
+    templateUrl: './rennes.component.html',
+    styleUrls: ['./rennes.component.scss']
 })
 export class RennesComponent implements AfterViewInit {
   public readonly ROUTING = ROUTING;

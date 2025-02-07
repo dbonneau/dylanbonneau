@@ -5,11 +5,10 @@ import { HeaderComponent } from '@app/shared/components/header/header.component'
 import { ROUTING } from 'src/app/shared/consts/consts';
 
 @Component({
-  selector: 'app-page-not-found',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent],
-  templateUrl: './page-not-found.component.html',
-  styleUrls: ['./page-not-found.component.scss']
+    selector: 'app-page-not-found',
+    imports: [HeaderComponent, FooterComponent],
+    templateUrl: './page-not-found.component.html',
+    styleUrls: ['./page-not-found.component.scss']
 })
 export class PageNotFoundComponent {
   constructor(private readonly router: Router) {}

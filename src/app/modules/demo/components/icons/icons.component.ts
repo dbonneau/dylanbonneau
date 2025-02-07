@@ -7,9 +7,8 @@ import { IconsLibraryComponent } from './icons-library/icons-library.component';
 import { IconsUsageComponent } from './icons-usage/icons-usage.component';
 
 @Component({
-  selector: 'app-icons',
-  standalone: true,
-  imports: [MatTabsModule, IconsUsageComponent, IconsLibraryComponent, IconsContributeComponent],
-  templateUrl: './icons.component.html'
+    selector: 'app-icons',
+    imports: [MatTabsModule, IconsUsageComponent, IconsLibraryComponent, IconsContributeComponent],
+    templateUrl: './icons.component.html'
 })
 export class IconsComponent {}
