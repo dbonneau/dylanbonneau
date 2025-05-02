@@ -32,7 +32,7 @@ export const routes: Routes = [
     component: HomeComponent,
     data: {
       title: 'Dylan Bonneau - Photographe de mariage',
-      description: ' Je vous accompagne dans votre histoire, pour des photos qui vous ressemblent'
+      description: 'Je vous accompagne dans votre histoire, pour des photos qui vous ressemblent'
     }
   },
   {
