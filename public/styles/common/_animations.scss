@@ -1,0 +1,39 @@
+%reveal-base {
+  display: inline-block;
+  animation: reveal-text .5s ease forwards;
+  opacity: 0;
+}
+
+.reveal {
+  @extend %reveal-base;
+}
+
+// Génération automatique des classes reveal avec délais
+
+/**
+.reveal-d1 (délai de 0.1s)
+.reveal-d2 (délai de 0.2s)
+.reveal-d3 (délai de 0.3s)
+.reveal-d4 (délai de 0.4s)
+.reveal-d5 (délai de 0.5s)
+...
+.reveal-d50 (délai de 5s)
+*/
+@for $i from 1 through 50 {
+  .reveal-d#{$i} {
+    @extend %reveal-base;
+    animation-delay: #{$i * .1}s;
+  }
+}
+
+@keyframes reveal-text {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

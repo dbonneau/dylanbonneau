@@ -8,10 +8,10 @@ describe('InfoboxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InfoboxComponent]
-    }).compileComponents();
-  });
-  beforeEach(() => {
+      imports: [InfoboxComponent]
+    })
+    .compileComponents();
+
     fixture = TestBed.createComponent(InfoboxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,0 +1,29 @@
+<a
+  app-button
+  [variant]="ButtonVariant.TERTIARY"
+  [active]="thisIsPage(ROUTING.DEMO_COMPONENTS)"
+  [routerLink]="ROUTING.DEMO_COMPONENTS">
+  <h1>Components</h1>
+</a>
+
+<!-- TODO use tabs components -->
+<a
+  app-button
+  [variant]="ButtonVariant.TERTIARY"
+  [active]="thisIsPage(ROUTING.DEMO_COMPONENTS_BUTTON)"
+  [routerLink]="ROUTING.DEMO_COMPONENTS_BUTTON">
+  Bouton
+</a>
+<a
+  app-button
+  [variant]="ButtonVariant.TERTIARY"
+  [active]="thisIsPage(ROUTING.DEMO_COMPONENTS_ICONS)"
+  [routerLink]="ROUTING.DEMO_COMPONENTS_ICONS">
+  Icones
+</a>
+
+@if (thisIsPage(ROUTING.DEMO_COMPONENTS_BUTTON)) {
+  <app-buttons></app-buttons>
+} @else if (thisIsPage(ROUTING.DEMO_COMPONENTS_ICONS)) {
+  <app-icons></app-icons>
+}

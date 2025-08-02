@@ -1,6 +1,7 @@
 {
-  "plugins": ["stylelint-declaration-block-no-ignored-properties", "stylelint-no-unsupported-browser-features"],
-  "extends": ["stylelint-config-property-sort-order-smacss"],
+  "customSyntax": "postcss-scss",
+  "extends": ["stylelint-config-property-sort-order-smacss", "stylelint-config-standard-scss"],
+  "plugins": ["stylelint-declaration-block-no-ignored-properties", "stylelint-no-unsupported-browser-features", "stylelint-prettier"],
   "rules": {
     "at-rule-disallowed-list": null,
     "at-rule-empty-line-before": null,
@@ -21,11 +22,11 @@
     "declaration-empty-line-before": "never",
     "declaration-no-important": true,
     "declaration-property-unit-allowed-list": {
-      "/^.*height.*/": ["em", "px", "%", "vh"],
-      "/^.*width.*/": ["em", "px", "%", "vw"],
       "/^.*border.*/": ["px", "%"],
+      "/^.*height.*/": ["em", "px", "%", "vh"],
       "/^.*margin.*/": ["em", "px", "%"],
       "/^.*padding.*/": ["em", "px", "%"],
+      "/^.*width.*/": ["em", "px", "%", "vw"],
       "font-size": ["em", "px", "rem"],
       "line-height": []
     },
@@ -62,19 +63,17 @@
       true,
       {
         "browsers": [
-          "> 1%",
-          "edge >= 14",
-          "ie >= 11",
-          "Firefox >= 52",
-          "chrome >= 49",
-          "safari >= 10.1",
-          "iOS >= 9.3",
-          "Android >= 44",
-          "ChromeAndroid >= 59"
+          "last 1 Chrome version",
+          "last 1 Firefox version",
+          "last 2 Edge major version",
+          "last 2 Safari major version",
+          "last 2 iOS major version",
+          "Firefox ESR",
+          "not IE <= 11"
         ],
-        "severity": "warning",
         "ignore": ["calc", "rem", "outline", "css-appearance", "css-gradients", "flexbox"],
-        "ignorePartialSupport": true
+        "ignorePartialSupport": true,
+        "severity": "warning"
       }
     ],
     "rule-empty-line-before": [
@@ -92,7 +91,7 @@
       }
     ],
     "selector-list-comma-newline-after": "always",
-    "selector-max-compound-selectors": 3,
+    "selector-max-compound-selectors": 5,
     "selector-max-id": 0,
     "selector-max-universal": 1,
     "selector-no-qualifying-type": [

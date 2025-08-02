@@ -1,25 +1,14 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
-
-export enum EInfoBox {
-  ERROR = 'ERROR',
-  WARNING = 'WARNING',
-  INFO = 'INFO',
-  SUCCESS = 'SUCCESS'
-}
+import { LowerCasePipe, NgClass } from '@angular/common';
+import { Component, input } from '@angular/core';
+import { InfoboxType } from '@app/shared/enums';
 
 @Component({
-    selector: 'app-infobox',
-    imports: [CommonModule],
-    templateUrl: './infobox.component.html',
-    styleUrls: ['./infobox.component.scss']
+  selector: 'app-infobox',
+  imports: [LowerCasePipe, NgClass],
+  templateUrl: './infobox.component.html',
+  styleUrl: './infobox.component.scss'
 })
 export class InfoboxComponent {
-  @Input() public title: string;
-  @Input() public type: EInfoBox;
-
-  constructor() {
-    this.title = '';
-    this.type = EInfoBox.INFO;
-  }
+  public title = input.required<string>();
+  public type = input<InfoboxType>(InfoboxType.INFO);
 }

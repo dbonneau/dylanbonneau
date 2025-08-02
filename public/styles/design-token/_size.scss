@@ -1,0 +1,65 @@
+:root {
+  --size-value-1: 1px;
+  --size-value-2: 2px;
+  --size-value-3: 3px;
+  --size-value-4: 4px;
+  --size-value-8: 8px;
+  --size-value-12: 12px;
+  --size-value-16: 16px;
+  --size-value-24: 24px;
+  --size-value-32: 32px;
+  --size-value-40: 40px;
+  --size-value-48: 48px;
+  --size-value-56: 56px;
+  --size-value-64: 64px;
+  --size-value-72: 72px;
+  --size-value-80: 80px;
+  --size-value-88: 88px;
+  --size-value-96: 96px;
+
+  // Radius
+  --size-radius-xs: var(--size-value-2);
+  --size-radius-s: var(--size-value-4);
+  --size-radius-m: var(--size-value-8);
+  --size-radius-l: var(--size-value-16);
+
+  // Space
+  --size-space-25: var(--size-value-2);
+  --size-space-50: var(--size-value-4);
+  --size-space-100: var(--size-value-8);
+  --size-space-150: var(--size-value-12);
+  --size-space-200: var(--size-value-16);
+  --size-space-300: var(--size-value-24);
+  --size-space-400: var(--size-value-32);
+  --size-space-500: var(--size-value-40);
+  --size-space-600: var(--size-value-48);
+  --size-space-700: var(--size-value-56);
+  --size-space-800: var(--size-value-64);
+  --size-space-900: var(--size-value-72);
+  --size-space-1000: var(--size-value-80);
+  --size-space-1200: var(--size-value-96);
+  --size-space-s: var(--size-value-4);
+  --size-space-m: var(--size-value-8);
+  --size-space-l: var(--size-value-16);
+
+  // Dim
+  --size-dim-100: var(--size-value-8);
+  --size-dim-150: var(--size-value-12);
+  --size-dim-200: var(--size-value-16);
+  --size-dim-300: var(--size-value-24);
+  --size-dim-400: var(--size-value-32);
+  --size-dim-500: var(--size-value-40);
+  --size-dim-600: var(--size-value-48);
+  --size-dim-700: var(--size-value-56);
+  --size-dim-800: var(--size-value-64);
+  --size-dim-900: var(--size-value-72);
+  --size-dim-1000: var(--size-value-80);
+  --size-dim-1100: var(--size-value-88);
+  --size-dim-1200: var(--size-value-96);
+
+  // Border
+  --size-border-xs: var(--size-value-1);
+  --size-border-s: var(--size-value-2);
+  --size-border-m: var(--size-value-3);
+  --size-border-l: var(--size-value-4);
+}

@@ -1,0 +1,23 @@
+<div class="color-grid">
+  @for (color of colors; track $index) {
+    <button
+      type="button"
+      role="button"
+      class="color-item"
+      [class.copied]="copiedColor === color.cssVar"
+      (click)="copyColorValue(color)"
+      (keydown.enter)="copyColorValue(color)">
+      <span
+        class="color-preview"
+        [style.background-color]="'var(--' + color.cssVar + ')'"></span>
+      <span class="color-info">
+        <p class="color-name">{{ color.name }}</p>
+        <p class="color-value">{{ color.valueRef }}</p>
+        <p class="color-var">var(--{{ color.cssVar }})</p>
+      </span>
+      @if (copiedColor === color.cssVar) {
+        <span class="copy-indicator">Copié !</span>
+      }
+    </button>
+  }
+</div>

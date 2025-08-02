@@ -1,0 +1,27 @@
+/**
+ * Font Definition
+ */
+@font-face {
+  font-family: icomoon;
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url(/fonts/common/icons/icomoon.eot) format('embedded-opentype'),
+    url(/fonts/common/icons/icomoon.woff2) format('truetype'),
+    url(/fonts/common/icons/icomoon.woff) format('woff'),
+    url(/fonts/common/icons/icomoon.svg) format('svg');
+  font-display: swap;
+}
+
+[class^=icon-],
+[class*=icon-] {
+  font-family:
+    icomoon,
+    sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  vertical-align: bottom;
+}

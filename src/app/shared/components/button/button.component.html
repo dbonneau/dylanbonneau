@@ -1,0 +1,20 @@
+@if (icon(); as iconValue) {
+  @if (iconPosition() === IconPosition.LEFT) {
+    <app-icon
+      [name]="iconValue"
+      [size]="iconSize()">
+    </app-icon>
+  }
+}
+<span class="button-content">
+  <ng-content></ng-content>
+</span>
+
+@if (icon(); as iconValue) {
+  @if (iconPosition() === IconPosition.RIGHT) {
+    <app-icon
+      [name]="iconValue"
+      [size]="iconSize()">
+    </app-icon>
+  }
+}

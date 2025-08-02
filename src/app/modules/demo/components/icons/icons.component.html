@@ -1,19 +1,52 @@
-<mat-tab-group>
-  <mat-tab label="Library">
-    <ng-template matTabContent>
-      <app-icons-library></app-icons-library>
-    </ng-template>
-  </mat-tab>
+<section class="icons">
+  <h2>Configuration des icônes</h2>
 
-  <mat-tab label="Usage">
-    <ng-template matTabContent>
-      <app-icons-usage></app-icons-usage>
-    </ng-template>
-  </mat-tab>
+  <div class="icons-grid">
+    @for (iconName of filteredIcons; track iconName) {
+      <button
+        type="button"
+        class="icon-item"
+        [class.copied]="copiedIcon === iconName"
+        (click)="copyIconName(iconName)"
+        (keydown.enter)="copyIconName(iconName)">
+        <app-icon
+          [name]="iconName"
+          [size]="selectedSize">
+        </app-icon>
+        <span class="icon-name">{{ iconName }}</span>
+        @if (copiedIcon === iconName) {
+          <span class="copy-indicator">Copié !</span>
+        }
+      </button>
+    }
+  </div>
 
-  <mat-tab label="Contribute">
-    <ng-template matTabContent>
-      <app-icons-contribute></app-icons-contribute>
-    </ng-template>
-  </mat-tab>
-</mat-tab-group>
+  <div class="icons-controls">
+    <div class="search-bar">
+      <app-icon
+        [name]="IconName.Search"
+        [size]="IconSize.S">
+      </app-icon>
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        placeholder="Rechercher une icône..." />
+    </div>
+
+    <div class="size-selector">
+      <span>Taille :</span>
+      <div class="radio-group">
+        @for (size of [IconSize.S, IconSize.M, IconSize.L, IconSize.XL, IconSize.XXL, IconSize.XXXL]; track size) {
+          <label>
+            <input
+              type="radio"
+              [value]="size"
+              [(ngModel)]="selectedSize"
+              name="iconSize" />
+            {{ size.toUpperCase() }}
+          </label>
+        }
+      </div>
+    </div>
+  </div>
+</section>

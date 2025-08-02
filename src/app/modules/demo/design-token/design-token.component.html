@@ -1,0 +1,38 @@
+<a
+  app-button
+  [variant]="ButtonVariant.TERTIARY"
+  [active]="thisIsPage(ROUTING.DEMO_DESIGN_TOKEN)"
+  [routerLink]="ROUTING.DEMO_DESIGN_TOKEN">
+  <h1>Design Token</h1>
+</a>
+
+<!-- TODO use tabs components -->
+<a
+  app-button
+  [variant]="ButtonVariant.TERTIARY"
+  [active]="thisIsPage(ROUTING.DEMO_DESIGN_TOKEN_SIZES)"
+  [routerLink]="ROUTING.DEMO_DESIGN_TOKEN_SIZES">
+  Dimensions
+</a>
+<a
+  app-button
+  [variant]="ButtonVariant.TERTIARY"
+  [active]="thisIsPage(ROUTING.DEMO_DESIGN_TOKEN_TYPOGRAPHY)"
+  [routerLink]="ROUTING.DEMO_DESIGN_TOKEN_TYPOGRAPHY">
+  Typographie
+</a>
+<a
+  app-button
+  [variant]="ButtonVariant.TERTIARY"
+  [active]="thisIsPage(ROUTING.DEMO_DESIGN_TOKEN_COLOR)"
+  [routerLink]="ROUTING.DEMO_DESIGN_TOKEN_COLOR">
+  Couleurs
+</a>
+
+@if (thisIsPage(ROUTING.DEMO_DESIGN_TOKEN_SIZES)) {
+  <app-design-token-size></app-design-token-size>
+} @else if (thisIsPage(ROUTING.DEMO_DESIGN_TOKEN_TYPOGRAPHY)) {
+  <app-design-token-typography></app-design-token-typography>
+} @else if (thisIsPage(ROUTING.DEMO_DESIGN_TOKEN_COLOR)) {
+  <app-design-token-color></app-design-token-color>
+}

@@ -8,11 +8,10 @@ describe('ButtonsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ButtonsComponent]
-    }).compileComponents();
-  });
+      imports: [ButtonsComponent]
+    })
+    .compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(ButtonsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

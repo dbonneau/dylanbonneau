@@ -8,11 +8,10 @@ describe('SpinnerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SpinnerComponent]
-    }).compileComponents();
-  });
+      imports: [SpinnerComponent]
+    })
+    .compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(SpinnerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

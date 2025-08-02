@@ -4,7 +4,7 @@
 }
 
 .error {
-  background-color: #f44336;
+  background-color: #F44336;
 }
 
 .success {
@@ -16,18 +16,18 @@
 }
 
 .warning {
-  background-color: #ff9800;
+  background-color: #FF9800;
 }
 
 .closebtn {
   margin-left: 15px;
-  color: white;
-  font-weight: bold;
   float: right;
+  transition: .3s;
+  color: white;
   font-size: 22px;
+  font-weight: bold;
   line-height: 20px;
   cursor: pointer;
-  transition: 0.3s;
 
   &:hover {
     color: black;

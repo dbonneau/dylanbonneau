@@ -1,0 +1,91 @@
+<section class="color-tokens">
+  <div class="search-bar">
+    <app-icon
+      [name]="IconName.Search"
+      [size]="IconSize.S">
+    </app-icon>
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Rechercher par nom, variable CSS ou valeur..." />
+  </div>
+
+  @if (!hasResults) {
+    <div class="no-results">Aucun résultat trouvé pour "{{ searchTerm }}"</div>
+  }
+
+  @if (filteredBaseColors.length > 0) {
+    <h2>Couleurs de base</h2>
+    <app-color-grid [colors]="filteredBaseColors"></app-color-grid>
+  }
+
+  @if (filteredGreyScale.length > 0) {
+    <h2>Échelle de gris</h2>
+    <app-color-grid [colors]="filteredGreyScale"></app-color-grid>
+  }
+
+  @if (filteredThemeColors.length > 0) {
+    <h2>Couleurs du thème</h2>
+    <app-color-grid [colors]="filteredThemeColors"></app-color-grid>
+  }
+
+  @if (filteredPrimaryVariants.length > 0) {
+    <h2>Variantes de la couleur primaire</h2>
+    <app-color-grid [colors]="filteredPrimaryVariants"></app-color-grid>
+  }
+
+  @if (filteredSecondaryVariants.length > 0) {
+    <h2>Variantes de la couleur secondaire</h2>
+    <app-color-grid [colors]="filteredSecondaryVariants"></app-color-grid>
+  }
+
+  @if (filteredBlueVariants.length > 0) {
+    <h2>Variantes de bleu</h2>
+    <app-color-grid [colors]="filteredBlueVariants"></app-color-grid>
+  }
+
+  @if (filteredGreenVariants.length > 0) {
+    <h2>Variantes de vert</h2>
+    <app-color-grid [colors]="filteredGreenVariants"></app-color-grid>
+  }
+
+  @if (filteredRedVariants.length > 0) {
+    <h2>Variantes de rouge</h2>
+    <app-color-grid [colors]="filteredRedVariants"></app-color-grid>
+  }
+
+  @if (filteredYellowVariants.length > 0) {
+    <h2>Variantes de jaune</h2>
+    <app-color-grid [colors]="filteredYellowVariants"></app-color-grid>
+  }
+
+  @if (filteredBackgroundColors.length > 0) {
+    <h2>Couleurs d'arrière-plan</h2>
+    <app-color-grid [colors]="filteredBackgroundColors"></app-color-grid>
+  }
+
+  @if (filteredTextColors.length > 0) {
+    <h2>Couleurs de texte</h2>
+    <app-color-grid [colors]="filteredTextColors"></app-color-grid>
+  }
+
+  @if (filteredFeedbackColors.length > 0) {
+    <h2>Couleurs de feedback</h2>
+    <app-color-grid [colors]="filteredFeedbackColors"></app-color-grid>
+  }
+
+  @if (filteredBorderColors.length > 0) {
+    <h2>Couleurs de bordure</h2>
+    <app-color-grid [colors]="filteredBorderColors"></app-color-grid>
+  }
+
+  @if (filteredInteractionColors.length > 0) {
+    <h2>Couleurs d'interaction</h2>
+    <app-color-grid [colors]="filteredInteractionColors"></app-color-grid>
+  }
+
+  @if (filteredUtilityColors.length > 0) {
+    <h2>Couleurs utilitaires</h2>
+    <app-color-grid [colors]="filteredUtilityColors"></app-color-grid>
+  }
+</section>

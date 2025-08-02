@@ -1,0 +1,56 @@
+export const PAGE = {
+  HOME: ``,
+  DEMO: `demo`,
+  DESIGN_TOKEN: `design-token`,
+  COMPONENTS: `components`,
+  SIZES: `dimensions`,
+  TYPOGRAPHY: `typographie`,
+  COLOR: `couleurs`,
+  BUTTON: `bouton`,
+  ICONS: `icones`,
+  ABOUT: `a-propos`,
+  WEDDING: `mariage`,
+  BLOG: `blog`,
+  CALENDLY: `https://calendly.com/dylanbonneau/contact`,
+  PLACES: `photographe-mariage-`,
+  RENNES: `rennes`,
+  CAEN: `caen`,
+  LEGAL_NOTICE: `mentions-legales`,
+  SITEMAP: `sitemap`,
+  DOWNLOAD: `download`,
+  ARTICLE_2022_07_30_01: 'mariage-derval-mathilde-sebastien',
+  ARTICLE_2023_03_16_01: 'comment-choisir-son-photographe-de-mariage',
+  ARTICLE_2023_07_02_01: 'qu-est-ce-qu-une-seance-photo-day-after',
+  ARTICLE_2023_08_29_01: 'le-kit-de-survie-votre-guide-pour-votre-mariage',
+  ARTICLE_2023_08_29_01_PDF: 'Kit-de-survie-mariage-jour-j_dylanbonneau.pdf',
+  ARTICLE_2024_08_11_01: 'kit-de-survie-ultime-mariage'
+};
+
+export const ROUTING = {
+  HOME: `${PAGE.HOME}`,
+  ABOUT: `${PAGE.ABOUT}`,
+  WEDDING: `${PAGE.WEDDING}`,
+  CALENDLY: `${PAGE.CALENDLY}`,
+  LEGAL_NOTICE: `${PAGE.LEGAL_NOTICE}`,
+  SITEMAP: `${PAGE.SITEMAP}`,
+  // Module places
+  RENNES: `${PAGE.PLACES}${PAGE.RENNES}`,
+  CAEN: `${PAGE.PLACES}${PAGE.CAEN}`,
+  // Blogs
+  BLOG: `${PAGE.BLOG}`,
+  ARTICLE_2022_07_30_01: `${PAGE.BLOG}/${PAGE.ARTICLE_2022_07_30_01}`,
+  ARTICLE_2023_03_16_01: `${PAGE.BLOG}/${PAGE.ARTICLE_2023_03_16_01}`,
+  ARTICLE_2023_07_02_01: `${PAGE.BLOG}/${PAGE.ARTICLE_2023_07_02_01}`,
+  ARTICLE_2023_08_29_01: `${PAGE.BLOG}/${PAGE.ARTICLE_2023_08_29_01}`,
+  ARTICLE_2023_08_29_01_PDF: `${PAGE.DOWNLOAD}/${PAGE.ARTICLE_2023_08_29_01_PDF}`,
+  ARTICLE_2024_08_11_01: `${PAGE.BLOG}/${PAGE.ARTICLE_2024_08_11_01}`,
+  // DEMO
+  DEMO: `${PAGE.DEMO}`,
+  DEMO_DESIGN_TOKEN: `${PAGE.DESIGN_TOKEN}`,
+  DEMO_DESIGN_TOKEN_SIZES: `${PAGE.DESIGN_TOKEN}/${PAGE.SIZES}`,
+  DEMO_DESIGN_TOKEN_TYPOGRAPHY: `${PAGE.DESIGN_TOKEN}/${PAGE.TYPOGRAPHY}`,
+  DEMO_DESIGN_TOKEN_COLOR: `${PAGE.DESIGN_TOKEN}/${PAGE.COLOR}`,
+  DEMO_COMPONENTS: `${PAGE.COMPONENTS}`,
+  DEMO_COMPONENTS_BUTTON: `${PAGE.COMPONENTS}/${PAGE.BUTTON}`,
+  DEMO_COMPONENTS_ICONS: `${PAGE.COMPONENTS}/${PAGE.ICONS}`
+};

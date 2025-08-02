@@ -1,0 +1,190 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.size-demo {
+  padding: var(--size-space-300);
+
+  .search-bar {
+    position: relative;
+    width: 100%;
+    margin-bottom: var(--size-space-400);
+
+    app-icon {
+      position: absolute;
+      top: 50%;
+      left: var(--size-space-200);
+      transform: translateY(-50%);
+      color: var(--color-neutral-500);
+    }
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: var(--size-space-200) var(--size-space-300) var(--size-space-200) var(--size-space-500);
+      border: 1px solid var(--color-border);
+      border-radius: var(--size-radius-s);
+      font-size: var(--font-size-16);
+
+      &:focus {
+        border-color: var(--color-primary);
+        outline: none;
+      }
+
+      &::placeholder {
+        color: var(--color-neutral-400);
+      }
+    }
+  }
+
+  .no-results {
+    margin-bottom: var(--size-space-400);
+    padding: var(--size-space-400);
+    border-radius: var(--size-radius-m);
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-600);
+    text-align: center;
+  }
+
+  .size-section {
+    min-height: auto;
+    margin-bottom: var(--size-space-400);
+
+    .section-title {
+      margin-bottom: var(--size-space-200);
+      color: var(--color-primary);
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.size-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--size-radius-m);
+  background: var(--color-neutral-0);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+
+  th {
+    padding: var(--size-space-200);
+    border-bottom: 2px solid var(--color-neutral-200);
+    background: var(--color-neutral-100);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  td {
+    padding: 0;
+    border-bottom: 1px solid var(--color-neutral-100);
+  }
+
+  td:not(.token-cell) {
+    padding: var(--size-space-200);
+  }
+}
+
+.example-cell {
+  width: 200px;
+}
+
+.token-cell {
+  position: relative;
+  padding: 0;
+  transition: all .2s ease;
+  color: var(--color-primary);
+  font-family: monospace;
+
+  .copy-button {
+    width: 100%;
+    padding: var(--size-space-200);
+    transition: all .2s ease;
+    border: none;
+    background: none;
+    color: var(--color-primary);
+    font-family: monospace;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-1px);
+      background-color: color-mix(in srgb, var(--color-primary) 5%, transparent);
+      box-shadow: 0 2px 4px var(--color-shadow);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    &.copied {
+      background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    }
+  }
+}
+
+.copy-indicator {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  padding: var(--size-space-50) var(--size-space-100);
+  transform: translateX(-50%);
+  animation: fade-in-out 2s ease;
+  border-radius: var(--size-radius-s);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-12);
+  white-space: nowrap;
+}
+
+.value-cell {
+  color: var(--color-neutral-700);
+  font-family: monospace;
+}
+
+// Exemples spécifiques
+.radius-example {
+  width: 60px;
+  height: 60px;
+  background: var(--color-primary);
+}
+
+.spacing-example {
+  height: 24px;
+  background: var(--color-primary);
+}
+
+.dim-example {
+  background: var(--color-primary);
+}
+
+.border-example {
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-color: var(--color-primary);
+}
+
+@keyframes fade-in-out {
+  0% {
+    transform: translate(-50%, 10px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -10px);
+    opacity: 0;
+  }
+}

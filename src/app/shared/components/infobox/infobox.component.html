@@ -1,10 +1,10 @@
 <div
   class="alert"
-  [ngClass]="[type | lowercase]">
+  [ngClass]="[type() | lowercase]">
   <span
     class="closebtn"
-    onclick="this.parentElement.style.display='none';"
-    >&times;</span
-  >
-  {{ title }}
+    onclick="this.parentElement.style.display='none';">
+    &times;
+  </span>
+  {{ title() }}
 </div>

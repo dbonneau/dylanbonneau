@@ -1,0 +1,173 @@
+<div class="size-demo">
+  <div class="search-bar">
+    <app-icon
+      [name]="IconName.Search"
+      [size]="IconSize.S">
+    </app-icon>
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Rechercher par nom, variable CSS ou valeur..." />
+  </div>
+
+  @if (!hasResults) {
+    <div class="no-results">Aucun résultat trouvé pour "{{ searchTerm }}"</div>
+  }
+
+  @if (sizeRadius.length > 0) {
+    <section class="size-section">
+      <h2 class="section-title">Radius</h2>
+      <table class="size-table">
+        <thead>
+          <tr>
+            <th>Exemple</th>
+            <th>Token</th>
+            <th>Valeur</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of sizeRadius; track $index) {
+            <tr>
+              <td class="example-cell">
+                <div
+                  class="radius-example"
+                  [style.borderRadius]="item.valueRef"></div>
+              </td>
+              <td class="token-cell">
+                <button
+                  type="button"
+                  class="copy-button"
+                  [class.copied]="copiedToken === item.cssVar"
+                  (click)="copyToken(item)">
+                  {{ item.cssVar }}
+                  @if (copiedToken === item.cssVar) {
+                    <span class="copy-indicator">Copié !</span>
+                  }
+                </button>
+              </td>
+              <td class="value-cell">{{ item.valueRef }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+  }
+
+  @if (sizeSpace.length > 0) {
+    <section class="size-section">
+      <h2 class="section-title">Spacing</h2>
+      <table class="size-table">
+        <thead>
+          <tr>
+            <th>Exemple</th>
+            <th>Token</th>
+            <th>Valeur</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of sizeSpace; track $index) {
+            <tr>
+              <td class="example-cell">
+                <div
+                  class="spacing-example"
+                  [style.width]="item.valueRef"></div>
+              </td>
+              <td class="token-cell">
+                <button
+                  type="button"
+                  class="copy-button"
+                  [class.copied]="copiedToken === item.cssVar"
+                  (click)="copyToken(item)">
+                  {{ item.cssVar }}
+                  @if (copiedToken === item.cssVar) {
+                    <span class="copy-indicator">Copié !</span>
+                  }
+                </button>
+              </td>
+              <td class="value-cell">{{ item.valueRef }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+  }
+
+  @if (sizeDim.length > 0) {
+    <section class="size-section">
+      <h2 class="section-title">Dimensions</h2>
+      <table class="size-table">
+        <thead>
+          <tr>
+            <th>Exemple</th>
+            <th>Token</th>
+            <th>Valeur</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of sizeDim; track $index) {
+            <tr>
+              <td class="example-cell">
+                <div
+                  class="dim-example"
+                  [style.width]="item.valueRef"
+                  [style.height]="item.valueRef"></div>
+              </td>
+              <td class="token-cell">
+                <button
+                  type="button"
+                  class="copy-button"
+                  [class.copied]="copiedToken === item.cssVar"
+                  (click)="copyToken(item)">
+                  {{ item.cssVar }}
+                  @if (copiedToken === item.cssVar) {
+                    <span class="copy-indicator">Copié !</span>
+                  }
+                </button>
+              </td>
+              <td class="value-cell">{{ item.valueRef }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+  }
+
+  @if (sizeBorder.length > 0) {
+    <section class="size-section">
+      <h2 class="section-title">Bordures</h2>
+      <table class="size-table">
+        <thead>
+          <tr>
+            <th>Exemple</th>
+            <th>Token</th>
+            <th>Valeur</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of sizeBorder; track $index) {
+            <tr>
+              <td class="example-cell">
+                <div
+                  class="border-example"
+                  [style.borderWidth]="item.valueRef"></div>
+              </td>
+              <td class="token-cell">
+                <button
+                  type="button"
+                  class="copy-button"
+                  [class.copied]="copiedToken === item.cssVar"
+                  (click)="copyToken(item)">
+                  {{ item.cssVar }}
+                  @if (copiedToken === item.cssVar) {
+                    <span class="copy-indicator">Copié !</span>
+                  }
+                </button>
+              </td>
+              <td class="value-cell">{{ item.valueRef }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+  }
+</div>

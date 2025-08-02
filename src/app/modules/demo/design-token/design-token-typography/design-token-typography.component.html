@@ -1,0 +1,91 @@
+<div class="typography-demo">
+  <div class="filters">
+    <div class="search-bar">
+      <app-icon
+        [name]="IconName.Search"
+        [size]="IconSize.S">
+      </app-icon>
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        placeholder="Rechercher par nom, variable CSS ou valeur..." />
+    </div>
+
+    <div class="select-filters">
+      <div class="select-group">
+        <label>Contexte</label>
+        <select [(ngModel)]="selectedContext">
+          @for (context of contexts; track context) {
+            <option [value]="context">{{ context | titlecase }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="select-group">
+        <label>Type</label>
+        <select [(ngModel)]="selectedElement">
+          <option value="all">Tous</option>
+          @for (element of elements; track element) {
+            <option [value]="element">{{ element | titlecase }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="select-group">
+        <label>Taille</label>
+        <select [(ngModel)]="selectedSize">
+          <option value="all">Toutes</option>
+          @for (size of sizes; track size) {
+            <option [value]="size">{{ size.toUpperCase() }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="select-group">
+        <label>Poids</label>
+        <select [(ngModel)]="selectedWeight">
+          <option value="all">Tous</option>
+          @for (weight of weights; track weight) {
+            <option [value]="weight">{{ weight | titlecase }}</option>
+          }
+        </select>
+      </div>
+    </div>
+  </div>
+
+  @if (!hasResults) {
+    <div class="no-results">Aucun résultat trouvé pour "{{ searchTerm }}"</div>
+  }
+
+  <table class="typography-table">
+    <thead>
+      <tr>
+        <th>Exemple</th>
+        <th>Token</th>
+        <th>Valeur</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of filteredTypographies; track item.cssVar) {
+        <tr>
+          <td [className]="item.cssVar + ' example-cell'">
+            {{ item.name }}
+          </td>
+          <td class="token-cell">
+            <button
+              type="button"
+              class="copy-button"
+              [class.copied]="copiedToken === item.cssVar"
+              (click)="copyToken(item)">
+              {{ item.cssVar }}
+              @if (copiedToken === item.cssVar) {
+                <span class="copy-indicator">Copié !</span>
+              }
+            </button>
+          </td>
+          <td class="value-cell">{{ item.valueRef }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

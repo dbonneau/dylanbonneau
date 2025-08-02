@@ -1,0 +1,43 @@
+<nav
+  class="sidebar-container"
+  [class.collapsed]="isSidebarCollapsed">
+  <button
+    class="toggle-sidebar"
+    (click)="toggleSidebar()"
+    [title]="isSidebarCollapsed ? 'Ouvrir le menu' : 'Réduire le menu'">
+    @if (isSidebarCollapsed) {
+      <app-icon [name]="IconName.Previous"></app-icon>
+    } @else {
+      <app-icon [name]="IconName.Next"></app-icon>
+    }
+  </button>
+
+  <a
+    app-button
+    [variant]="ButtonVariant.TERTIARY"
+    [routerLink]="ROUTING.HOME">
+    <h1>Accueil</h1>
+  </a>
+  <a
+    app-button
+    [variant]="ButtonVariant.TERTIARY"
+    [active]="thisIsPage(ROUTING.DEMO_DESIGN_TOKEN)"
+    [routerLink]="ROUTING.DEMO_DESIGN_TOKEN">
+    <h2>Design token</h2>
+  </a>
+  <a
+    app-button
+    [variant]="ButtonVariant.TERTIARY"
+    [active]="thisIsPage(ROUTING.DEMO_COMPONENTS)"
+    [routerLink]="ROUTING.DEMO_COMPONENTS">
+    <h2>Components</h2>
+  </a>
+</nav>
+
+<div class="content">
+  @if (thisIsPage(ROUTING.DEMO_DESIGN_TOKEN)) {
+    <app-design-token></app-design-token>
+  } @else if (thisIsPage(ROUTING.DEMO_COMPONENTS)) {
+    <app-components></app-components>
+  }
+</div>

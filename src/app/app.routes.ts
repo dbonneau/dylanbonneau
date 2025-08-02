@@ -1,42 +1,32 @@
 import { Routes } from '@angular/router';
-
-import { AboutMeComponent } from './modules/about-me/about-me.component';
-import { Article_2022_07_30_01_Component } from './modules/articles/2022/2022-07-30-mathilde-sebastien/article-2022-07-30-01.component';
-import { Article_2023_03_16_01_Component } from './modules/articles/2023/2023-03-16-comment-choisir-son-photographe-de-mariage/article-2023-03-16-01.component';
-import { Article_2023_07_02_01_Component } from './modules/articles/2023/2023-07-02-day-after/article-2023-07-02-01.component';
-import { Article_2023_08_29_01_Component } from './modules/articles/2023/2023-08-29-kit-de-survie/article-2023-08-29-01.component';
-import { Article_2024_08_11_01_Component } from './modules/articles/2024/2024-08-11-kit-ultime/article-2024-08-11-01.component';
-import { ArticlesComponent } from './modules/articles/articles.component';
-import { StyleguideComponent } from './modules/demo/pages/styleguide/styleguide.component';
-import { PageNotFoundComponent } from './modules/errors/page-not-found/page-not-found.component';
-import { HomeComponent } from './modules/home/home.component';
-import { LegalNoticeComponent } from './modules/legal-notice/legal-notice.component';
-import { CaenComponent } from './modules/places/caen/caen.component';
-import { RennesComponent } from './modules/places/rennes/rennes.component';
-import { WeddingComponent } from './modules/wedding/wedding.component';
-import {
-  ROUTING_ABOUT,
-  ROUTING_BLOGS,
-  ROUTING_CAEN,
-  ROUTING_DEMO,
-  ROUTING_LEGAL_NOTICE,
-  ROUTING_NOT_FOUND,
-  ROUTING_RENNES,
-  ROUTING_WEDDING
-} from './shared/consts/consts';
-import { ROUTES } from './shared/consts/routes';
+import { PAGE, ROUTING } from '@app/shared/constants/routes';
+import { StyleguideComponent } from './modules/demo/styleguide/styleguide.component';
+import { HomeComponent } from './modules/web/home/home.component';
+import { AboutMeComponent } from './modules/web/about-me/about-me.component';
+import { WeddingComponent } from './modules/web/wedding/wedding.component';
+import { ArticlesComponent } from './modules/web/articles/articles.component';
+import { Article2022073001Component } from './modules/web/articles/2022/article-2022-07-30-01/article-2022-07-30-01.component';
+import { Article2023031601Component } from './modules/web/articles/2023/article2023031601/article2023031601.component';
+import { Article2023070201Component } from './modules/web/articles/2023/article2023070201/article2023070201.component';
+import { Article2023082901Component } from './modules/web/articles/2023/article2023082901/article2023082901.component';
+import { Article2024081101Component } from './modules/web/articles/2024/article2024081101/article2024081101.component';
+import { LegalNoticeComponent } from './modules/web/legal-notice/legal-notice.component';
+import { SiteMapComponent } from './modules/web/site-map/site-map.component';
+import { CaenComponent } from './modules/web/places/france/normandie/calvados/caen/caen.component';
+import { RennesComponent } from './modules/web/places/france/bretagne/Ille-et-Vilaine/rennes/rennes.component';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: ROUTING.HOME,
     component: HomeComponent,
+    pathMatch: 'full',
     data: {
       title: 'Dylan Bonneau - Photographe de mariage',
       description: 'Je vous accompagne dans votre histoire, pour des photos qui vous ressemblent'
     }
   },
   {
-    path: ROUTING_ABOUT,
+    path: ROUTING.ABOUT,
     component: AboutMeComponent,
     data: {
       title: 'À propos - Dylan Bonneau - Photographe de mariage',
@@ -44,7 +34,7 @@ export const routes: Routes = [
     }
   },
   {
-    path: ROUTING_WEDDING,
+    path: ROUTING.WEDDING,
     component: WeddingComponent,
     data: {
       title: 'Mariage - Dylan Bonneau - Photographe de mariage',
@@ -53,7 +43,7 @@ export const routes: Routes = [
     }
   },
   {
-    path: ROUTING_BLOGS,
+    path: ROUTING.BLOG,
     children: [
       {
         path: '',
@@ -64,8 +54,8 @@ export const routes: Routes = [
         }
       },
       {
-        path: ROUTES.Article_2022_07_30_01,
-        component: Article_2022_07_30_01_Component,
+        path: PAGE.ARTICLE_2022_07_30_01,
+        component: Article2022073001Component,
         data: {
           title: 'Un mariage inoubliable sous le soleil de Derval',
           description:
@@ -74,16 +64,16 @@ export const routes: Routes = [
         }
       },
       {
-        path: ROUTES.Article_2023_03_16_01,
-        component: Article_2023_03_16_01_Component,
+        path: PAGE.ARTICLE_2023_03_16_01,
+        component: Article2023031601Component,
         data: {
           title: 'Comment choisir son photographe de mariage ?',
           description: "Opter pour un photographe est l'une des décisions les plus importantes que vous devrez prendre pour votre mariage."
         }
       },
       {
-        path: ROUTES.Article_2023_07_02_01,
-        component: Article_2023_07_02_01_Component,
+        path: PAGE.ARTICLE_2023_07_02_01,
+        component: Article2023070201Component,
         data: {
           title: "Qu'est-ce qu'une séance photo 'Day After'",
           description:
@@ -92,27 +82,26 @@ export const routes: Routes = [
         }
       },
       {
-        path: ROUTES.Article_2023_08_29_01,
-        component: Article_2023_08_29_01_Component,
+        path: PAGE.ARTICLE_2023_08_29_01,
+        component: Article2023082901Component,
         data: {
           title: 'kit de survie mariage : 50 accessoires indispensable',
           description: 'un kit de survie pour votre mariage : une checklist complète pour vous guider tout au long du processus'
         }
       },
       {
-        path: ROUTES.Article_2024_08_11_01,
-        component: Article_2024_08_11_01_Component,
+        path: PAGE.ARTICLE_2024_08_11_01,
+        component: Article2024081101Component,
         data: {
           title: 'Le Kit de Survie Ultime pour un Mariage Mémorable et Sans Stress!',
           description:
-            // eslint-disable-next-line max-len
             "Ne laissez pas le stress gâcher l'expérience de votre mariage. Avec le kit de survie ultime, vous pouvez être sûr de profiter pleinement de chaque instant de cette journée spéciale. Suivez mes conseils et préparez-vous à vivre un mariage inoubliable et sans stress !"
         }
       }
     ]
   },
   {
-    path: ROUTING_LEGAL_NOTICE,
+    path: ROUTING.LEGAL_NOTICE,
     component: LegalNoticeComponent,
     data: {
       title: 'Mentions légales - Dylan Bonneau - Photographe de mariage',
@@ -120,16 +109,15 @@ export const routes: Routes = [
     }
   },
   {
-    path: ROUTING_RENNES,
-    component: RennesComponent,
+    path: ROUTING.SITEMAP,
+    component: SiteMapComponent,
     data: {
-      title: 'Photographe mariage Rennes - Dylan Bonneau',
-      description:
-        'Vous allez vous mariez à Rennes ? Je suis photographe de mariage, discret et passionné, pour capturer chaque émotion authentique de votre mariage en Bretagne'
+      title: 'Plan du site - Dylan Bonneau - Photographe de mariage',
+      description: ''
     }
   },
   {
-    path: ROUTING_CAEN,
+    path: ROUTING.CAEN,
     component: CaenComponent,
     data: {
       title: 'Photographe mariage Caen - Dylan Bonneau',
@@ -138,7 +126,16 @@ export const routes: Routes = [
     }
   },
   {
-    path: ROUTING_DEMO,
+    path: ROUTING.RENNES,
+    component: RennesComponent,
+    data: {
+      title: 'Photographe mariage Rennes - Dylan Bonneau',
+      description:
+        'Vous allez vous mariez à Rennes ? Je suis photographe de mariage, discret et passionné, pour capturer chaque émotion authentique de votre mariage en Bretagne'
+    }
+  },
+  {
+    path: ROUTING.DEMO,
     component: StyleguideComponent,
     children: [
       {
@@ -146,18 +143,5 @@ export const routes: Routes = [
         component: StyleguideComponent
       }
     ]
-  },
-  {
-    path: '**',
-    redirectTo: ROUTING_NOT_FOUND
-  },
-  {
-    path: ROUTING_NOT_FOUND,
-    component: PageNotFoundComponent,
-    data: {
-      title: '404 - Dylan Bonneau - Photographe de mariage',
-      description:
-        "Ah, vous n'avez pas trouvé la page que vous cherchiez ? Pas de panique, c'est peut- être parce qu'elle s'est mariée elle aussi"
-    }
   }
 ];

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Cardo;
+  src:
+    local(cardo),
+    url(../../../fonts/common/Cardo/Cardo-Regular.woff2) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Raleway;
+  src:
+    local(raleway),
+    url(../../../fonts/common/Raleway/Raleway-VariableFont_wght.woff2) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Oswald;
+  src:
+    local(oswald),
+    url(../../../fonts/common/Oswald/Oswald.woff2) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Malina;
+  src:
+    local(malina),
+    url(../../../fonts/common/Malina/Malina1.woff2) format('truetype');
+  font-display: swap;
+}

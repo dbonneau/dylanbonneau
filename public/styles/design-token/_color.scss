@@ -1,0 +1,173 @@
+// =============================================================================
+// DESIGN TOKENS : COULEURS
+// =============================================================================
+
+:root {
+  // Palette de base
+  // -----------------------------------------------------------------------------
+  // Ces couleurs sont les couleurs fondamentales de notre système de design.
+  // Elles ne doivent pas être utilisées directement dans l'application.
+  // Utilisez plutôt les variables sémantiques définies plus bas.
+
+  // Noir et Blanc
+  --color-black: #000;
+  --color-white: #FFF;
+
+  // Échelle de gris
+  --color-grey-100: #111;
+  --color-grey-200: #272727;
+  --color-grey-300: #333;
+  --color-grey-400: #4A4A4A;
+  --color-grey-500: #555;
+  --color-grey-600: #666;
+  --color-grey-700: #777;
+  --color-grey-800: #888;
+  --color-grey-900: #999;
+  --color-grey-a100: #AEAEAE;
+  --color-grey-a200: #BBB;
+  --color-grey-a300: #CCC;
+  --color-grey-a400: #DDD;
+  --color-grey-a500: #EEE;
+  --color-grey-a600: #F3F3F3;
+  --color-grey-a700: #F8F8F8;
+  --color-grey-a800: #FAFAFA;
+  --color-grey-a900: #FDFDFD;
+
+  // Couleurs primaires
+  --color-blue-base: #0088E3;
+  --color-red-base: #F03A47;
+  --color-yellow-base: #FFA500;
+  --color-green-base: #00CB56;
+
+  // Variantes de bleu
+  --color-blue-100: #F5FAFE;
+  --color-blue-200: #E0F1FC;
+  --color-blue-300: #8FCBF3;
+  --color-blue-400: var(--color-blue-base);
+  --color-blue-500: #004776;
+  --color-blue-600: #003152;
+  --color-blue-700: #00223A;
+
+  // Variantes de vert
+  --color-green-100: #F5FDF8;
+  --color-green-200: #E0F9EB;
+  --color-green-300: #8FE8B5;
+  --color-green-400: var(--color-green-base);
+  --color-green-500: #006A2D;
+  --color-green-600: #00491F;
+  --color-green-700: #003818;
+
+  // Variantes de rouge
+  --color-red-100: #FEF7F8;
+  --color-red-200: #FDE7E9;
+  --color-red-300: #F8A8AE;
+  --color-red-400: var(--color-red-base);
+  --color-red-500: #7D1E25;
+  --color-red-600: #56151A;
+  --color-red-700: #3C0F12;
+
+  // Variantes de jaune
+  --color-yellow-100: #FFFBF5;
+  --color-yellow-200: #FFF4E0;
+  --color-yellow-300: #FFD78F;
+  --color-yellow-400: var(--color-yellow-base);
+  --color-yellow-500: #855600;
+  --color-yellow-600: #5C3B00;
+  --color-yellow-700: #482E00;
+
+  // =============================================================================
+  // TOKENS SÉMANTIQUES
+  // =============================================================================
+  // Ces variables représentent l'utilisation sémantique des couleurs dans l'application.
+  // Utilisez ces variables plutôt que les couleurs de base directement.
+
+  // Couleurs du thème
+  --color-primary: #7843E6;
+  --color-secondary: #FFEFF9;
+  --color-tertiary: #151626;
+  --color-transparent: transparent;
+
+  // Variantes de la couleur primaire
+  --color-primary-100: #F5F2FE;
+  --color-primary-200: #E0D7FC;
+  --color-primary-300: #B39AF3;
+  --color-primary-400: var(--color-primary);
+  --color-primary-500: #4A2A8C;
+  --color-primary-600: #3A2166;
+  --color-primary-700: #2A1847;
+
+  // Variantes de la couleur secondaire
+  --color-secondary-100: #FFF9FC;
+  --color-secondary-200: #FFF0F7;
+  --color-secondary-300: #FFD7EB;
+  --color-secondary-400: var(--color-secondary);
+  --color-secondary-500: #CCBFC6;
+  --color-secondary-600: #998F94;
+  --color-secondary-700: #665F63;
+
+  // États et feedback
+  --color-success: var(--color-green-base);
+  --color-warning: var(--color-yellow-base);
+  --color-danger: var(--color-red-base);
+  --color-info: var(--color-blue-base);
+
+  // Text et typographie
+  --color-text-primary: var(--color-primary);
+  --color-text-secondary: var(--color-secondary);
+  --color-text-tertiary: var(--color-tertiary);
+  --color-text-default: var(--color-grey-100);
+  --color-text-disabled: var(--color-grey-a200);
+  --color-text-inverse: var(--color-white);
+  --color-text-subtle: var(--color-grey-700);
+  --color-text-hint: var(--color-grey-500);
+  --color-text-highlight: var(--color-primary);
+  --color-text-success: var(--color-green-600);
+  --color-text-warning: var(--color-yellow-600);
+  --color-text-danger: var(--color-red-600);
+  --color-text-info: var(--color-blue-600);
+
+  // Backgrounds
+  --color-background-primary: var(--color-primary);
+  --color-background-secondary: var(--color-secondary);
+  --color-background-tertiary: var(--color-tertiary);
+  --color-background-light: var(--color-white);
+  --color-background-subtle: var(--color-grey-a600);
+  --color-background-disabled: var(--color-grey-a500);
+  --color-background-inverse: var(--color-grey-100);
+  --color-background-overlay: rgb(15 16 18 / 95%);
+  --color-background-success-subtle: var(--color-green-100);
+  --color-background-warning-subtle: var(--color-yellow-100);
+  --color-background-danger-subtle: var(--color-red-100);
+  --color-background-info-subtle: var(--color-blue-100);
+
+  // Borders
+  --color-border: var(--color-grey-a400);
+  --color-border-light: var(--color-grey-a500);
+  --color-border-subtle: var(--color-grey-a600);
+  --color-border-disabled: var(--color-grey-a300);
+  --color-border-focus: var(--color-primary);
+  --color-border-error: var(--color-red-400);
+
+  // Overlay et shadows
+  --color-overlay: rgb(0 0 0 / 50%);
+  --color-shadow: rgb(0 0 0 / 10%);
+  --color-shadow-dark: rgb(0 0 0 / 20%);
+  --color-shadow-darker: rgb(0 0 0 / 40%);
+
+  // États des boutons
+  --color-button-primary: var(--color-background-primary);
+  --color-button-primary-hover: color-mix(in srgb, var(--color-background-primary) 90%, var(--color-black));
+  --color-button-primary-outline: var(--color-background-light);
+  --color-button-primary-outline-hover: var(--color-background-primary);
+  --color-button-secondary: var(--color-grey-300);
+  --color-button-secondary-hover: color-mix(in srgb, var(--color-grey-300) 90%, var(--color-white));
+  --color-button-secondary-outline: var(--color-background-light);
+  --color-button-secondary-outline-hover: var(--color-grey-300);
+  --color-button-tertiary: var(--color-transparent);
+  --color-button-tertiary-hover: var(--color-transparent);
+  --color-button-tertiary-active: var(--color-transparent);
+
+  .fill-primary {
+    fill: var(--color-primary);
+  }
+}

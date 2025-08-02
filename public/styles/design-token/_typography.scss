@@ -1,0 +1,155 @@
+/* stylelint-disable max-line-length */
+
+// Configuration maps
+$sizes: ('xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl');
+$weights: ('light', 'regular', 'medium', 'bold');
+$elements: ('title', 'headline', 'display', 'body');
+$contexts: ('desktop', 'mobile');
+
+// Mixin unique pour générer à la fois les variables et les classes
+@mixin generate-typography {
+  @each $context in $contexts {
+    @each $element in $elements {
+      @each $size in $sizes {
+        @each $weight in $weights {
+          // Génération des variables CSS
+          --typography-#{$context}-#{$element}-#{$size}-#{$weight}: var(--font-weight-#{$weight}) var(--font-size-#{$size}) / var(--line-height-normal) var(--font-family-base);
+
+          // Génération des classes correspondantes
+          .typography-#{$context}-#{$element}-#{$size}-#{$weight} {
+            font: var(--typography-#{$context}-#{$element}-#{$size}-#{$weight});
+          }
+        }
+      }
+    }
+  }
+}
+
+:root {
+  // Font families
+  --font-family-base:
+    cardo,
+    raleway,
+    oswald,
+    sans-serif;
+
+  // Font weights
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  // Font sizes
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-s: 16px;
+  --font-size-m: 18px;
+  --font-size-l: 24px;
+  --font-size-xl: 32px;
+  --font-size-xxl: 40px;
+
+  // Line heights
+  --line-height-tight: 120%;
+  --line-height-normal: 130%;
+  --line-height-relaxed: 150%;
+
+  // Letter spacing
+  --letter-spacing-normal: 0;
+  --letter-spacing-tight: -.01em;
+  --letter-spacing-wide: .02em;
+  @include generate-typography;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul {
+    margin: 24px 20px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+
+    & span {
+      color: var(--color-primary);
+    }
+  }
+
+  h1 {
+    font: var(--typography-desktop-title-xl-bold);
+    @media (min-width: 959px) {
+      font: var(--typography-desktop-title-xxl-bold);
+    }
+  }
+
+  h2 {
+    font: var(--typography-desktop-title-l-bold);
+    @media (min-width: 959px) {
+      font: var(--typography-desktop-title-xl-bold);
+    }
+  }
+
+  h3 {
+    font: var(--typography-desktop-title-m-bold);
+    @media (min-width: 959px) {
+      font: var(--typography-desktop-title-l-bold);
+    }
+  }
+
+  h4 {
+    font: var(--typography-desktop-title-s-bold);
+    @media (min-width: 959px) {
+      font: var(--typography-desktop-title-m-bold);
+    }
+  }
+
+  h5 {
+    font: var(--typography-desktop-title-xs-bold);
+    @media (min-width: 959px) {
+      font: var(--typography-desktop-title-s-bold);
+    }
+  }
+
+  h6 {
+    font: var(--typography-desktop-title-xxs-bold);
+    @media (min-width: 959px) {
+      font: var(--typography-desktop-title-xs-bold);
+    }
+  }
+
+  p {
+    font: var(--typography-desktop-body-s-regular);
+
+    @media (min-width: 959px) {
+      font: var(--typography-desktop-body-m-regular);
+    }
+  }
+
+  em {
+    padding: 0 var(--size-space-300);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .subtitle {
+    content: attr(data-title);
+    display: block;
+    margin-top: var(--size-space-l);
+    color: var(--color-primary);
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: .188rem;
+    text-transform: uppercase;
+  }
+}

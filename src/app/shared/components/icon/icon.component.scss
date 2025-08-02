@@ -1,0 +1,33 @@
+:host {
+  display: inline-flex;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &.icon-s {
+      font-size: var(--size-dim-200);
+    }
+
+    &.icon-m {
+      font-size: var(--size-dim-300);
+    }
+
+    &.icon-l {
+      font-size: var(--size-dim-400);
+    }
+
+    &.icon-xl {
+      font-size: var(--size-dim-500);
+    }
+
+    &.icon-xxl {
+      font-size: var(--size-dim-600);
+    }
+
+    &.icon-xxxl {
+      font-size: var(--size-dim-700);
+    }
+  }
+}

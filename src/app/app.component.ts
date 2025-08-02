@@ -1,45 +1,31 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, ElementRef, Inject, OnInit } from '@angular/core';
+import { Component, ElementRef, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet } from '@angular/router';
-import { environment } from '@env/environment';
+import { HeaderComponent } from './modules/web/header/header.component';
+import { FooterComponent } from './modules/web/footer/footer.component';
+import { DOCUMENT } from '@angular/common';
+import { SEOService } from './core/services/seo.service';
 import { filter } from 'rxjs/internal/operators/filter';
 import { map } from 'rxjs/internal/operators/map';
 import { mergeMap } from 'rxjs/internal/operators/mergeMap';
 
-// Import { SEOService } from './core/services/seo.service';
-import { SEOService } from './core/services/seo.service';
-import { SpinnerComponent } from './shared/components/spinner/spinner.component';
-
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SpinnerComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  public loading = false;
+  public loading = signal<boolean>(false);
 
-  constructor(
-    @Inject(DOCUMENT) private readonly document: Document,
-    private readonly router: Router,
-    private readonly activatedRoute: ActivatedRoute,
-    private readonly seoService: SEOService,
-    private elementRef: ElementRef
-  ) {}
+  protected readonly router = inject(Router);
+  protected readonly document = inject(DOCUMENT);
+  protected readonly activatedRoute = inject(ActivatedRoute);
+  protected readonly seoService = inject(SEOService);
+  protected readonly elementRef = inject(ElementRef);
 
   public ngOnInit(): void {
-    this.addHighlight();
     this.seo();
     this.load();
-  }
-
-  private addHighlight(): void {
-    if (!environment.production) {
-      const script = this.document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js';
-      this.elementRef.nativeElement.appendChild(script);
-    }
   }
 
   private seo(): void {
@@ -71,14 +57,13 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event) => {
       switch (true) {
         case event instanceof NavigationStart: {
-          this.loading = true;
+          this.loading.set(true);
           break;
         }
-
         case event instanceof NavigationEnd:
         case event instanceof NavigationCancel:
         case event instanceof NavigationError: {
-          this.loading = false;
+          this.loading.set(false);
           break;
         }
         default: {

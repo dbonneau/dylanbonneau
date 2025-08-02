@@ -1,7 +1,135 @@
-<mat-tab-group>
-  <mat-tab label="Library">
-    <ng-template matTabContent>
-      <app-buttons-library></app-buttons-library>
-    </ng-template>
-  </mat-tab>
-</mat-tab-group>
+<section class="buttons">
+  <h2>Configuration du bouton</h2>
+
+  <div class="button-preview">
+    <button
+      app-button
+      [variant]="selectedVariant"
+      [size]="selectedSize"
+      [disabled]="isDisabled"
+      [active]="isActive"
+      [icon]="iconName"
+      [iconPosition]="selectedIconPosition"
+      [iconOnly]="isIconOnly">
+      {{ buttonText }}
+    </button>
+  </div>
+
+  <div class="button-config">
+    <!-- Texte du bouton -->
+    <div class="config-group">
+      <label for="buttonText">Texte du bouton :</label>
+      <input
+        type="text"
+        id="buttonText"
+        [(ngModel)]="buttonText"
+        class="text-input" />
+    </div>
+
+    <!-- Configuration de l'icône -->
+    <div class="config-group">
+      <label for="iconName">Icône :</label>
+      <div class="select-wrapper">
+        <select
+          id="iconName"
+          [(ngModel)]="iconName"
+          class="select-input">
+          <option [ngValue]="undefined">Aucune icône</option>
+          @for (icon of IconName | keyvalue; track icon.key) {
+            <option [value]="icon.value">{{ icon.key }}</option>
+          }
+        </select>
+        <app-icon
+          [name]="IconName.BxsChevronDown"
+          class="select-icon"></app-icon>
+      </div>
+    </div>
+
+    <!-- Position de l'icône -->
+    <div class="config-group">
+      <label class="group-label">Position de l'icône :</label>
+      <div class="radio-group">
+        @for (position of iconPositions; track position.value) {
+          <div class="radio-item">
+            <input
+              type="radio"
+              [id]="position.value"
+              name="iconPosition"
+              [value]="position.value"
+              [(ngModel)]="selectedIconPosition" />
+            <label [for]="position.value">{{ position.label }}</label>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Toggle Icon Only -->
+    <div class="config-group">
+      <div class="toggle-item">
+        <input
+          type="checkbox"
+          id="iconOnly"
+          [(ngModel)]="isIconOnly" />
+        <label for="iconOnly">Icône uniquement</label>
+      </div>
+    </div>
+
+    <!-- Variants -->
+    <div class="config-group">
+      <label class="group-label">Variant :</label>
+      <div class="radio-group">
+        @for (variant of variants; track variant.value) {
+          <div class="radio-item">
+            <input
+              type="radio"
+              [id]="variant.value"
+              name="variant"
+              [value]="variant.value"
+              [(ngModel)]="selectedVariant" />
+            <label [for]="variant.value">{{ variant.label }}</label>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Tailles -->
+    <div class="config-group">
+      <label class="group-label">Taille :</label>
+      <div class="radio-group">
+        @for (size of sizes; track size.value) {
+          <div class="radio-item">
+            <input
+              type="radio"
+              [id]="size.value"
+              name="size"
+              [value]="size.value"
+              [(ngModel)]="selectedSize" />
+            <label [for]="size.value">{{ size.label }}</label>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Toggle Disabled -->
+    <div class="config-group">
+      <div class="toggle-item">
+        <input
+          type="checkbox"
+          id="disabled"
+          [(ngModel)]="isDisabled" />
+        <label for="disabled">Désactivé</label>
+      </div>
+    </div>
+
+    <!-- Toggle Active -->
+    <div class="config-group">
+      <div class="toggle-item">
+        <input
+          type="checkbox"
+          id="active"
+          [(ngModel)]="isActive" />
+        <label for="active">Actif</label>
+      </div>
+    </div>
+  </div>
+</section>

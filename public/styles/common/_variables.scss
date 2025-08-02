@@ -1,0 +1,21 @@
+:root {
+  /* header */
+  --header-height: var(--size-dim-800);
+
+  /* Paths */
+  --theme-images-path: '/images/';
+  --common-images-path: '/images/common/';
+  --theme-fonts-path: '/fonts/';
+
+  /* grid Breakpoints */
+  --sm: 600px;
+  --md: 960px;
+  --lg: 1280px;
+  --xl: 1400px;
+  --mobile-breakpoint: var(--sm);
+  --xs-max: var(--sm - 1px);
+  --sm-max: var(--md - 1px);
+  --md-max: var(--lg - 1px);
+  --lg-max: var(--xl - 1px);
+  --grid-cols: 12;
+}
