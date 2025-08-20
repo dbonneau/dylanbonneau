@@ -126,8 +126,16 @@ $contexts: ('desktop', 'mobile');
   p {
     font: var(--typography-desktop-body-s-regular);
 
+    & strong {
+      font: var(--typography-desktop-body-s-bold);
+    }
+
     @media (min-width: 959px) {
       font: var(--typography-desktop-body-m-regular);
+
+       & strong {
+      font: var(--typography-desktop-body-m-bold);
+    }
     }
   }
 
