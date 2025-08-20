@@ -18,6 +18,7 @@ export const PAGE = {
   LEGAL_NOTICE: `mentions-legales`,
   SITEMAP: `sitemap`,
   DOWNLOAD: `download`,
+  CUSTOMER_ACCESS: `acces-client`,
   ARTICLE_2022_07_30_01: 'mariage-derval-mathilde-sebastien',
   ARTICLE_2023_03_16_01: 'comment-choisir-son-photographe-de-mariage',
   ARTICLE_2023_07_02_01: 'qu-est-ce-qu-une-seance-photo-day-after',
@@ -33,6 +34,7 @@ export const ROUTING = {
   CALENDLY: `${PAGE.CALENDLY}`,
   LEGAL_NOTICE: `${PAGE.LEGAL_NOTICE}`,
   SITEMAP: `${PAGE.SITEMAP}`,
+  CUSTOMER_ACCESS: `${PAGE.CUSTOMER_ACCESS}`,
   // Module places
   RENNES: `${PAGE.PLACES}${PAGE.RENNES}`,
   CAEN: `${PAGE.PLACES}${PAGE.CAEN}`,

@@ -79,7 +79,7 @@
 
 :host(.button-primary-outline) {
   --button-color-label: var(--color-text-primary);
-  --button-color-background: var(--color-button-primary-outline);
+  --button-color-background: inherit;
   --button-color-border: var(--color-primary);
 
   // Hover
@@ -162,7 +162,6 @@
   height: auto;
   padding: 0;
   border: none;
-  font-weight: 700;
   text-decoration: underline;
 
   // Hover
@@ -177,7 +176,6 @@
   height: auto;
   padding: 0;
   border: none;
-  font-weight: 700;
   text-decoration: underline;
 
   // Hover

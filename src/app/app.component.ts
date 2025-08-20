@@ -1,12 +1,12 @@
+import { DOCUMENT } from '@angular/common';
 import { Component, ElementRef, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './modules/web/header/header.component';
-import { FooterComponent } from './modules/web/footer/footer.component';
-import { DOCUMENT } from '@angular/common';
-import { SEOService } from './core/services/seo.service';
 import { filter } from 'rxjs/internal/operators/filter';
 import { map } from 'rxjs/internal/operators/map';
 import { mergeMap } from 'rxjs/internal/operators/mergeMap';
+import { SEOService } from './core/services/seo.service';
+import { FooterComponent } from './modules/web/footer/footer.component';
+import { HeaderComponent } from './modules/web/header/header.component';
 
 @Component({
   selector: 'app-root',

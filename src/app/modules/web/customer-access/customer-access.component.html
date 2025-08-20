@@ -1,0 +1,47 @@
+<section class="access">
+  <h1>Comment accéder à votre galerie photo mariage privée ?</h1>
+  <h2>Retrouvez en 2 minutes tous vos souvenirs de mariage</h2>
+  <div class="text">
+    <p>
+      Vos <strong>photos de mariage haute résolution</strong> vous attendent dans votre galerie sécurisée. En tant que
+      <strong>photographe mariage professionnel</strong>, j'ai créé un système simple et rapide pour que vous puissiez revivre chaque
+      émotion de votre mariage ou de celui que vous participé.
+    </p>
+    <!-- <p><strong>Plus de 150 couples</strong> ont déjà téléchargé leurs souvenirs grâce à ce processus en 2 étapes seulement.</p> -->
+    <p>
+      Parcourez la liste ci-dessous et <strong>cliquez sur le mariage</strong> qui vous correspond. Vous serez redirigé vers la page où vous
+      devrez insérer le code que je vous ai donné. <strong>Chaque reportage photo mariage</strong> est identifié par les prénoms des mariés.
+    </p>
+    <em class="italic">Vous ne trouvez pas votre mariage ? Il sera ajouté prochainement...</em>
+
+    <p>
+      <strong>Entrez le code secret</strong> que je vous ai remis le jour du mariage. Ce code garantit l'accès exclusif à votre
+      <strong>galerie photo mariage</strong>.
+    </p>
+
+    <div class="mt-xxxl">
+      @if (loading()) {
+        <app-spinner></app-spinner>
+      } @else {
+        <ul class="box mt-xxxl">
+          @for (gallery of galleries()?.galleries; track gallery) {
+            <li class="card">
+              <a
+                class="gallery"
+                [href]="galleries()?.lumysUrl + '/' + gallery?.url">
+                <div class="imgBx">
+                  <img
+                    [src]="galleries()?.lumysUrl + '/api/photos/coverPhoto/' + gallery?._id"
+                    [alt]="'galerie de' + gallery?.eventName" />
+                </div>
+                <div class="details">
+                  <p>{{ gallery?.eventName }}</p>
+                </div>
+              </a>
+            </li>
+          }
+        </ul>
+      }
+    </div>
+  </div>
+</section>

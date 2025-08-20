@@ -172,6 +172,17 @@
             Contact
           </a>
         </li>
+        <li>
+          <a
+            class="menu-header-link"
+            (click)="toggleMenu()"
+            app-button
+            [variant]="ButtonVariant.TERTIARY"
+            [active]="thisIsPage(ROUTING.CUSTOMER_ACCESS)"
+            [routerLink]="ROUTING.CUSTOMER_ACCESS">
+            Accès client
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
