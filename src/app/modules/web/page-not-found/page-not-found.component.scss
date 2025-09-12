@@ -1,0 +1,65 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--color-secondary-100) 0%, var(--color-primary-100) 100%);
+}
+
+.error-number {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: clamp(96px, 240px, 192px);
+  font-weight: 900;
+  line-height: .8;
+  text-align: center;
+  text-shadow: 0 4px 20px rgb(120 67 230 / 30%);
+}
+
+.error-decoration {
+  .heart,
+  .ring,
+  .camera {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 8px rgb(0 0 0 / 10%));
+  }
+}
+
+.error-footer {
+  max-width: 500px;
+  margin-top: var(--size-space-400);
+
+  p {
+    margin: 0;
+    color: var(--color-text-subtle);
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+// Responsive design
+@media screen and (max-width: 768px) {
+  .block {
+    padding: var(--size-space-200);
+  }
+
+  .hero-container {
+    gap: var(--size-space-300);
+  }
+
+  .actions ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    li {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .error-number {
+    font-size: 8rem;
+  }
+}

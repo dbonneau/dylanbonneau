@@ -15,6 +15,7 @@ import { SiteMapComponent } from './modules/web/site-map/site-map.component';
 import { CaenComponent } from './modules/web/places/france/normandie/calvados/caen/caen.component';
 import { RennesComponent } from './modules/web/places/france/bretagne/Ille-et-Vilaine/rennes/rennes.component';
 import { CustomerAccessComponent } from './modules/web/customer-access/customer-access.component';
+import { PageNotFoundComponent } from './modules/web/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   {
@@ -142,6 +143,15 @@ export const routes: Routes = [
       title: 'Accès client - Dylan Bonneau - Photographe mariage',
       description:
         'Accédez à votre galerie photo mariage privée en 2 clics. Code sécurisé, téléchargement haute définition. Photographe Rennes-Caen. support client immédiat'
+    }
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+    data: {
+      title: '404 - Dylan Bonneau - Photographe de mariage',
+      description:
+        "Il semble que cette page ait trouvé l'amour et soit partie célébrer son union ! Mais ne vous inquiétez pas, J'ai plein d'autres belles pages à vous montrer."
     }
   },
   {

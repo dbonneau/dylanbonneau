@@ -1,0 +1,76 @@
+<div class="block">
+  <div class="hero-container">
+    <div class="group-dates-images-container">
+      <div class="error-number">404</div>
+    </div>
+
+    <div class="text">
+      <h1>Oups ! Cette page a dit "oui" ailleurs</h1>
+      <p>
+        Il semble que cette page ait trouvé l'amour et soit partie célébrer son union ! Mais ne vous inquiétez pas, J'ai plein d'autres
+        belles pages à vous montrer.
+      </p>
+
+      <div class="actions">
+        <ul>
+          <li>
+            <a
+              app-button
+              [variant]="ButtonVariant.PRIMARY"
+              [size]="ButtonSize.L"
+              [routerLink]="['/' + ROUTING.HOME]">
+              Retour à l'accueil
+            </a>
+          </li>
+          <li>
+            <a
+              app-button
+              [variant]="ButtonVariant.SECONDARY"
+              [size]="ButtonSize.L"
+              [routerLink]="['/' + ROUTING.WEDDING]">
+              Découvrir mes mariages
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="text quick-links">
+        <h3 class="title">Ou explorez directement :</h3>
+        <div class="list-actions">
+          <a
+            app-button
+            [variant]="ButtonVariant.TERTIARY"
+            [icon]="IconName.BxsRightArrow"
+            [iconPosition]="IconPosition.LEFT"
+            [routerLink]="['/' + ROUTING.ABOUT]">
+            À propos
+          </a>
+          <a
+            app-button
+            [variant]="ButtonVariant.TERTIARY"
+            [icon]="IconName.BxsRightArrow"
+            [iconPosition]="IconPosition.LEFT"
+            [routerLink]="['/' + ROUTING.BLOG]">
+            Blog
+          </a>
+          <a
+            app-button
+            [variant]="ButtonVariant.TERTIARY"
+            [icon]="IconName.BxsRightArrow"
+            [iconPosition]="IconPosition.LEFT"
+            [href]="ROUTING.CALENDLY"
+            target="_blank"
+            rel="noopener noreferrer">
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner-cta">
+    <div class="content error-footer">
+      <p>En attendant, laissez-moi vous raconter une histoire d'amour... celle de votre futur mariage !</p>
+    </div>
+  </div>
+</div>
